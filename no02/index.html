@@ -1,0 +1,527 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ÉPOQUE No.02 — HOLLYWOOD 1934</title>
+<meta name="description" content="1985년 서울의 가상 패션지 ÉPOQUE가 1934년 할리우드로 출장 가서 찍어 온 시간여행 화보.">
+<meta property="og:title" content="ÉPOQUE No.02 — HOLLYWOOD 1934">
+<meta property="og:description" content="1985년 서울의 가상 패션지가 1934년 할리우드로 출장 가서 찍어 온 시간여행 화보">
+<meta property="og:image" content="../images/no02/cover-a.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Limelight&amp;family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&amp;family=Courier+Prime:wght@400;700&amp;family=Noto+Serif+KR:wght@400;600;700;900&amp;display=swap" rel="stylesheet">
+<style>
+:root{--ink:#07080F;--night:#0E1834;--silver:#C9CDD6;--pearl:#F2EFE8;--gold:#C9A86A;--dim:rgba(242,239,232,.72)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--ink);color:var(--pearl);font-family:'Noto Serif KR','Noto Serif CJK KR',serif;word-break:keep-all;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:var(--gold)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+
+/* header */
+.bar{position:sticky;top:0;z-index:20;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 20px;padding:12px 24px;background:rgba(7,8,15,.92);backdrop-filter:blur(6px);border-bottom:1px solid rgba(201,205,214,.18)}
+.brand{font-family:'Limelight',serif;font-size:24px;color:var(--pearl);text-decoration:none;letter-spacing:.04em}
+.brand small{font-family:'Courier Prime',monospace;font-size:12px;letter-spacing:.2em;margin-left:12px;color:var(--gold)}
+.issues{display:flex;gap:4px}
+.issues a{font-family:'Courier Prime',monospace;font-size:12px;letter-spacing:.14em;color:var(--silver);text-decoration:none;padding:7px 10px;border:1px solid rgba(201,205,214,.3)}
+.issues a[aria-current="page"]{background:var(--pearl);color:var(--ink);border-color:var(--pearl)}
+.share-btn{font-family:'Courier Prime',monospace;font-size:12px;letter-spacing:.18em;color:var(--ink);background:var(--gold);border:0;padding:8px 14px;cursor:pointer}
+.share-btn:hover{background:var(--pearl)}
+.bar nav{display:flex;flex-wrap:wrap;gap:4px 16px}
+.bar nav a{font-family:'Courier Prime',monospace;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--silver);text-decoration:none;padding:6px 0}
+.bar nav a:hover{color:var(--gold)}
+section{scroll-margin-top:72px}
+
+/* film leader intro */
+.leader{position:fixed;inset:0;z-index:200;background:#111;display:flex;align-items:center;justify-content:center;transition:opacity .5s}
+.leader.done{opacity:0;pointer-events:none}
+.leader .dial{position:relative;width:min(62vmin,420px);aspect-ratio:1;border-radius:50%;border:3px solid #ddd;display:flex;align-items:center;justify-content:center;overflow:hidden;background:#7d7d7d}
+.leader .sweep{position:absolute;inset:0;background:conic-gradient(#2b2b2b var(--a,0deg),transparent 0);}
+.leader .dial::before,.leader .dial::after{content:"";position:absolute;background:#ddd;z-index:2}
+.leader .dial::before{left:50%;top:0;bottom:0;width:2px;transform:translateX(-50%)}
+.leader .dial::after{top:50%;left:0;right:0;height:2px;transform:translateY(-50%)}
+.leader .ring{position:absolute;inset:12%;border-radius:50%;border:2px solid #ddd;z-index:2}
+.leader .num{position:relative;z-index:3;font-family:'Limelight',serif;font-size:min(30vmin,200px);color:#f3f3f3;line-height:1;text-shadow:0 0 18px rgba(0,0,0,.6)}
+.leader .grain{position:absolute;inset:0;opacity:.18;background-image:radial-gradient(rgba(255,255,255,.6) 1px,transparent 1px);background-size:3px 3px;mix-blend-mode:overlay;animation:flick .12s steps(2) infinite}
+.leader .skip{position:absolute;right:20px;bottom:20px;font-family:'Courier Prime',monospace;font-size:13px;letter-spacing:.2em;color:#eee;background:transparent;border:1px solid #888;padding:10px 14px;cursor:pointer}
+@keyframes flick{0%{opacity:.12}100%{opacity:.24}}
+
+/* premiere */
+.premiere{position:relative;padding:72px 24px 80px;text-align:center;background:radial-gradient(ellipse at 50% 0%,rgba(201,205,214,.22),transparent 60%),var(--ink);overflow:hidden}
+.premiere::before{content:"";position:absolute;inset:0;background:repeating-conic-gradient(from 0deg at 50% 0%,rgba(201,168,106,.08) 0deg 3deg,transparent 3deg 9deg);pointer-events:none}
+.eyebrow{font-family:'Courier Prime',monospace;font-size:13px;letter-spacing:.34em;color:var(--gold);text-transform:uppercase}
+.premiere h1{position:relative;margin:14px 0 0;font-family:'Limelight',serif;font-weight:400;font-size:clamp(36px,10.5vw,150px);line-height:.95;letter-spacing:.03em;color:var(--pearl)}
+.premiere .sub{position:relative;margin-top:10px;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(22px,3vw,34px);color:var(--silver)}
+.posters{position:relative;display:flex;justify-content:center;gap:clamp(16px,3vw,40px);margin:48px auto 0;max-width:1100px;flex-wrap:wrap}
+.poster{flex:1 1 300px;max-width:480px;margin:0;position:relative;border:1px solid rgba(201,168,106,.6);padding:10px;background:linear-gradient(180deg,rgba(201,168,106,.12),transparent)}
+.poster .frame{position:relative;overflow:hidden;aspect-ratio:3/4}
+.poster img{width:100%;height:100%;object-fit:cover;object-position:50% 100%}
+.poster .title{position:absolute;left:0;right:0;top:2%;text-align:center;font-family:'Limelight',serif;font-size:clamp(34px,5vw,60px);color:var(--pearl);letter-spacing:.04em;text-shadow:0 2px 18px rgba(7,8,15,.45);pointer-events:none}
+.poster .tag{position:absolute;left:0;right:0;bottom:0;padding:16px;background:linear-gradient(to top,rgba(7,8,15,.85),transparent);text-align:left;pointer-events:none}
+.poster .tag b{display:block;font-family:'Courier Prime',monospace;font-size:12px;letter-spacing:.24em;color:var(--gold);font-weight:400}
+.poster .tag span{font-size:15px;font-weight:700}
+.poster figcaption{font-family:'Courier Prime',monospace;font-size:12px;letter-spacing:.18em;color:var(--silver);padding-top:10px}
+
+/* letter */
+.letter{max-width:760px;margin:0 auto;padding:110px 24px}
+.letter h2{font-size:clamp(30px,4vw,44px);line-height:1.25;font-weight:900;margin:14px 0 8px}
+.letter .en{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:22px;color:var(--silver)}
+.letter p{font-size:17px;line-height:1.95;color:var(--dim);margin:22px 0 0}
+.letter p b{color:var(--pearl)}
+.letter .pull{margin:36px 0;padding:22px 0;border-top:1px solid var(--gold);border-bottom:1px solid var(--gold);font-size:24px;line-height:1.5;font-weight:700;color:var(--pearl)}
+.letter .sign{text-align:right;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:19px;color:var(--silver)}
+.ticket{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:40px;padding:16px;border:1px dashed rgba(201,205,214,.45)}
+.ticket div{display:flex;flex-direction:column;gap:4px}
+.ticket span{font-family:'Courier Prime',monospace;font-size:11px;letter-spacing:.22em;color:var(--gold)}
+.ticket strong{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600}
+
+/* act cards */
+.act{position:relative;min-height:62vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:80px 24px;background:radial-gradient(ellipse at center,var(--night),var(--ink) 70%);overflow:hidden}
+.act::before{content:"";position:absolute;inset:0;background:repeating-conic-gradient(from 0deg at 50% 50%,rgba(201,205,214,.05) 0deg 4deg,transparent 4deg 12deg)}
+.act .no{position:relative;font-family:'Courier Prime',monospace;font-size:14px;letter-spacing:.5em;color:var(--gold)}
+.act h2{position:relative;margin:16px 0 10px;font-family:'Limelight',serif;font-weight:400;font-size:clamp(48px,9vw,120px);line-height:1;color:var(--pearl)}
+.act p{position:relative;margin:0;font-size:17px;color:var(--silver)}
+.act .rule{position:relative;width:180px;height:14px;margin-top:22px;background:linear-gradient(var(--gold),var(--gold)) center/100% 1px no-repeat,radial-gradient(circle,var(--gold) 3px,transparent 4px) center/14px 14px no-repeat}
+
+/* scenes */
+.scene{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(24px,5vw,72px);align-items:center;max-width:1240px;margin:0 auto;padding:clamp(64px,10vh,120px) 24px}
+.scene.flip .shot{order:2}
+.shot{margin:0;position:relative}
+.shot .frame{position:relative;overflow:hidden;background:#000;box-shadow:0 30px 80px rgba(0,0,0,.6)}
+.shot img,.shot video{width:100%;height:auto;max-height:86vh;object-fit:cover;cursor:zoom-in}
+.shot video.live{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.slug{font-family:'Courier Prime',monospace;font-size:13px;letter-spacing:.08em;color:var(--gold);text-transform:uppercase;line-height:1.6}
+.slug em{font-style:normal;color:var(--silver);display:block;letter-spacing:.24em;font-size:11px}
+.scene h3{margin:14px 0 6px;font-size:clamp(28px,3.4vw,40px);line-height:1.25;font-weight:900}
+.scene .en{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:21px;color:var(--silver)}
+.scene p{font-size:16px;line-height:1.9;color:var(--dim);margin:18px 0 0}
+.credits{margin:26px 0 0;padding:18px 0 0;border-top:1px solid rgba(201,205,214,.25);display:grid;grid-template-columns:110px minmax(0,1fr);gap:10px 16px}
+.credits dt{font-family:'Courier Prime',monospace;font-size:11.5px;letter-spacing:.2em;color:var(--gold);padding-top:3px}
+.credits dd{margin:0;font-size:14.5px;line-height:1.6;color:var(--pearl)}
+.note{margin-top:18px;display:flex;gap:12px;font-size:14px;line-height:1.7;color:var(--silver)}
+.note span{font-family:'Courier Prime',monospace;font-size:11px;letter-spacing:.2em;color:var(--gold);white-space:nowrap;padding-top:3px}
+
+/* close-up */
+.closeup{position:relative;background:#000;display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);align-items:center;gap:clamp(24px,5vw,72px);padding:clamp(48px,8vh,96px) clamp(16px,5vw,72px)}
+.closeup .frame{position:relative;overflow:hidden;justify-self:end;max-width:760px;width:100%}
+.closeup img,.closeup video{width:100%;height:auto;max-height:86vh;object-fit:cover;cursor:zoom-in}
+.closeup .cap{max-width:440px}
+.closeup .cap h3{margin:10px 0 6px;font-size:clamp(26px,3vw,36px);line-height:1.3;font-weight:900}
+.closeup .cap .credits{grid-template-columns:90px minmax(0,1fr)}
+/* iris reveal */
+.reveal .frame{clip-path:circle(0% at 50% 50%);transition:clip-path 1.3s cubic-bezier(.6,0,.2,1)}
+.reveal .txt{opacity:0;transform:translateY(24px);transition:opacity .9s .35s,transform .9s .35s}
+.reveal.in .frame{clip-path:circle(75% at 50% 50%)}
+.reveal.in .txt{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal .frame{clip-path:none;transition:none}.reveal .txt{opacity:1;transform:none;transition:none}}
+
+/* code card */
+.code{max-width:900px;margin:0 auto;padding:110px 24px;text-align:center}
+.code .seal{display:inline-flex;flex-direction:column;align-items:center;justify-content:center;width:150px;height:150px;border-radius:50%;border:2px solid var(--gold);font-family:'Courier Prime',monospace;font-size:11px;letter-spacing:.18em;color:var(--gold);line-height:1.6;padding:12px}
+.code .seal b{font-family:'Limelight',serif;font-size:30px;letter-spacing:.05em;font-weight:400;color:var(--pearl)}
+.code h2{font-size:clamp(28px,3.6vw,42px);font-weight:900;margin:26px 0 8px}
+.code p{font-size:17px;line-height:1.95;color:var(--dim);max-width:720px;margin:18px auto 0}
+
+/* calendar reel */
+.reel{max-width:1240px;margin:0 auto;padding:40px 24px 110px}
+.reel h2{text-align:center;font-family:'Limelight',serif;font-weight:400;font-size:clamp(40px,6vw,72px);margin:10px 0 40px}
+.strip{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));background:#000;padding:22px 0;position:relative}
+.strip::before,.strip::after{content:"";position:absolute;left:0;right:0;height:12px;background:repeating-linear-gradient(90deg,transparent 0 10px,var(--ink) 10px 22px,transparent 22px 32px)}
+.strip::before{top:5px}.strip::after{bottom:5px}
+.cell{margin:0 8px;padding:22px 18px;border:1px solid rgba(201,205,214,.25);background:var(--night)}
+.cell .d{font-family:'Limelight',serif;font-size:30px;color:var(--gold)}
+.cell .t{margin-top:10px;font-size:15px;line-height:1.7}
+
+/* end credits */
+.endroll{position:relative;height:88vh;overflow:hidden;background:#000;text-align:center}
+.endroll::before,.endroll::after{content:"";position:absolute;left:0;right:0;height:22%;z-index:2;pointer-events:none}
+.endroll::before{top:0;background:linear-gradient(#000,transparent)}
+.endroll::after{bottom:0;background:linear-gradient(transparent,#000)}
+.roll{position:absolute;left:0;right:0;top:100%;padding:0 24px}
+.endroll.in .roll{animation:roll 46s linear infinite}
+.endroll:hover .roll,.endroll:focus-within .roll{animation-play-state:paused}
+@keyframes roll{from{transform:translateY(0)}to{transform:translateY(calc(-100% - 88vh))}}
+@media (prefers-reduced-motion:reduce){.endroll{height:auto}.roll{position:static;padding:60px 24px}.endroll.in .roll{animation:none}.endroll::before,.endroll::after{display:none}}
+.roll .h{font-family:'Limelight',serif;font-size:clamp(36px,5vw,64px);margin:0 0 50px}
+.roll .grp{margin:0 0 46px}
+.roll .grp b{display:block;font-family:'Courier Prime',monospace;font-size:12px;letter-spacing:.34em;color:var(--gold);font-weight:400;margin-bottom:14px}
+.roll .row{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:640px;margin:0 auto;font-size:15px;line-height:2}
+.roll .row span:first-child{text-align:right;color:var(--silver)}
+.roll .row span:last-child{text-align:left}
+.roll .fin{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:48px;margin-top:80px}
+footer{padding:40px 24px 64px;text-align:center;font-size:13px;line-height:1.9;color:var(--silver);border-top:1px solid rgba(201,205,214,.15)}
+
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:150;background:rgba(4,5,10,.97);display:none;flex-direction:column}
+.lb.open{display:flex}
+.lb-top{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 16px}
+.lb-count{font-family:'Courier Prime',monospace;letter-spacing:.24em;font-size:13px}
+.lb-actions{display:flex;flex-wrap:wrap;gap:8px}
+.lb-actions button,.lb-actions a{font-family:'Noto Serif KR',serif;font-size:13px;color:var(--pearl);background:transparent;border:1px solid rgba(242,239,232,.45);padding:8px 12px;cursor:pointer;text-decoration:none;min-height:36px;display:inline-flex;align-items:center}
+.lb-actions button:hover,.lb-actions a:hover{border-color:var(--gold);color:var(--gold)}
+.lb-stage{position:relative;flex:1;display:flex;align-items:center;justify-content:center;min-height:0;padding:0 64px}
+.lb-stage img,.lb-stage video{max-width:100%;max-height:100%;object-fit:contain;box-shadow:0 20px 60px rgba(0,0,0,.6)}
+.lb-nav{position:absolute;top:50%;transform:translateY(-50%);width:48px;height:64px;border:0;background:transparent;color:var(--pearl);font-size:40px;cursor:pointer;opacity:.8}
+.lb-nav:hover{opacity:1;color:var(--gold)}
+.lb-prev{left:8px}.lb-next{right:8px}
+.lb-cap{padding:12px 20px 18px;text-align:center;color:var(--silver);font-size:13px;line-height:1.6;min-height:20px}
+.toast{position:fixed;left:50%;bottom:32px;transform:translateX(-50%);z-index:220;background:var(--pearl);color:var(--ink);padding:10px 18px;font-size:13px;opacity:0;transition:opacity .2s;pointer-events:none}
+.toast.show{opacity:1}
+
+@media (max-width:860px){
+.bar{padding:10px 12px}
+.bar nav{flex-wrap:nowrap;overflow-x:auto;width:100%;gap:16px;scrollbar-width:none}
+.bar nav::-webkit-scrollbar{display:none}
+.bar nav a{white-space:nowrap}
+.scene{grid-template-columns:1fr;padding:56px 16px}
+.scene.flip .shot{order:0}
+.closeup{grid-template-columns:1fr;padding:48px 16px}
+.closeup .frame{justify-self:stretch}
+.closeup .cap{max-width:none}
+.issues a{padding:5px 7px;font-size:11px}
+.strip{grid-template-columns:1fr 1fr;row-gap:16px}
+.ticket{grid-template-columns:1fr}
+.lb-stage{padding:0 8px}.lb-top{flex-direction:column;align-items:flex-start}
+.roll .row{grid-template-columns:1fr;gap:0}.roll .row span{text-align:center!important}
+}
+</style>
+</head>
+<body>
+
+<div class="leader" id="leader" aria-hidden="true">
+<div class="dial"><div class="sweep" id="sweep"></div><div class="ring"></div><span class="num" id="num">5</span></div>
+<div class="grain"></div>
+<button class="skip" id="skip" type="button">SKIP ›</button>
+</div>
+
+<header class="bar">
+<a class="brand" href="#top">ÉPOQUE<small>No.02 · HOLLYWOOD 1934</small></a>
+<div class="issues" aria-label="호 선택"><a href="../">No.01 PARIS 1925</a><a href="./" aria-current="page">No.02 HOLLYWOOD 1934</a></div>
+<button class="share-btn" id="shareSite" type="button">공유</button>
+<nav aria-label="목차"><a href="#top">Premiere</a><a href="#letter">Letter</a><a href="#stars">Stars</a><a href="#men">Men</a><a href="#pictures">Pictures</a><a href="#calendar">1934</a><a href="#credits">Credits</a></nav>
+</header>
+
+<main>
+<section class="premiere" id="top" aria-label="커버">
+<div class="eyebrow">ÉPOQUE presents · a time-travel fashion picture</div>
+<h1>HOLLYWOOD<br>1934</h1>
+<div class="sub">The Silver Screen Issue — No.02</div>
+<div class="posters">
+<figure class="poster">
+<div class="frame"><img class="zoom" src="../images/no02/cover-a.jpg" alt="실버 새틴 홀터 가운에 화이트 폭스를 걸친 플래티넘 블론드의 여자, 커버 A"><div class="title">ÉPOQUE</div><div class="tag"><b>COVER A</b><span>플래티넘의 해</span></div></div>
+<figcaption>NOW SHOWING · COVER A</figcaption>
+</figure>
+<figure class="poster">
+<div class="frame"><img class="zoom" src="../images/no02/cover-b.jpg" alt="아이보리 더블브레스트 디너 재킷에 블랙 보타이와 흰 카네이션을 단 남자, 커버 B"><div class="title">ÉPOQUE</div><div class="tag"><b>COVER B</b><span>화이트 디너 재킷의 밤</span></div></div>
+<figcaption>NOW SHOWING · COVER B</figcaption>
+</figure>
+</div>
+</section>
+
+<section class="letter" id="letter" aria-label="에디터 레터">
+<div class="eyebrow">Editor's Letter</div>
+<h2>9년 뒤, 이번에는 할리우드</h2>
+<div class="en">A season in the silver city — 1985년 편집부의 두 번째 출장 일지</div>
+<p><b>1985년 서울.</b> 두 번째 출장지는 1934년의 할리우드다. 9년 전 파리에서 만났던 모델은 단발을 길러 턱선까지 웨이브를 넣었고, 머리는 플래티넘으로 탈색했다. 짙은 콜 아이라인은 사라지고, 눈썹은 가늘게 뽑아 높은 아치로 다시 그렸다.</p>
+<p>치맛단은 다시 내려왔다. 낮에는 종아리 중간, 밤에는 바닥까지. 원단을 사선으로 재단한 바이어스 컷 드레스는 몸의 곡선을 따라 흘러내렸고, 등은 깊게 파였다. 남자들의 어깨는 넓어졌고 바지 허리는 배꼽 위로 올라갔다.</p>
+<div class="pull">스크린이 단속을 시작한 해,<br>편집부는 스크린 밖의 옷장을 들여다보기로 했다.</div>
+<p>1934년 7월 1일부터 할리우드 영화는 심의 승인서 없이 개봉할 수 없게 됐다. 이번 호는 그해 스튜디오와 나이트클럽, 해변과 비행장에서 찍어 온 장면들이다.</p>
+<p class="sign">— ÉPOQUE 편집부, 1985년 서울</p>
+<div class="ticket"><div><span>DEPARTURE</span><strong>1985 · Seoul</strong></div><div><span>ARRIVAL</span><strong>1934 · Hollywood</strong></div><div><span>SINCE No.01</span><strong>+9 years</strong></div></div>
+</section>
+
+<section class="act" id="stars" aria-label="ACT I"><div class="no">ACT I</div><h2>The Stars</h2><p>여성 룩 다섯 벌 — 스튜디오에서 비행장까지</p><div class="rule"></div></section>
+
+<section class="closeup reveal" aria-label="클로즈업 뷰티">
+<div class="frame"><img class="zoom" src="../images/no02/beauty.jpg" alt="턱선 길이 플래티넘 웨이브, 가는 아치 눈썹과 다크 레드 립의 클로즈업" loading="lazy"></div>
+<div class="cap txt">
+<div class="slug">CLOSE-UP<em>BEAUTY · 1934</em></div>
+<h3>단발은 9년 만에 금발 웨이브가 됐다</h3>
+<dl class="credits">
+<dt>HAIR</dt><dd>턱선 길이 플래티넘 웨이브, 깊은 옆가르마</dd>
+<dt>BROWS</dt><dd>가늘게 뽑아 높은 아치로 다시 그린 눈썹</dd>
+<dt>LIPS</dt><dd>입술선을 꽉 채운 다크 레드</dd>
+<dt>JEWELRY</dt><dd>다이아몬드 클립 이어링</dd>
+</dl>
+</div>
+</section>
+
+<article class="scene reveal">
+<figure class="shot"><div class="frame"><img class="zoom" src="../images/no02/portrait.jpg" alt="대형 조명과 목제 뷰 카메라 앞, 새틴 셰이즈에 기대 포즈를 잡은 블랙 벨벳 가운의 여자" loading="lazy"></div></figure>
+<div class="txt">
+<div class="slug">SCENE 01<em>INT. PHOTOGRAPHER'S STUDIO — DAY</em></div>
+<h3>스타를 찍는 방</h3>
+<div class="en">Look 01 · The Glamour Portrait</div>
+<p>한 장의 포트레이트를 위해 거대한 조명이 차례로 켜지고, 사진가는 대형 뷰 카메라의 검은 천 아래로 들어간다. 위에서 내리꽂는 단단한 빛과 깊은 그림자가 이 시대 글래머 사진의 문법이었다.</p>
+<dl class="credits">
+<dt>GOWN</dt><dd>블랙 벨벳 이브닝 가운, 바닥까지 떨어지는 슬림한 바이어스 컷 스커트</dd>
+<dt>SLEEVES</dt><dd>어깨를 크게 부풀린 오간자 퍼프 소매</dd>
+<dt>SHOES</dt><dd>블랙 펌프스</dd>
+</dl>
+</div>
+</article>
+
+<article class="scene flip reveal">
+<figure class="shot"><div class="frame"><img class="zoom" src="../images/no02/trocadero.jpg" alt="나이트클럽 계단을 내려가는 등이 깊게 파인 실버 새틴 가운의 여자와 플래시를 터뜨리는 기자들" loading="lazy"></div></figure>
+<div class="txt">
+<div class="slug">SCENE 02<em>INT. CAFÉ TROCADERO, SUNSET STRIP — NIGHT</em></div>
+<h3>보여지기 위한 계단</h3>
+<div class="en">Look 02 · The Bias-Cut Gown</div>
+<p>1934년 선셋 스트립에 문을 연 카페 트로카데로는 곧바로 스타들이 ‘보이러’ 가는 곳이 됐다. 이곳에서 찍힌 밤의 사진이 다음 날 업계지에 실렸다. 등을 깊게 판 바이어스 컷 가운은 계단을 내려가는 뒷모습을 위해 만든 옷처럼 보였다.</p>
+<dl class="credits">
+<dt>GOWN</dt><dd>바닥에 끌리는 실버 새틴 바이어스 컷 가운, 깊게 파인 등과 홀터 스트랩</dd>
+<dt>STOLE</dt><dd>화이트 폭스</dd>
+<dt>GLOVES</dt><dd>팔꿈치 위까지 오는 화이트 이브닝 글러브</dd>
+<dt>JEWELRY</dt><dd>다이아몬드 브레이슬릿</dd>
+</dl>
+</div>
+</article>
+
+<article class="scene reveal">
+<figure class="shot"><div class="frame"><img class="zoom" src="../images/no02/restaurant.jpg" alt="스타 캐리커처가 걸린 레스토랑 부스 옆에 선 도브 그레이 스커트 수트의 여자" loading="lazy"></div></figure>
+<div class="txt">
+<div class="slug">SCENE 03<em>INT. RESTAURANT, HOLLYWOOD — LUNCH</em></div>
+<h3>낮의 스타는 수트를 입는다</h3>
+<div class="en">Look 03 · The Day Suit</div>
+<p>밤의 가운과 달리 낮의 옷은 단정하다. 어깨는 넓게, 허리는 벨트로 잘록하게, 스커트는 종아리 중간까지. 작은 모자는 한쪽 눈 위로 비스듬히 얹는다.</p>
+<dl class="credits">
+<dt>SUIT</dt><dd>도브 그레이 울 스커트 수트, 패드를 넣은 넓은 어깨와 벨티드 웨이스트</dd>
+<dt>BLOUSE</dt><dd>목에 리본을 맨 실크 블라우스</dd>
+<dt>HAT</dt><dd>한쪽으로 기울여 쓴 작은 챙 모자</dd>
+<dt>GLOVES</dt><dd>레더 쇼트 글러브</dd>
+</dl>
+</div>
+</article>
+
+<article class="scene flip reveal">
+<figure class="shot"><div class="frame"><img class="zoom" src="../images/no02/beach.jpg" alt="부두와 줄무늬 파라솔이 있는 해변에서 바람에 날리는 와이드 팬츠 비치 파자마를 입은 여자" loading="lazy"></div></figure>
+<div class="txt">
+<div class="slug">SCENE 04<em>EXT. SANTA MONICA BEACH — DAY</em></div>
+<h3>집 밖으로 나온 파자마</h3>
+<div class="en">Look 04 · Beach Pajamas</div>
+<p>해변의 유행은 비치 파자마였다. 원래 집 안에서 입던 라운지 파자마에서 온 옷이라, 그걸 입고 밖에 나간다는 것 자체가 작은 스캔들이었다. 바람이 불 때마다 통 넓은 바지가 돛처럼 부푼다.</p>
+<dl class="credits">
+<dt>PAJAMAS</dt><dd>홀터넥 탑과 통 넓은 하이웨이스트 와이드 팬츠, 미드나잇 블루 단 장식</dd>
+<dt>HAT</dt><dd>챙 넓은 스트로 햇</dd>
+<dt>EYEWEAR</dt><dd>라운드 선글라스</dd>
+</dl>
+</div>
+</article>
+
+<article class="scene reveal">
+<figure class="shot"><div class="frame"><img class="zoom" src="../images/no02/airfield.jpg" alt="은빛 프로펠러기 탑승 계단 위의 폭스 칼라 카멜 코트를 입은 여자" loading="lazy"></div></figure>
+<div class="txt">
+<div class="slug">SCENE 05<em>EXT. AIRFIELD, CALIFORNIA — DAY</em></div>
+<h3>은빛 날개로 떠나는 사람</h3>
+<div class="en">Look 05 · The Travel Coat</div>
+<p>번쩍이는 은빛 프로펠러기와 그 앞의 카멜 코트. 넓은 어깨와 커다란 폭스 칼라가 이 시대 여행복의 실루엣이다.</p>
+<dl class="credits">
+<dt>COAT</dt><dd>폭스 칼라를 단 카멜 울 롱코트, 허리 벨트</dd>
+<dt>INNER</dt><dd>미드나잇 블루</dd>
+<dt>CASE</dt><dd>베니티 케이스</dd>
+</dl>
+<div class="note"><span>NOTE · 1985</span>1934년의 여자는 외출할 때 모자를 거의 빼놓지 않았다. 이 컷의 모자 없는 머리는 1985년 편집부의 실수로 남겨 둔다.</div>
+</div>
+</article>
+
+<section class="act" id="men" aria-label="ACT II"><div class="no">ACT II</div><h2>Leading Men</h2><p>어깨는 넓게, 허리는 높게</p><div class="rule"></div></section>
+
+<section class="closeup reveal" aria-label="클로즈업 그루밍">
+<div class="frame"><img class="zoom" src="../images/no02/grooming.jpg" alt="윗머리에 볼륨을 남겨 넘긴 헤어와 블랙 보타이의 남자 클로즈업" loading="lazy"></div>
+<div class="cap txt">
+<div class="slug">CLOSE-UP<em>GROOMING · 1934</em></div>
+<h3>머리는 더 이상 납작하지 않다</h3>
+<dl class="credits">
+<dt>HAIR</dt><dd>윗머리를 길게 남겨 볼륨 있게 넘긴 웨이브, 옆가르마</dd>
+<dt>JACKET</dt><dd>피크드 새틴 라펠의 블랙 디너 재킷</dd>
+<dt>TIE</dt><dd>블랙 실크 보타이</dd>
+</dl>
+</div>
+</section>
+
+<article class="scene reveal">
+<figure class="shot"><div class="frame"><img class="zoom" src="../images/no02/boulevard.jpg" alt="야자수와 영화관이 있는 할리우드 대로를 걷는 그레이 초크 스트라이프 더블브레스트 수트의 남자" loading="lazy"></div></figure>
+<div class="txt">
+<div class="slug">SCENE 06<em>EXT. HOLLYWOOD BOULEVARD — DAY</em></div>
+<h3>드레이프 컷의 오후</h3>
+<div class="en">Look 06 · The Drape Suit</div>
+<p>런던 재단사들이 만든 드레이프 컷이 1930년대 남자의 몸을 바꿨다. 어깨와 가슴에 여유를 주고 허리를 잡아 넓은 어깨의 V자 실루엣을 만들고, 바지는 주름을 넣어 넉넉하게 떨어뜨린다.</p>
+<dl class="credits">
+<dt>SUIT</dt><dd>그레이 초크 스트라이프 더블브레스트 드레이프 수트, 넓은 피크드 라펠</dd>
+<dt>TROUSERS</dt><dd>하이웨이스트 와이드 레그, 턴업 커프스</dd>
+<dt>HAT</dt><dd>그레이 페도라</dd>
+<dt>SHOES</dt><dd>블랙 옥스퍼드</dd>
+</dl>
+</div>
+</article>
+
+<article class="scene flip reveal">
+<figure class="shot"><div class="frame"><img class="zoom" src="../images/no02/desert.jpg" alt="해 질 녘 사막 리조트 수영장의 야자수에 기댄 아이보리 디너 재킷의 남자" loading="lazy"></div></figure>
+<div class="txt">
+<div class="slug">SCENE 07<em>EXT. DESERT RESORT, POOLSIDE — DUSK</em></div>
+<h3>여름밤의 흰 재킷</h3>
+<div class="en">Look 07 · The White Dinner Jacket</div>
+<p>더운 휴양지의 저녁에는 검은 재킷 대신 흰 디너 재킷을 입었다. 바지는 검은 턱시도 바지 그대로, 단추 구멍엔 흰 카네이션 한 송이.</p>
+<dl class="credits">
+<dt>JACKET</dt><dd>아이보리 화이트 디너 재킷</dd>
+<dt>TROUSERS</dt><dd>새틴 사이드 스트라이프를 넣은 블랙 하이웨이스트 턱시도 트라우저</dd>
+<dt>NECKWEAR</dt><dd>블랙 실크 보타이</dd>
+<dt>BOUTONNIERE</dt><dd>화이트 카네이션</dd>
+</dl>
+</div>
+</article>
+
+<section class="act" id="pictures" aria-label="ACT III"><div class="no">ACT III</div><h2>The Pictures</h2><p>1934년, 영화가 바뀌던 해</p><div class="rule"></div></section>
+
+<article class="scene reveal">
+<figure class="shot"><div class="frame"><img class="zoom" src="../images/no02/soundstage.jpg" alt="거대한 테크니컬러 카메라와 스페인풍 세트 앞에 대본을 들고 선 승마 바지 차림의 젊은 감독" loading="lazy"></div></figure>
+<div class="txt">
+<div class="slug">SCENE 08<em>INT. SOUNDSTAGE — TECHNICOLOR TEST</em></div>
+<h3>세 가지 색으로 찍는 영화</h3>
+<div class="en">Three-Strip Technicolor</div>
+<p>1934년, 빨강·초록·파랑을 따로 담는 3색 테크니컬러가 실사 영화에 쓰이기 시작했다. 그해 8월 말 개봉한 단편 「라 쿠카라차」는 이 방식으로 찍은 초기 실사 영화로 이름을 남겼다. 장편은 이듬해에 나온다.</p>
+<dl class="credits">
+<dt>BREECHES</dt><dd>크림 울 승마 바지와 롱 라이딩 부츠</dd>
+<dt>KNIT</dt><dd>아가일 니트 베스트</dd>
+<dt>SHIRT</dt><dd>소매를 걷어 올린 화이트 셔츠</dd>
+</dl>
+</div>
+</article>
+
+<section class="code" aria-label="제작 규범">
+<div class="seal"><span>PRODUCTION CODE</span><b>1934</b><span>JULY 1</span></div>
+<h2>1934년 7월 1일, 스크린의 규칙</h2>
+<p>제작 규범은 1930년에 만들어졌지만 오랫동안 제대로 지켜지지 않았다. 1934년 7월 1일, 제작규범관리국(PCA)이 출범하면서 이날 이후의 모든 영화는 승인서를 받아야 개봉할 수 있게 됐다.</p>
+<p>그래서 1930년부터 이날까지의 할리우드 영화를 따로 ‘프리코드(Pre-Code)’ 시대라 부른다.</p>
+</section>
+
+<section class="reel" id="calendar" aria-label="1934 캘린더">
+<div class="eyebrow" style="text-align:center">Calendar · 1934</div>
+<h2>그해 할리우드에서는</h2>
+<div class="strip">
+<div class="cell"><div class="d">7.1</div><div class="t">제작규범관리국 출범, 승인서 없는 영화는 개봉 불가</div></div>
+<div class="cell"><div class="d">8월 말</div><div class="t">3색 테크니컬러 실사 단편 「라 쿠카라차」 개봉</div></div>
+<div class="cell"><div class="d">9월</div><div class="t">선셋 스트립에 카페 트로카데로 개장</div></div>
+<div class="cell"><div class="d">12.25</div><div class="t">아르데코 양식의 산타 아니타 경마장 개장</div></div>
+</div>
+</section>
+
+<section class="endroll" id="credits" aria-label="엔드 크레딧">
+<div class="roll" tabindex="0">
+<div class="h">ÉPOQUE No.02</div>
+<div class="grp"><b>THE WARDROBE</b>
+<div class="row"><span>Look 01</span><span>블랙 벨벳 퍼프 소매 가운</span></div>
+<div class="row"><span>Look 02</span><span>실버 새틴 바이어스 컷 가운</span></div>
+<div class="row"><span>Look 03</span><span>도브 그레이 스커트 수트</span></div>
+<div class="row"><span>Look 04</span><span>비치 파자마</span></div>
+<div class="row"><span>Look 05</span><span>폭스 칼라 카멜 코트</span></div>
+<div class="row"><span>Look 06</span><span>초크 스트라이프 드레이프 수트</span></div>
+<div class="row"><span>Look 07</span><span>화이트 디너 재킷</span></div>
+</div>
+<div class="grp"><b>LOCATIONS</b>
+<div class="row"><span>Night</span><span>Café Trocadero, Sunset Strip</span></div>
+<div class="row"><span>Day</span><span>Hollywood Boulevard</span></div>
+<div class="row"><span>Beach</span><span>Santa Monica</span></div>
+<div class="row"><span>Dusk</span><span>A Desert Resort</span></div>
+</div>
+<div class="grp"><b>PRODUCED BY</b>
+<div class="row"><span>Concept, Styling &amp; Art Direction</span><span>KIM SOY</span></div>
+<div class="row"><span>Illustrations</span><span>Midjourney</span></div>
+<div class="row"><span>Editorial Office</span><span>ÉPOQUE, Seoul 1985</span></div>
+</div>
+<div class="fin">The End</div>
+<div class="grp" style="margin-top:40px"><b>NEXT ISSUE</b><div style="font-size:15px;color:var(--silver)">다음 출장지는 다음 호에서</div></div>
+</div>
+</section>
+</main>
+
+<footer>
+1985년 서울의 가상 패션지 ÉPOQUE가 매 호 한 시대로 출장을 떠나 그 시대의 옷을 화보로 찍어 온다는 설정의 프로젝트입니다.<br>
+No.02의 출장지는 1934년 할리우드. 사건과 장소는 실제 기록을 바탕으로 했고, 인물은 모두 가상입니다.<br>
+Concept, styling &amp; art direction — KIM SOY · Illustrations generated with Midjourney
+</footer>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="그림 크게 보기">
+<div class="lb-top">
+<span class="lb-count" id="lbCount"></span>
+<div class="lb-actions">
+<button type="button" id="lbShare">이 그림 공유</button>
+<button type="button" id="lbCopy">링크 복사</button>
+<a id="lbSave" download>그림 저장</a>
+<button type="button" id="lbClose" aria-label="닫기">닫기 ✕</button>
+</div>
+</div>
+<div class="lb-stage" id="lbStage">
+<button class="lb-nav lb-prev" id="lbPrev" type="button" aria-label="이전 그림">‹</button>
+<img id="lbImg" alt="">
+<video id="lbVid" muted loop playsinline hidden></video>
+<button class="lb-nav lb-next" id="lbNext" type="button" aria-label="다음 그림">›</button>
+</div>
+<div class="lb-cap" id="lbCap"></div>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(function(){
+  var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  /* film leader */
+  var L=document.getElementById('leader'),num=document.getElementById('num'),sw=document.getElementById('sweep');
+  var seen=false;try{seen=sessionStorage.getItem('ep02-leader')==='1'}catch(e){}
+  function endLeader(){L.classList.add('done');try{sessionStorage.setItem('ep02-leader','1')}catch(e){}setTimeout(function(){L.style.display='none'},600);}
+  document.getElementById('skip').onclick=endLeader;
+  if(reduce||seen||location.hash){L.style.display='none';}
+  else{
+    var n=5,start=performance.now(),per=520;
+    (function tick(t){var el=t-start,i=Math.floor(el/per),f=(el%per)/per;
+      if(i>=5){endLeader();return;}
+      num.textContent=5-i;sw.style.setProperty('--a',(f*360)+'deg');requestAnimationFrame(tick);})(start);
+  }
+  /* iris reveal */
+  var rv=document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window&&!reduce){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.18});
+    rv.forEach(function(x){io.observe(x)});
+  }else rv.forEach(function(x){x.classList.add('in')});
+  /* end credits start when visible */
+  var er=document.querySelector('.endroll');
+  if('IntersectionObserver' in window){new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)er.classList.add('in')})},{threshold:.2}).observe(er);}else er.classList.add('in');
+  /* lightbox */
+  var lb=document.getElementById('lb'),img=document.getElementById('lbImg'),vid=document.getElementById('lbVid'),cap=document.getElementById('lbCap'),cnt=document.getElementById('lbCount'),save=document.getElementById('lbSave');
+  var list=[],seenSrc={};
+  document.querySelectorAll('img.zoom').forEach(function(el){var src=el.getAttribute('src');if(seenSrc[src])return;seenSrc[src]=1;
+    var lv=document.querySelector('video.live[data-still="'+src+'"]');
+    list.push({src:src,alt:el.getAttribute('alt')||'',name:src.split('/').pop().replace(/\.[^.]+$/,''),video:lv?lv.getAttribute('src'):null});});
+  var idx=0;
+  function toast(t){var el=document.getElementById('toast');el.textContent=t;el.classList.add('show');clearTimeout(el._t);el._t=setTimeout(function(){el.classList.remove('show')},1800);}
+  function base(){return location.href.split('#')[0];}
+  function show(i){idx=(i+list.length)%list.length;var it=list[idx];
+    if(it.video&&!reduce){vid.src=it.video;vid.hidden=false;img.hidden=true;var pp=vid.play();if(pp&&pp.catch)pp.catch(function(){});}else{vid.pause();vid.removeAttribute('src');vid.hidden=true;img.hidden=false;}
+    img.src=it.src;img.alt=it.alt;cap.textContent=it.alt;cnt.textContent=(idx+1)+' / '+list.length;
+    save.href=it.video||it.src;save.setAttribute('download','EPOQUE02-'+it.name+(it.video?'.mp4':'.jpg'));save.textContent=it.video?'영상 저장':'그림 저장';
+    history.replaceState(null,'','#photo='+it.name);}
+  function open(src){var i=list.findIndex(function(x){return x.src===src});if(i<0)return;lb.classList.add('open');document.body.style.overflow='hidden';show(i);document.getElementById('lbClose').focus();}
+  function close(){vid.pause();lb.classList.remove('open');document.body.style.overflow='';history.replaceState(null,'',base());}
+  function copy(url){if(navigator.clipboard){navigator.clipboard.writeText(url).then(function(){toast('링크를 복사했어요')},function(){prompt('아래 링크를 복사하세요',url)});}else{prompt('아래 링크를 복사하세요',url);}}
+  function share(title,url){if(navigator.share){navigator.share({title:title,url:url}).catch(function(){});}else{copy(url);}}
+  document.addEventListener('click',function(e){var t=e.target;
+    if(t.tagName==='IMG'&&t.classList.contains('zoom')){e.preventDefault();open(t.getAttribute('src'));}
+    else if(t.tagName==='VIDEO'&&t.classList.contains('live')){e.preventDefault();open(t.getAttribute('data-still'));}
+    else if(t.closest&&t.closest('.poster .frame')){var im=t.closest('.poster .frame').querySelector('img.zoom');if(im){e.preventDefault();open(im.getAttribute('src'));}}});
+  document.getElementById('lbClose').onclick=close;
+  document.getElementById('lbPrev').onclick=function(){show(idx-1)};
+  document.getElementById('lbNext').onclick=function(){show(idx+1)};
+  document.getElementById('lbShare').onclick=function(){var it=list[idx];share('ÉPOQUE No.02 — '+(it.alt||'화보'),base()+'#photo='+it.name);};
+  document.getElementById('lbCopy').onclick=function(){copy(base()+'#photo='+list[idx].name);};
+  document.getElementById('shareSite').onclick=function(){share(document.title,base());};
+  document.getElementById('lbStage').addEventListener('click',function(e){if(e.target===this)close();});
+  document.addEventListener('keydown',function(e){if(!lb.classList.contains('open'))return;if(e.key==='Escape')close();else if(e.key==='ArrowLeft')show(idx-1);else if(e.key==='ArrowRight')show(idx+1);});
+  var sx=null;lb.addEventListener('touchstart',function(e){sx=e.touches[0].clientX},{passive:true});
+  lb.addEventListener('touchend',function(e){if(sx===null)return;var dx=e.changedTouches[0].clientX-sx;if(Math.abs(dx)>50)show(idx+(dx<0?1:-1));sx=null;});
+  var m=location.hash.match(/^#photo=(.+)$/);if(m){var it=list.find(function(x){return x.name===decodeURIComponent(m[1])});if(it)open(it.src);}
+})();
+</script>
+</body>
+</html>
