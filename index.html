@@ -66,6 +66,11 @@ main{padding-top:20px}
 .toast{position:fixed;left:50%;bottom:32px;transform:translateX(-50%);z-index:120;background:#F3EADA;color:#0B1028;padding:10px 18px;font-size:13px;opacity:0;transition:opacity .2s;pointer-events:none}
 .toast.show{opacity:1}
 @media (max-width:900px){.lb-stage{padding:0 8px}.lb-nav{width:40px;font-size:32px}.lb-top{flex-direction:column;align-items:flex-start}}
+
+/* live video */
+.page video.live{cursor:zoom-in}
+@media (prefers-reduced-motion:reduce){.page video.live{display:none}}
+.lb-stage video{max-width:100%;max-height:100%;object-fit:contain;box-shadow:0 20px 60px rgba(0,0,0,.6)}
 </style>
 </head>
 <body>
@@ -79,6 +84,7 @@ main{padding-top:20px}
 <div class="page"><div class="inner one">
 <div style="width: 816px; height: 1056px; position: relative; overflow: hidden; background: #2F5174; font-family: 'Noto Serif KR', 'Noto Serif CJK KR', serif; color: #F3EADA; word-break: keep-all">
 <img src="images/cover.jpg" alt="1925년 파리의 플래퍼, 등이 파인 비즈 드레스와 진주 로프" style="position: absolute; left: 0; top: 0; width: 816px; height: 1268px; object-fit: cover">
+<video class="live" data-still="images/cover.jpg" src="videos/cover.mp4" style="position: absolute; left: 0; top: 184.7px; width: 816px; height: 1083.3px; object-fit: cover; -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 90px); mask-image: linear-gradient(to bottom, transparent 0, #000 90px)" autoplay muted loop playsinline preload="metadata" aria-hidden="true"></video>
 
 <div style="position: absolute; left: 40px; right: 40px; top: 22px; display: flex; justify-content: space-between; align-items: baseline; font-family: 'Poiret One', sans-serif; font-size: 14px; letter-spacing: 0.32em; text-transform: uppercase">
 <span>Seoul · 1985</span>
@@ -1523,6 +1529,7 @@ main{padding-top:20px}
 <div class="lb-stage" id="lbStage">
 <button class="lb-nav lb-prev" id="lbPrev" type="button" aria-label="이전 그림">‹</button>
 <img id="lbImg" alt="">
+<video id="lbVid" muted loop playsinline hidden></video>
 <button class="lb-nav lb-next" id="lbNext" type="button" aria-label="다음 그림">›</button>
 </div>
 <div class="lb-cap" id="lbCap"></div>
@@ -1535,17 +1542,19 @@ main{padding-top:20px}
   var list=[],seen={};
   document.querySelectorAll('.page img').forEach(function(el){
     var src=el.getAttribute('src'); if(!src||seen[src]) return; seen[src]=1;
-    list.push({src:src,alt:el.getAttribute('alt')||'',name:src.split('/').pop().replace(/\.[^.]+$/,'')});
+    var lv=document.querySelector('video.live[data-still="'+src+'"]');
+    list.push({src:src,alt:el.getAttribute('alt')||'',name:src.split('/').pop().replace(/\.[^.]+$/,''),video:lv?lv.getAttribute('src'):null});
   });
   var idx=0;
   function toast(t){var el=document.getElementById('toast');el.textContent=t;el.classList.add('show');clearTimeout(el._t);el._t=setTimeout(function(){el.classList.remove('show')},1800);}
   function base(){return location.href.split('#')[0];}
-  function show(i){idx=(i+list.length)%list.length;var it=list[idx];img.src=it.src;img.alt=it.alt;cap.textContent=it.alt;cnt.textContent=(idx+1)+' / '+list.length;save.href=it.src;save.setAttribute('download','EPOQUE-'+it.name+'.jpg');history.replaceState(null,'','#photo='+it.name);}
+  var vid=document.getElementById('lbVid');var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function show(i){idx=(i+list.length)%list.length;var it=list[idx];if(it.video&&!reduce){vid.src=it.video;vid.hidden=false;img.hidden=true;var pp=vid.play();if(pp&&pp.catch)pp.catch(function(){});}else{vid.pause();vid.removeAttribute('src');vid.hidden=true;img.hidden=false;}img.src=it.src;img.alt=it.alt;cap.textContent=it.alt;cnt.textContent=(idx+1)+' / '+list.length;save.href=it.video||it.src;save.setAttribute('download','EPOQUE-'+it.name+(it.video?'.mp4':'.jpg'));save.textContent=it.video?'영상 저장':'그림 저장';history.replaceState(null,'','#photo='+it.name);}
   function open(src){var i=list.findIndex(function(x){return x.src===src});if(i<0)return;lb.classList.add('open');document.body.style.overflow='hidden';show(i);document.getElementById('lbClose').focus();}
-  function close(){lb.classList.remove('open');document.body.style.overflow='';history.replaceState(null,'',base());}
+  function close(){vid.pause();lb.classList.remove('open');document.body.style.overflow='';history.replaceState(null,'',base());}
   function copy(url){if(navigator.clipboard){navigator.clipboard.writeText(url).then(function(){toast('링크를 복사했어요')},function(){prompt('아래 링크를 복사하세요',url)});}else{prompt('아래 링크를 복사하세요',url);}}
   function share(title,url){if(navigator.share){navigator.share({title:title,url:url}).catch(function(){});}else{copy(url);}}
-  document.addEventListener('click',function(e){var t=e.target;if(t.tagName==='IMG'&&t.closest('.page')){e.preventDefault();open(t.getAttribute('src'));}});
+  document.addEventListener('click',function(e){var t=e.target;if(t.tagName==='IMG'&&t.closest('.page')){e.preventDefault();open(t.getAttribute('src'));}else if(t.tagName==='VIDEO'&&t.classList.contains('live')){e.preventDefault();open(t.getAttribute('data-still'));}});
   document.getElementById('lbClose').onclick=close;
   document.getElementById('lbPrev').onclick=function(){show(idx-1)};
   document.getElementById('lbNext').onclick=function(){show(idx+1)};
