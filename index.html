@@ -29,6 +29,7 @@ main{padding:40px 0 24px}
 .inner{position:absolute;top:0;left:0;width:1632px;height:1056px;transform:scale(var(--s));transform-origin:0 0}
 .inner.one{width:816px}
 .inner.shift{left:calc(-816px * var(--s))}
+.spread.covers{gap:24px}
 .page.left::after{content:"";position:absolute;top:0;right:0;width:28px;height:100%;background:linear-gradient(to left,rgba(0,0,0,.22),rgba(0,0,0,0));pointer-events:none}
 .page.right::before{content:"";position:absolute;z-index:2;top:0;left:0;width:20px;height:100%;background:linear-gradient(to right,rgba(0,0,0,.16),rgba(0,0,0,0));pointer-events:none}
 footer{max-width:820px;margin:0 auto;padding:24px 24px 64px;text-align:center;font-size:13px;line-height:1.9;color:rgba(243,234,218,.78)}
@@ -49,10 +50,10 @@ main{padding-top:20px}
 <body>
 <header class="bar">
 <a class="brand" href="#cover">ÉPOQUE<small>No.01 · PARIS 1925</small></a>
-<nav aria-label="목차"><a href="#cover">Cover</a><a href="#opening">Opening</a><a href="#letter">Letter</a><a href="#women">Women</a><a href="#men">Men</a><a href="#wardrobe">Wardrobe</a><a href="#backstage">Backstage</a></nav>
+<nav aria-label="목차"><a href="#cover">Cover</a><a href="#contents">Contents</a><a href="#culture">Culture</a><a href="#city">City</a><a href="#women">Women</a><a href="#men">Men</a><a href="#wardrobe">Wardrobe</a><a href="#backstage">Backstage</a></nav>
 </header>
 <main>
-<section class="spread single" id="cover" aria-label="ÉPOQUE No.01 표지">
+<section class="spread covers" id="cover" aria-label="커버 A와 커버 B">
 <div class="page"><div class="inner one">
 <div style="width: 816px; height: 1056px; position: relative; overflow: hidden; background: #2F5174; font-family: 'Noto Serif KR', 'Noto Serif CJK KR', serif; color: #F3EADA; word-break: keep-all">
 <img src="images/cover.jpg" alt="1925년 파리의 플래퍼, 등이 파인 비즈 드레스와 진주 로프" style="position: absolute; left: 0; top: 0; width: 816px; height: 1268px; object-fit: cover">
@@ -95,6 +96,126 @@ main{padding-top:20px}
 </div>
 </div>
 </div></div>
+<div class="page"><div class="inner one">
+<div style="width: 816px; height: 1056px; position: relative; overflow: hidden; background: #2A3F7A; font-family: 'Noto Serif KR', 'Noto Serif CJK KR', serif; color: #F3EADA; word-break: keep-all">
+<img src="images/cover-b.jpg" alt="턱시도와 화이트 실크 스카프 차림으로 어깨 너머 정면을 응시하는 남자" style="position: absolute; left: 0; top: 0; width: 816px; height: 1137px; object-fit: cover">
+
+<div style="position: absolute; left: 40px; right: 40px; top: 22px; display: flex; justify-content: space-between; align-items: baseline; font-family: 'Poiret One', sans-serif; font-size: 14px; letter-spacing: 0.32em; text-transform: uppercase">
+<span>Seoul · 1985</span>
+<span>The Time-Travel Fashion Magazine</span>
+<span>No.01 · B</span>
+</div>
+
+<div style="position: absolute; left: 0; right: 0; top: 64px; text-align: center; font-family: 'Bodoni Moda', serif; font-weight: 500; font-size: 176px; line-height: 1; letter-spacing: 0.01em; color: #F3EADA">ÉPOQUE</div>
+
+<div style="position: absolute; right: 36px; top: 268px; width: 190px; display: flex; flex-direction: column; gap: 8px; text-align: right">
+<div style="font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.3em; color: #E3A65B">COVER B</div>
+<div style="font-family: 'Bodoni Moda', serif; font-style: italic; font-size: 46px; line-height: 0.95; font-weight: 500">Paris<br>1925</div>
+<div style="font-size: 13px; line-height: 1.55; font-weight: 600">60년 전 파리로 떠난<br>첫 번째 출장</div>
+</div>
+
+<div style="position: absolute; left: 36px; bottom: 44px; width: 210px; display: flex; flex-direction: column; gap: 22px">
+<div style="display: flex; flex-direction: column; gap: 5px">
+<div style="font-family: 'Bodoni Moda', serif; font-size: 23px; line-height: 1.1; font-weight: 600; letter-spacing: 0.04em">OXFORD<br>BAGS</div>
+<div style="font-size: 12px; line-height: 1.55">남자의 바지는 왜 넓어졌나</div>
+</div>
+<div style="width: 40px; height: 1px; background: #E3A65B"></div>
+<div style="display: flex; flex-direction: column; gap: 5px">
+<div style="font-size: 22px; line-height: 1.25; font-weight: 900">화이트 타이의 밤</div>
+<div style="font-size: 12px; line-height: 1.55">1925년, 저녁 옷의 정답</div>
+</div>
+<div style="width: 40px; height: 1px; background: #E3A65B"></div>
+<div style="display: flex; flex-direction: column; gap: 5px">
+<div style="font-size: 22px; line-height: 1.25; font-weight: 900">재즈가<br>도착한 밤</div>
+<div style="font-size: 12px; line-height: 1.55">찰스턴, 박람회, 몽파르나스</div>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section class="spread" id="contents" aria-label="향수 광고와 목차">
+<div class="page left"><div class="inner">
+<div style="width: 1632px; height: 1056px; position: relative; overflow: hidden; background: #F3EADA; font-family: 'Noto Serif KR', 'Noto Serif CJK KR', serif; color: #1A1B24; word-break: keep-all">
+<img src="images/ad-perfume.jpg" alt="크리스털 향수병 옆에서 눈을 감은 여자의 옆얼굴, 선버스트 배경의 향수 광고" style="position: absolute; left: 0px; top: 0; width: 816px; height: 1056px; object-fit: cover; object-position: 50% 50%">
+<div style="position: absolute; left: 40px; top: 28px; font-family: 'Poiret One', sans-serif; font-size: 11px; letter-spacing: 0.4em; color: #0F1220">PUBLICITÉ</div>
+<div style="position: absolute; right: 856px; bottom: 56px; width: 300px; text-align: right; display: flex; flex-direction: column; gap: 8px; color: #F3EADA">
+<div style="font-family: 'Bodoni Moda', serif; font-weight: 500; font-size: 64px; line-height: 0.95; letter-spacing: 0.06em">SÉLÈNE</div>
+<div style="font-family: 'Bodoni Moda', serif; font-style: italic; font-size: 24px; color: #E3A65B">Minuit</div>
+<div style="font-size: 14px; line-height: 1.6">파리의 자정을, 한 방울로.</div>
+<div style="font-family: 'Poiret One', sans-serif; font-size: 12px; letter-spacing: 0.32em">PARFUMS SÉLÈNE · PARIS</div>
+</div>
+<div style="position: absolute; left: 872px; top: 32px; width: 704px; display: flex; justify-content: space-between; padding-bottom: 12px; border-bottom: 1px solid #B9AB90; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.3em; text-transform: uppercase; color: #4E4C57"><span>ÉPOQUE · No.01</span><span>Sommaire</span></div>
+<div style="position: absolute; left: 872px; top: 96px; width: 704px; display: grid; grid-template-columns: minmax(0, 1fr) 200px; column-gap: 40px">
+<div style="display: flex; flex-direction: column">
+<div style="font-family: 'Poiret One', sans-serif; font-size: 54px; line-height: 1; letter-spacing: 0.08em; color: #0F1220">CONTENTS</div>
+<div style="margin-top: 6px; font-family: 'Bodoni Moda', serif; font-style: italic; font-size: 19px; color: #1C2B5E">Sommaire — Paris, 1925</div>
+<div style="margin-top: 20px; font-family: 'Poiret One', sans-serif; font-size: 12px; letter-spacing: 0.32em; color: #8A5A1F">FRONT</div>
+<div style="display: grid; grid-template-columns: 52px minmax(0, 1fr); column-gap: 14px; padding: 9px 0; border-bottom: 1px solid #D8CBB2"><span style="font-family: 'Bodoni Moda', serif; font-size: 24px; line-height: 1.1; color: #0F1220">04</span><div style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 15px; font-weight: 700">Opening</span><span style="font-size: 12.5px; color: #3A3A46">파리, 1925</span></div></div>
+<div style="display: grid; grid-template-columns: 52px minmax(0, 1fr); column-gap: 14px; padding: 9px 0; border-bottom: 1px solid #D8CBB2"><span style="font-family: 'Bodoni Moda', serif; font-size: 24px; line-height: 1.1; color: #0F1220">06</span><div style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 15px; font-weight: 700">Editor's Letter</span><span style="font-size: 12.5px; color: #3A3A46">60년 전으로 가는 첫 번째 출장</span></div></div>
+<div style="margin-top: 20px; font-family: 'Poiret One', sans-serif; font-size: 12px; letter-spacing: 0.32em; color: #8A5A1F">CULTURE & CITY</div>
+<div style="display: grid; grid-template-columns: 52px minmax(0, 1fr); column-gap: 14px; padding: 9px 0; border-bottom: 1px solid #D8CBB2"><span style="font-family: 'Bodoni Moda', serif; font-size: 24px; line-height: 1.1; color: #0F1220">08</span><div style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 15px; font-weight: 700">박람회의 해</span><span style="font-size: 12.5px; color: #3A3A46">아르데코가 이름을 얻은 해</span></div></div>
+<div style="display: grid; grid-template-columns: 52px minmax(0, 1fr); column-gap: 14px; padding: 9px 0; border-bottom: 1px solid #D8CBB2"><span style="font-family: 'Bodoni Moda', serif; font-size: 24px; line-height: 1.1; color: #0F1220">10</span><div style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 15px; font-weight: 700">재즈가 도착한 밤 · 몽파르나스</span><span style="font-size: 12.5px; color: #3A3A46">찰스턴과 예술가들의 테라스</span></div></div>
+<div style="display: grid; grid-template-columns: 52px minmax(0, 1fr); column-gap: 14px; padding: 9px 0; border-bottom: 1px solid #D8CBB2"><span style="font-family: 'Bodoni Moda', serif; font-size: 24px; line-height: 1.1; color: #0F1220">12</span><div style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 15px; font-weight: 700">소리 없는 영화관 · 1925 캘린더</span><span style="font-size: 12.5px; color: #3A3A46">그해 파리에서는</span></div></div>
+<div style="display: grid; grid-template-columns: 52px minmax(0, 1fr); column-gap: 14px; padding: 9px 0; border-bottom: 1px solid #D8CBB2"><span style="font-family: 'Bodoni Moda', serif; font-size: 24px; line-height: 1.1; color: #0F1220">14</span><div style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 15px; font-weight: 700">메트로 · 백화점</span><span style="font-size: 12.5px; color: #3A3A46">비 오는 밤과 유리 돔 아래의 오후</span></div></div>
+<div style="margin-top: 20px; font-family: 'Poiret One', sans-serif; font-size: 12px; letter-spacing: 0.32em; color: #8A5A1F">FASHION</div>
+<div style="display: grid; grid-template-columns: 52px minmax(0, 1fr); column-gap: 14px; padding: 9px 0; border-bottom: 1px solid #D8CBB2"><span style="font-family: 'Bodoni Moda', serif; font-size: 24px; line-height: 1.1; color: #0F1220">18</span><div style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 15px; font-weight: 700">Women · Look 01–05</span><span style="font-size: 12.5px; color: #3A3A46">이브닝부터 테니스까지, 다섯 벌</span></div></div>
+<div style="display: grid; grid-template-columns: 52px minmax(0, 1fr); column-gap: 14px; padding: 9px 0; border-bottom: 1px solid #D8CBB2"><span style="font-family: 'Bodoni Moda', serif; font-size: 24px; line-height: 1.1; color: #0F1220">24</span><div style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 15px; font-weight: 700">Détails</span><span style="font-size: 12.5px; color: #3A3A46">비즈, 프린지, 핸드백 속의 1925</span></div></div>
+<div style="display: grid; grid-template-columns: 52px minmax(0, 1fr); column-gap: 14px; padding: 9px 0; border-bottom: 1px solid #D8CBB2"><span style="font-family: 'Bodoni Moda', serif; font-size: 24px; line-height: 1.1; color: #0F1220">26</span><div style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 15px; font-weight: 700">Men · Look 01–04</span><span style="font-size: 12.5px; color: #3A3A46">시티 수트부터 리비에라까지, 네 벌</span></div></div>
+<div style="display: grid; grid-template-columns: 52px minmax(0, 1fr); column-gap: 14px; padding: 9px 0; border-bottom: 1px solid #D8CBB2"><span style="font-family: 'Bodoni Moda', serif; font-size: 24px; line-height: 1.1; color: #0F1220">31</span><div style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 15px; font-weight: 700">The Wardrobe</span><span style="font-size: 12.5px; color: #3A3A46">이번 호의 아홉 벌</span></div></div>
+<div style="display: grid; grid-template-columns: 52px minmax(0, 1fr); column-gap: 14px; padding: 9px 0; border-bottom: 1px solid #D8CBB2"><span style="font-family: 'Bodoni Moda', serif; font-size: 24px; line-height: 1.1; color: #0F1220">33</span><div style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 15px; font-weight: 700">Backstage</span><span style="font-size: 12.5px; color: #3A3A46">밤이 시작되기 전</span></div></div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px; padding-top: 8px">
+<div style="font-family: 'Poiret One', sans-serif; font-size: 12px; letter-spacing: 0.3em; color: #4E4C57">ON THE COVER</div>
+<img src="images/cover.jpg" alt="커버 A 썸네일" style="width: 200px; height: 259px; object-fit: cover; object-position: 50% 0%">
+<span style="font-size: 12px; line-height: 1.55"><span style="font-family: 'Bodoni Moda', serif; font-style: italic; color: #8A5A1F">Cover A</span> — 비즈 드레스와 진주 로프</span>
+<img src="images/cover-b.jpg" alt="커버 B 썸네일" style="margin-top: 6px; width: 200px; height: 259px; object-fit: cover; object-position: 50% 0%">
+<span style="font-size: 12px; line-height: 1.55"><span style="font-family: 'Bodoni Moda', serif; font-style: italic; color: #8A5A1F">Cover B</span> — 턱시도와 실크 스카프</span>
+</div>
+</div>
+<div style="position: absolute; right: 48px; bottom: 28px; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.2em; color: #4E4C57">03</div>
+</div>
+</div></div>
+<div class="page right" aria-hidden="true"><div class="inner shift">
+<div style="width: 1632px; height: 1056px; position: relative; overflow: hidden; background: #F3EADA; font-family: 'Noto Serif KR', 'Noto Serif CJK KR', serif; color: #1A1B24; word-break: keep-all">
+<img src="images/ad-perfume.jpg" alt="크리스털 향수병 옆에서 눈을 감은 여자의 옆얼굴, 선버스트 배경의 향수 광고" style="position: absolute; left: 0px; top: 0; width: 816px; height: 1056px; object-fit: cover; object-position: 50% 50%">
+<div style="position: absolute; left: 40px; top: 28px; font-family: 'Poiret One', sans-serif; font-size: 11px; letter-spacing: 0.4em; color: #0F1220">PUBLICITÉ</div>
+<div style="position: absolute; right: 856px; bottom: 56px; width: 300px; text-align: right; display: flex; flex-direction: column; gap: 8px; color: #F3EADA">
+<div style="font-family: 'Bodoni Moda', serif; font-weight: 500; font-size: 64px; line-height: 0.95; letter-spacing: 0.06em">SÉLÈNE</div>
+<div style="font-family: 'Bodoni Moda', serif; font-style: italic; font-size: 24px; color: #E3A65B">Minuit</div>
+<div style="font-size: 14px; line-height: 1.6">파리의 자정을, 한 방울로.</div>
+<div style="font-family: 'Poiret One', sans-serif; font-size: 12px; letter-spacing: 0.32em">PARFUMS SÉLÈNE · PARIS</div>
+</div>
+<div style="position: absolute; left: 872px; top: 32px; width: 704px; display: flex; justify-content: space-between; padding-bottom: 12px; border-bottom: 1px solid #B9AB90; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.3em; text-transform: uppercase; color: #4E4C57"><span>ÉPOQUE · No.01</span><span>Sommaire</span></div>
+<div style="position: absolute; left: 872px; top: 96px; width: 704px; display: grid; grid-template-columns: minmax(0, 1fr) 200px; column-gap: 40px">
+<div style="display: flex; flex-direction: column">
+<div style="font-family: 'Poiret One', sans-serif; font-size: 54px; line-height: 1; letter-spacing: 0.08em; color: #0F1220">CONTENTS</div>
+<div style="margin-top: 6px; font-family: 'Bodoni Moda', serif; font-style: italic; font-size: 19px; color: #1C2B5E">Sommaire — Paris, 1925</div>
+<div style="margin-top: 20px; font-family: 'Poiret One', sans-serif; font-size: 12px; letter-spacing: 0.32em; color: #8A5A1F">FRONT</div>
+<div style="display: grid; grid-template-columns: 52px minmax(0, 1fr); column-gap: 14px; padding: 9px 0; border-bottom: 1px solid #D8CBB2"><span style="font-family: 'Bodoni Moda', serif; font-size: 24px; line-height: 1.1; color: #0F1220">04</span><div style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 15px; font-weight: 700">Opening</span><span style="font-size: 12.5px; color: #3A3A46">파리, 1925</span></div></div>
+<div style="display: grid; grid-template-columns: 52px minmax(0, 1fr); column-gap: 14px; padding: 9px 0; border-bottom: 1px solid #D8CBB2"><span style="font-family: 'Bodoni Moda', serif; font-size: 24px; line-height: 1.1; color: #0F1220">06</span><div style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 15px; font-weight: 700">Editor's Letter</span><span style="font-size: 12.5px; color: #3A3A46">60년 전으로 가는 첫 번째 출장</span></div></div>
+<div style="margin-top: 20px; font-family: 'Poiret One', sans-serif; font-size: 12px; letter-spacing: 0.32em; color: #8A5A1F">CULTURE & CITY</div>
+<div style="display: grid; grid-template-columns: 52px minmax(0, 1fr); column-gap: 14px; padding: 9px 0; border-bottom: 1px solid #D8CBB2"><span style="font-family: 'Bodoni Moda', serif; font-size: 24px; line-height: 1.1; color: #0F1220">08</span><div style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 15px; font-weight: 700">박람회의 해</span><span style="font-size: 12.5px; color: #3A3A46">아르데코가 이름을 얻은 해</span></div></div>
+<div style="display: grid; grid-template-columns: 52px minmax(0, 1fr); column-gap: 14px; padding: 9px 0; border-bottom: 1px solid #D8CBB2"><span style="font-family: 'Bodoni Moda', serif; font-size: 24px; line-height: 1.1; color: #0F1220">10</span><div style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 15px; font-weight: 700">재즈가 도착한 밤 · 몽파르나스</span><span style="font-size: 12.5px; color: #3A3A46">찰스턴과 예술가들의 테라스</span></div></div>
+<div style="display: grid; grid-template-columns: 52px minmax(0, 1fr); column-gap: 14px; padding: 9px 0; border-bottom: 1px solid #D8CBB2"><span style="font-family: 'Bodoni Moda', serif; font-size: 24px; line-height: 1.1; color: #0F1220">12</span><div style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 15px; font-weight: 700">소리 없는 영화관 · 1925 캘린더</span><span style="font-size: 12.5px; color: #3A3A46">그해 파리에서는</span></div></div>
+<div style="display: grid; grid-template-columns: 52px minmax(0, 1fr); column-gap: 14px; padding: 9px 0; border-bottom: 1px solid #D8CBB2"><span style="font-family: 'Bodoni Moda', serif; font-size: 24px; line-height: 1.1; color: #0F1220">14</span><div style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 15px; font-weight: 700">메트로 · 백화점</span><span style="font-size: 12.5px; color: #3A3A46">비 오는 밤과 유리 돔 아래의 오후</span></div></div>
+<div style="margin-top: 20px; font-family: 'Poiret One', sans-serif; font-size: 12px; letter-spacing: 0.32em; color: #8A5A1F">FASHION</div>
+<div style="display: grid; grid-template-columns: 52px minmax(0, 1fr); column-gap: 14px; padding: 9px 0; border-bottom: 1px solid #D8CBB2"><span style="font-family: 'Bodoni Moda', serif; font-size: 24px; line-height: 1.1; color: #0F1220">18</span><div style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 15px; font-weight: 700">Women · Look 01–05</span><span style="font-size: 12.5px; color: #3A3A46">이브닝부터 테니스까지, 다섯 벌</span></div></div>
+<div style="display: grid; grid-template-columns: 52px minmax(0, 1fr); column-gap: 14px; padding: 9px 0; border-bottom: 1px solid #D8CBB2"><span style="font-family: 'Bodoni Moda', serif; font-size: 24px; line-height: 1.1; color: #0F1220">24</span><div style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 15px; font-weight: 700">Détails</span><span style="font-size: 12.5px; color: #3A3A46">비즈, 프린지, 핸드백 속의 1925</span></div></div>
+<div style="display: grid; grid-template-columns: 52px minmax(0, 1fr); column-gap: 14px; padding: 9px 0; border-bottom: 1px solid #D8CBB2"><span style="font-family: 'Bodoni Moda', serif; font-size: 24px; line-height: 1.1; color: #0F1220">26</span><div style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 15px; font-weight: 700">Men · Look 01–04</span><span style="font-size: 12.5px; color: #3A3A46">시티 수트부터 리비에라까지, 네 벌</span></div></div>
+<div style="display: grid; grid-template-columns: 52px minmax(0, 1fr); column-gap: 14px; padding: 9px 0; border-bottom: 1px solid #D8CBB2"><span style="font-family: 'Bodoni Moda', serif; font-size: 24px; line-height: 1.1; color: #0F1220">31</span><div style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 15px; font-weight: 700">The Wardrobe</span><span style="font-size: 12.5px; color: #3A3A46">이번 호의 아홉 벌</span></div></div>
+<div style="display: grid; grid-template-columns: 52px minmax(0, 1fr); column-gap: 14px; padding: 9px 0; border-bottom: 1px solid #D8CBB2"><span style="font-family: 'Bodoni Moda', serif; font-size: 24px; line-height: 1.1; color: #0F1220">33</span><div style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 15px; font-weight: 700">Backstage</span><span style="font-size: 12.5px; color: #3A3A46">밤이 시작되기 전</span></div></div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px; padding-top: 8px">
+<div style="font-family: 'Poiret One', sans-serif; font-size: 12px; letter-spacing: 0.3em; color: #4E4C57">ON THE COVER</div>
+<img src="images/cover.jpg" alt="커버 A 썸네일" style="width: 200px; height: 259px; object-fit: cover; object-position: 50% 0%">
+<span style="font-size: 12px; line-height: 1.55"><span style="font-family: 'Bodoni Moda', serif; font-style: italic; color: #8A5A1F">Cover A</span> — 비즈 드레스와 진주 로프</span>
+<img src="images/cover-b.jpg" alt="커버 B 썸네일" style="margin-top: 6px; width: 200px; height: 259px; object-fit: cover; object-position: 50% 0%">
+<span style="font-size: 12px; line-height: 1.55"><span style="font-family: 'Bodoni Moda', serif; font-style: italic; color: #8A5A1F">Cover B</span> — 턱시도와 실크 스카프</span>
+</div>
+</div>
+<div style="position: absolute; right: 48px; bottom: 28px; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.2em; color: #4E4C57">03</div>
+</div>
+</div></div>
 </section>
 <section class="spread" id="opening" aria-label="오프닝 스프레드 — PARIS 1925">
 <div class="page left"><div class="inner">
@@ -120,8 +241,8 @@ main{padding-top:20px}
 <div style="font-size: 13px; line-height: 1.7">탐조등이 밤하늘을 가르고,<br>에펠탑은 전구로 옷을 입었다.</div>
 </div>
 
-<div style="position: absolute; left: 48px; bottom: 28px; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.2em">02</div>
-<div style="position: absolute; right: 48px; bottom: 28px; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.2em">03</div>
+<div style="position: absolute; left: 48px; bottom: 28px; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.2em">04</div>
+<div style="position: absolute; right: 48px; bottom: 28px; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.2em">05</div>
 </div>
 </div></div>
 <div class="page right" aria-hidden="true"><div class="inner shift">
@@ -147,8 +268,8 @@ main{padding-top:20px}
 <div style="font-size: 13px; line-height: 1.7">탐조등이 밤하늘을 가르고,<br>에펠탑은 전구로 옷을 입었다.</div>
 </div>
 
-<div style="position: absolute; left: 48px; bottom: 28px; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.2em">02</div>
-<div style="position: absolute; right: 48px; bottom: 28px; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.2em">03</div>
+<div style="position: absolute; left: 48px; bottom: 28px; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.2em">04</div>
+<div style="position: absolute; right: 48px; bottom: 28px; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.2em">05</div>
 </div>
 </div></div>
 </section>
@@ -195,7 +316,7 @@ main{padding-top:20px}
 <span style="font-family: 'Bodoni Moda', serif; font-size: 20px">− 60 years</span>
 </div>
 </div>
-<div style="position: absolute; left: 48px; bottom: 28px; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.2em; color: #4E4C57">04</div>
+<div style="position: absolute; left: 48px; bottom: 28px; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.2em; color: #4E4C57">06</div>
 </div>
 
 <img src="images/after-the-party.jpg" alt="파티가 끝난 무도회장에서 춤추는 두 사람" style="position: absolute; left: 816px; top: 0; width: 816px; height: 1056px; object-fit: cover; object-position: 50% 50%">
@@ -203,7 +324,7 @@ main{padding-top:20px}
 <div style="font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.3em; color: #E3A65B">AFTER THE PARTY</div>
 <div style="font-size: 13px; line-height: 1.7">파티가 끝난 무도회장.<br>남은 건 두 사람과<br>스포트라이트 하나.</div>
 </div>
-<div style="position: absolute; right: 48px; bottom: 28px; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.2em; color: #F3EADA">05</div>
+<div style="position: absolute; right: 48px; bottom: 28px; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.2em; color: #F3EADA">07</div>
 </div>
 </div></div>
 <div class="page right" aria-hidden="true"><div class="inner shift">
@@ -248,7 +369,7 @@ main{padding-top:20px}
 <span style="font-family: 'Bodoni Moda', serif; font-size: 20px">− 60 years</span>
 </div>
 </div>
-<div style="position: absolute; left: 48px; bottom: 28px; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.2em; color: #4E4C57">04</div>
+<div style="position: absolute; left: 48px; bottom: 28px; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.2em; color: #4E4C57">06</div>
 </div>
 
 <img src="images/after-the-party.jpg" alt="파티가 끝난 무도회장에서 춤추는 두 사람" style="position: absolute; left: 816px; top: 0; width: 816px; height: 1056px; object-fit: cover; object-position: 50% 50%">
@@ -256,7 +377,313 @@ main{padding-top:20px}
 <div style="font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.3em; color: #E3A65B">AFTER THE PARTY</div>
 <div style="font-size: 13px; line-height: 1.7">파티가 끝난 무도회장.<br>남은 건 두 사람과<br>스포트라이트 하나.</div>
 </div>
-<div style="position: absolute; right: 48px; bottom: 28px; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.2em; color: #F3EADA">05</div>
+<div style="position: absolute; right: 48px; bottom: 28px; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.2em; color: #F3EADA">07</div>
+</div>
+</div></div>
+</section>
+<section class="spread" id="culture" aria-label="컬처 01 — 박람회의 해">
+<div class="page left"><div class="inner">
+<div style="width: 1632px; height: 1056px; position: relative; overflow: hidden; background: #F3EADA; font-family: 'Noto Serif KR', 'Noto Serif CJK KR', serif; color: #1A1B24; word-break: keep-all">
+<img src="images/culture-expo.jpg" alt="1925년 파리 장식미술 박람회의 밤, 아르데코 탑과 빛의 분수 사이를 걷는 두 사람" style="position: absolute; left: 0px; top: 0; width: 816px; height: 1056px; object-fit: cover; object-position: 50% 50%">
+<div style="position: absolute; left: 48px; bottom: 28px; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.2em; color: #F3EADA">08</div>
+<div style="position: absolute; left: 872px; top: 32px; width: 704px; display: flex; justify-content: space-between; padding-bottom: 12px; border-bottom: 1px solid #B9AB90; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.3em; text-transform: uppercase; color: #4E4C57"><span>Culture</span><span>L'Exposition</span></div>
+<div style="position: absolute; left: 872px; top: 100px; width: 704px; display: flex; flex-direction: column">
+<div style="font-family: 'Poiret One', sans-serif; font-size: 14px; letter-spacing: 0.34em; color: #1C2B5E">CULTURE · 01</div>
+<div style="margin-top: 12px; font-size: 48px; line-height: 1.15; font-weight: 900; color: #0F1220">박람회의 해</div>
+<div style="margin-top: 10px; font-family: 'Bodoni Moda', serif; font-style: italic; font-size: 22px; color: #1C2B5E">Exposition des Arts Décoratifs, 1925</div>
+<div style="margin-top: 34px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 36px; font-size: 14.5px; line-height: 1.85">
+<div style="display: flex; flex-direction: column; gap: 14px">
+<p style="margin: 0"><span style="font-weight: 700">1925년 4월 28일,</span> 파리 한복판에서 국제 현대 장식·산업 미술 박람회가 문을 열었다. 샹젤리제와 앵발리드 사이, 센강을 따라 계단처럼 층층이 솟은 파빌리온과 빛나는 유리 분수가 들어섰다.</p>
+<p style="margin: 0">훗날 사람들은 이 박람회의 이름 ‘아르 데코라티프(Arts Décoratifs)’를 줄여, 이 시대의 양식을 ‘아르데코’라 불렀다.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 14px">
+<p style="margin: 0">백화점들도 이 무대에 섰다. 프랭탕, 갤러리 라파예트, 봉 마르셰, 그랑 마가쟁 뒤 루브르가 저마다 디자인 아틀리에의 이름을 단 파빌리온을 세우고 새 시대의 가구와 실내를 선보였다.</p>
+<p style="margin: 0">향수에도 특별한 해였다. 겔랑은 이 박람회에서 향수 ‘샬리마르’를 공식적으로 선보였고, 바카라에서 만든 그 병은 상을 받았다.</p>
+</div>
+</div>
+<div style="margin-top: 40px; padding-top: 18px; border-top: 1px solid #B9AB90; display: flex; flex-direction: column; gap: 16px">
+<div style="font-family: 'Poiret One', sans-serif; font-size: 12px; letter-spacing: 0.3em; color: #4E4C57">L'EXPOSITION EN CHIFFRES — 숫자로 본 박람회</div>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: 24px">
+<div style="display: flex; flex-direction: column; gap: 4px"><span style="font-family: 'Bodoni Moda', serif; font-size: 34px; line-height: 1; color: #0F1220">1,600만</span><span style="font-size: 12px; color: #3A3A46">반년 동안 다녀간 관람객</span></div>
+<div style="display: flex; flex-direction: column; gap: 4px"><span style="font-family: 'Bodoni Moda', serif; font-size: 34px; line-height: 1; color: #0F1220">약 20</span><span style="font-size: 12px; color: #3A3A46">파빌리온을 세운 참가국</span></div>
+<div style="display: flex; flex-direction: column; gap: 4px"><span style="font-family: 'Bodoni Moda', serif; font-size: 34px; line-height: 1; color: #0F1220">1만 5천</span><span style="font-size: 12px; color: #3A3A46">작품을 낸 출품자</span></div>
+</div>
+</div>
+<div style="margin-top: 34px; display: flex; gap: 14px; align-items: flex-start">
+<span style="font-family: 'Poiret One', sans-serif; font-size: 12px; letter-spacing: 0.26em; color: #8A5A1F; white-space: nowrap; padding-top: 3px">NOTE · 1985</span>
+<span style="font-size: 13.5px; line-height: 1.7; color: #3A3A46">60년 뒤 서울의 편집부 책상 위 스탠드도, 따져 보면 이 박람회의 직선에서 온 것이다.</span>
+</div>
+</div>
+<div style="position: absolute; left: 872px; bottom: 64px; width: 704px; padding-top: 14px; border-top: 1px solid #B9AB90; display: flex; gap: 14px; align-items: baseline">
+<span style="font-family: 'Poiret One', sans-serif; font-size: 12px; letter-spacing: 0.26em; color: #4E4C57; white-space: nowrap">← ON THE LEFT</span>
+<span style="font-size: 13px; line-height: 1.7; color: #3A3A46">박람회장의 밤. 계단처럼 솟은 탑과 빛의 분수 사이를 걷는 두 사람. 실버 라메 드레스와 라이트 그레이 더블브레스트 수트.</span>
+</div>
+<div style="position: absolute; right: 48px; bottom: 28px; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.2em; color: #4E4C57">09</div>
+</div>
+</div></div>
+<div class="page right" aria-hidden="true"><div class="inner shift">
+<div style="width: 1632px; height: 1056px; position: relative; overflow: hidden; background: #F3EADA; font-family: 'Noto Serif KR', 'Noto Serif CJK KR', serif; color: #1A1B24; word-break: keep-all">
+<img src="images/culture-expo.jpg" alt="1925년 파리 장식미술 박람회의 밤, 아르데코 탑과 빛의 분수 사이를 걷는 두 사람" style="position: absolute; left: 0px; top: 0; width: 816px; height: 1056px; object-fit: cover; object-position: 50% 50%">
+<div style="position: absolute; left: 48px; bottom: 28px; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.2em; color: #F3EADA">08</div>
+<div style="position: absolute; left: 872px; top: 32px; width: 704px; display: flex; justify-content: space-between; padding-bottom: 12px; border-bottom: 1px solid #B9AB90; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.3em; text-transform: uppercase; color: #4E4C57"><span>Culture</span><span>L'Exposition</span></div>
+<div style="position: absolute; left: 872px; top: 100px; width: 704px; display: flex; flex-direction: column">
+<div style="font-family: 'Poiret One', sans-serif; font-size: 14px; letter-spacing: 0.34em; color: #1C2B5E">CULTURE · 01</div>
+<div style="margin-top: 12px; font-size: 48px; line-height: 1.15; font-weight: 900; color: #0F1220">박람회의 해</div>
+<div style="margin-top: 10px; font-family: 'Bodoni Moda', serif; font-style: italic; font-size: 22px; color: #1C2B5E">Exposition des Arts Décoratifs, 1925</div>
+<div style="margin-top: 34px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 36px; font-size: 14.5px; line-height: 1.85">
+<div style="display: flex; flex-direction: column; gap: 14px">
+<p style="margin: 0"><span style="font-weight: 700">1925년 4월 28일,</span> 파리 한복판에서 국제 현대 장식·산업 미술 박람회가 문을 열었다. 샹젤리제와 앵발리드 사이, 센강을 따라 계단처럼 층층이 솟은 파빌리온과 빛나는 유리 분수가 들어섰다.</p>
+<p style="margin: 0">훗날 사람들은 이 박람회의 이름 ‘아르 데코라티프(Arts Décoratifs)’를 줄여, 이 시대의 양식을 ‘아르데코’라 불렀다.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 14px">
+<p style="margin: 0">백화점들도 이 무대에 섰다. 프랭탕, 갤러리 라파예트, 봉 마르셰, 그랑 마가쟁 뒤 루브르가 저마다 디자인 아틀리에의 이름을 단 파빌리온을 세우고 새 시대의 가구와 실내를 선보였다.</p>
+<p style="margin: 0">향수에도 특별한 해였다. 겔랑은 이 박람회에서 향수 ‘샬리마르’를 공식적으로 선보였고, 바카라에서 만든 그 병은 상을 받았다.</p>
+</div>
+</div>
+<div style="margin-top: 40px; padding-top: 18px; border-top: 1px solid #B9AB90; display: flex; flex-direction: column; gap: 16px">
+<div style="font-family: 'Poiret One', sans-serif; font-size: 12px; letter-spacing: 0.3em; color: #4E4C57">L'EXPOSITION EN CHIFFRES — 숫자로 본 박람회</div>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: 24px">
+<div style="display: flex; flex-direction: column; gap: 4px"><span style="font-family: 'Bodoni Moda', serif; font-size: 34px; line-height: 1; color: #0F1220">1,600만</span><span style="font-size: 12px; color: #3A3A46">반년 동안 다녀간 관람객</span></div>
+<div style="display: flex; flex-direction: column; gap: 4px"><span style="font-family: 'Bodoni Moda', serif; font-size: 34px; line-height: 1; color: #0F1220">약 20</span><span style="font-size: 12px; color: #3A3A46">파빌리온을 세운 참가국</span></div>
+<div style="display: flex; flex-direction: column; gap: 4px"><span style="font-family: 'Bodoni Moda', serif; font-size: 34px; line-height: 1; color: #0F1220">1만 5천</span><span style="font-size: 12px; color: #3A3A46">작품을 낸 출품자</span></div>
+</div>
+</div>
+<div style="margin-top: 34px; display: flex; gap: 14px; align-items: flex-start">
+<span style="font-family: 'Poiret One', sans-serif; font-size: 12px; letter-spacing: 0.26em; color: #8A5A1F; white-space: nowrap; padding-top: 3px">NOTE · 1985</span>
+<span style="font-size: 13.5px; line-height: 1.7; color: #3A3A46">60년 뒤 서울의 편집부 책상 위 스탠드도, 따져 보면 이 박람회의 직선에서 온 것이다.</span>
+</div>
+</div>
+<div style="position: absolute; left: 872px; bottom: 64px; width: 704px; padding-top: 14px; border-top: 1px solid #B9AB90; display: flex; gap: 14px; align-items: baseline">
+<span style="font-family: 'Poiret One', sans-serif; font-size: 12px; letter-spacing: 0.26em; color: #4E4C57; white-space: nowrap">← ON THE LEFT</span>
+<span style="font-size: 13px; line-height: 1.7; color: #3A3A46">박람회장의 밤. 계단처럼 솟은 탑과 빛의 분수 사이를 걷는 두 사람. 실버 라메 드레스와 라이트 그레이 더블브레스트 수트.</span>
+</div>
+<div style="position: absolute; right: 48px; bottom: 28px; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.2em; color: #4E4C57">09</div>
+</div>
+</div></div>
+</section>
+<section class="spread" id="c2_culture_jazz_cafe" aria-label="컬처 02·03 — 재즈와 몽파르나스">
+<div class="page left"><div class="inner">
+<div style="width: 1632px; height: 1056px; position: relative; overflow: hidden; background: #F3EADA; font-family: 'Noto Serif KR', 'Noto Serif CJK KR', serif; color: #1A1B24; word-break: keep-all">
+<img src="images/culture-jazz.jpg" alt="1925년 파리 뮤직홀 무대, 재즈 밴드 앞에서 깃털 장식을 단 무용수들이 일렬로 다리를 차올리는 장면" style="position: absolute; left: 0px; top: 0; width: 816px; height: 1056px; object-fit: cover; object-position: 50% 50%">
+<div style="position: absolute; left: 36px; top: 40px; width: 320px; box-sizing: border-box; padding: 24px 24px 22px 24px; background: #F3EADA; display: flex; flex-direction: column; gap: 11px">
+<div style="font-family: 'Poiret One', sans-serif; font-size: 12px; letter-spacing: 0.3em; color: #1C2B5E">CULTURE · 02 — LE JAZZ</div>
+<div style="font-size: 26px; line-height: 1.25; font-weight: 900; color: #0F1220">재즈가 도착한 밤</div>
+<p style="margin: 0; font-size: 13px; line-height: 1.75">1925년 10월 2일, 샹젤리제 극장에서 「라 르뷔 네그르」가 막을 올렸다. 할렘에서 건너온 음악가와 무용수들, 그리고 열아홉 살의 조세핀 베이커.</p>
+<p style="margin: 0; font-size: 13px; line-height: 1.75">이 무대 이후 찰스턴은 유럽 전역의 유행이 됐다. 무릎 아래로 짧아진 치마와 프린지는 이 춤을 위해 만들어진 것처럼 흔들렸다.</p>
+</div>
+<div style="position: absolute; left: 48px; bottom: 28px; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.2em; color: #F3EADA">10</div>
+<img src="images/culture-montparnasse.jpg" alt="몽파르나스 카페 테라스에서 예술가들 사이에 앉아 긴 시가렛 홀더를 문 블랙 벨벳 드레스의 여자" style="position: absolute; left: 816px; top: 0; width: 816px; height: 1056px; object-fit: cover; object-position: 50% 50%">
+<div style="position: absolute; left: 1276px; top: 40px; width: 320px; box-sizing: border-box; padding: 24px 24px 22px 24px; background: #F3EADA; display: flex; flex-direction: column; gap: 11px">
+<div style="font-family: 'Poiret One', sans-serif; font-size: 12px; letter-spacing: 0.3em; color: #1C2B5E">CULTURE · 03 — MONTPARNASSE</div>
+<div style="font-size: 26px; line-height: 1.25; font-weight: 900; color: #0F1220">몽파르나스의 테라스</div>
+<p style="margin: 0; font-size: 13px; line-height: 1.75">센강 왼편의 몽파르나스는 1920년대 파리에서 화가와 작가들이 모여드는 동네였다.</p>
+<p style="margin: 0; font-size: 13px; line-height: 1.75">1925년 4월, 이 동네의 딩고 바에서 『위대한 개츠비』를 막 펴낸 스콧 피츠제럴드가 아직 첫 장편을 내지 않은 어니스트 헤밍웨이를 처음 만났다.</p>
+<div style="padding-top: 10px; border-top: 1px solid #B9AB90; display: flex; flex-direction: column; gap: 6px">
+<div style="display: flex; gap: 10px; align-items: baseline"><span style="font-family: 'Poiret One', sans-serif; font-size: 11.5px; letter-spacing: 0.22em; color: #4E4C57; white-space: nowrap">DRESS</span><span style="font-size: 12.5px; line-height: 1.5">블랙 벨벳 드롭 웨이스트 드레스</span></div>
+<div style="display: flex; gap: 10px; align-items: baseline"><span style="font-family: 'Poiret One', sans-serif; font-size: 11.5px; letter-spacing: 0.22em; color: #4E4C57; white-space: nowrap">ACCESSORY</span><span style="font-size: 12.5px; line-height: 1.5">긴 시가렛 홀더</span></div>
+</div>
+</div>
+<div style="position: absolute; right: 48px; bottom: 28px; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.2em; color: #F3EADA">11</div>
+</div>
+</div></div>
+<div class="page right" aria-hidden="true"><div class="inner shift">
+<div style="width: 1632px; height: 1056px; position: relative; overflow: hidden; background: #F3EADA; font-family: 'Noto Serif KR', 'Noto Serif CJK KR', serif; color: #1A1B24; word-break: keep-all">
+<img src="images/culture-jazz.jpg" alt="1925년 파리 뮤직홀 무대, 재즈 밴드 앞에서 깃털 장식을 단 무용수들이 일렬로 다리를 차올리는 장면" style="position: absolute; left: 0px; top: 0; width: 816px; height: 1056px; object-fit: cover; object-position: 50% 50%">
+<div style="position: absolute; left: 36px; top: 40px; width: 320px; box-sizing: border-box; padding: 24px 24px 22px 24px; background: #F3EADA; display: flex; flex-direction: column; gap: 11px">
+<div style="font-family: 'Poiret One', sans-serif; font-size: 12px; letter-spacing: 0.3em; color: #1C2B5E">CULTURE · 02 — LE JAZZ</div>
+<div style="font-size: 26px; line-height: 1.25; font-weight: 900; color: #0F1220">재즈가 도착한 밤</div>
+<p style="margin: 0; font-size: 13px; line-height: 1.75">1925년 10월 2일, 샹젤리제 극장에서 「라 르뷔 네그르」가 막을 올렸다. 할렘에서 건너온 음악가와 무용수들, 그리고 열아홉 살의 조세핀 베이커.</p>
+<p style="margin: 0; font-size: 13px; line-height: 1.75">이 무대 이후 찰스턴은 유럽 전역의 유행이 됐다. 무릎 아래로 짧아진 치마와 프린지는 이 춤을 위해 만들어진 것처럼 흔들렸다.</p>
+</div>
+<div style="position: absolute; left: 48px; bottom: 28px; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.2em; color: #F3EADA">10</div>
+<img src="images/culture-montparnasse.jpg" alt="몽파르나스 카페 테라스에서 예술가들 사이에 앉아 긴 시가렛 홀더를 문 블랙 벨벳 드레스의 여자" style="position: absolute; left: 816px; top: 0; width: 816px; height: 1056px; object-fit: cover; object-position: 50% 50%">
+<div style="position: absolute; left: 1276px; top: 40px; width: 320px; box-sizing: border-box; padding: 24px 24px 22px 24px; background: #F3EADA; display: flex; flex-direction: column; gap: 11px">
+<div style="font-family: 'Poiret One', sans-serif; font-size: 12px; letter-spacing: 0.3em; color: #1C2B5E">CULTURE · 03 — MONTPARNASSE</div>
+<div style="font-size: 26px; line-height: 1.25; font-weight: 900; color: #0F1220">몽파르나스의 테라스</div>
+<p style="margin: 0; font-size: 13px; line-height: 1.75">센강 왼편의 몽파르나스는 1920년대 파리에서 화가와 작가들이 모여드는 동네였다.</p>
+<p style="margin: 0; font-size: 13px; line-height: 1.75">1925년 4월, 이 동네의 딩고 바에서 『위대한 개츠비』를 막 펴낸 스콧 피츠제럴드가 아직 첫 장편을 내지 않은 어니스트 헤밍웨이를 처음 만났다.</p>
+<div style="padding-top: 10px; border-top: 1px solid #B9AB90; display: flex; flex-direction: column; gap: 6px">
+<div style="display: flex; gap: 10px; align-items: baseline"><span style="font-family: 'Poiret One', sans-serif; font-size: 11.5px; letter-spacing: 0.22em; color: #4E4C57; white-space: nowrap">DRESS</span><span style="font-size: 12.5px; line-height: 1.5">블랙 벨벳 드롭 웨이스트 드레스</span></div>
+<div style="display: flex; gap: 10px; align-items: baseline"><span style="font-family: 'Poiret One', sans-serif; font-size: 11.5px; letter-spacing: 0.22em; color: #4E4C57; white-space: nowrap">ACCESSORY</span><span style="font-size: 12.5px; line-height: 1.5">긴 시가렛 홀더</span></div>
+</div>
+</div>
+<div style="position: absolute; right: 48px; bottom: 28px; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.2em; color: #F3EADA">11</div>
+</div>
+</div></div>
+</section>
+<section class="spread" id="c3_culture_cinema" aria-label="컬처 04 — 무성영화관과 1925 캘린더">
+<div class="page left"><div class="inner">
+<div style="width: 1632px; height: 1056px; position: relative; overflow: hidden; background: #F3EADA; font-family: 'Noto Serif KR', 'Noto Serif CJK KR', serif; color: #1A1B24; word-break: keep-all">
+<img src="images/culture-cinema.jpg" alt="어두운 영화관에서 은빛 스크린 불빛을 받으며 앉아 있는 퍼 칼라 코트의 여자, 화면 아래 피아니스트" style="position: absolute; left: 0px; top: 0; width: 816px; height: 1056px; object-fit: cover; object-position: 50% 50%">
+<div style="position: absolute; left: 36px; bottom: 40px; width: 320px; box-sizing: border-box; padding: 24px 24px 22px 24px; background: #F3EADA; display: flex; flex-direction: column; gap: 11px">
+<div style="font-family: 'Poiret One', sans-serif; font-size: 12px; letter-spacing: 0.3em; color: #1C2B5E">CULTURE · 04 — LE CINÉMA</div>
+<div style="font-size: 26px; line-height: 1.25; font-weight: 900; color: #0F1220">소리 없는 영화관</div>
+<p style="margin: 0; font-size: 13px; line-height: 1.75">1925년의 영화에는 아직 소리가 없었다. 화면 아래에서 피아니스트나 작은 악단이 장면에 맞춰 연주했고, 극장은 그 자체로 하나의 궁전이었다.</p>
+<p style="margin: 0; font-size: 13px; line-height: 1.75">영화가 말을 하기 시작하는 건 2년 뒤의 일이다.</p>
+<div style="padding-top: 10px; border-top: 1px solid #B9AB90; display: flex; flex-direction: column; gap: 6px">
+<div style="display: flex; gap: 10px; align-items: baseline"><span style="font-family: 'Poiret One', sans-serif; font-size: 11.5px; letter-spacing: 0.22em; color: #4E4C57; white-space: nowrap">HEADBAND</span><span style="font-size: 12.5px; line-height: 1.5">비즈 헤드밴드</span></div>
+<div style="display: flex; gap: 10px; align-items: baseline"><span style="font-family: 'Poiret One', sans-serif; font-size: 11.5px; letter-spacing: 0.22em; color: #4E4C57; white-space: nowrap">COAT</span><span style="font-size: 12.5px; line-height: 1.5">화이트 퍼 칼라 이브닝 코트</span></div>
+</div>
+</div>
+<div style="position: absolute; left: 48px; bottom: 28px; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.2em; color: #F3EADA">12</div>
+<div style="position: absolute; left: 872px; top: 32px; width: 704px; display: flex; justify-content: space-between; padding-bottom: 12px; border-bottom: 1px solid #B9AB90; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.3em; text-transform: uppercase; color: #4E4C57"><span>Culture</span><span>Calendrier 1925</span></div>
+<div style="position: absolute; left: 872px; top: 100px; width: 704px; display: flex; flex-direction: column">
+<div style="font-family: 'Poiret One', sans-serif; font-size: 14px; letter-spacing: 0.34em; color: #1C2B5E">CALENDRIER 1925</div>
+<div style="margin-top: 12px; display: flex; align-items: baseline; gap: 18px"><span style="font-size: 40px; line-height: 1.2; font-weight: 900; color: #0F1220">그해 파리에서는</span><span style="font-family: 'Bodoni Moda', serif; font-style: italic; font-size: 20px; color: #1C2B5E">une année à Paris</span></div>
+<div style="margin-top: 28px; border-top: 2px solid #0F1220">
+<div style="display: grid; grid-template-columns: 120px minmax(0, 1fr); column-gap: 20px; padding: 14px 0; border-bottom: 1px solid #D8CBB2"><span style="font-family: 'Bodoni Moda', serif; font-style: italic; font-size: 19px; color: #8A5A1F">4월 10일</span><span style="font-size: 14px; line-height: 1.65">뉴욕에서 스콧 피츠제럴드의 『위대한 개츠비』 출간</span></div>
+<div style="display: grid; grid-template-columns: 120px minmax(0, 1fr); column-gap: 20px; padding: 14px 0; border-bottom: 1px solid #D8CBB2"><span style="font-family: 'Bodoni Moda', serif; font-style: italic; font-size: 19px; color: #8A5A1F">4월 28일</span><span style="font-size: 14px; line-height: 1.65">국제 장식미술 박람회 개막. 반년 동안 1,600만 명이 다녀간다</span></div>
+<div style="display: grid; grid-template-columns: 120px minmax(0, 1fr); column-gap: 20px; padding: 14px 0; border-bottom: 1px solid #D8CBB2"><span style="font-family: 'Bodoni Moda', serif; font-style: italic; font-size: 19px; color: #8A5A1F">4월 말</span><span style="font-size: 14px; line-height: 1.65">몽파르나스 딩고 바, 피츠제럴드와 헤밍웨이의 첫 만남</span></div>
+<div style="display: grid; grid-template-columns: 120px minmax(0, 1fr); column-gap: 20px; padding: 14px 0; border-bottom: 1px solid #D8CBB2"><span style="font-family: 'Bodoni Moda', serif; font-style: italic; font-size: 19px; color: #8A5A1F">박람회 기간</span><span style="font-size: 14px; line-height: 1.65">겔랑, 향수 ‘샬리마르’를 공식적으로 선보이다</span></div>
+<div style="display: grid; grid-template-columns: 120px minmax(0, 1fr); column-gap: 20px; padding: 14px 0; border-bottom: 1px solid #D8CBB2"><span style="font-family: 'Bodoni Moda', serif; font-style: italic; font-size: 19px; color: #8A5A1F">여름</span><span style="font-size: 14px; line-height: 1.65">에펠탑에 자동차 회사 시트로엥의 광고 조명이 켜지다</span></div>
+<div style="display: grid; grid-template-columns: 120px minmax(0, 1fr); column-gap: 20px; padding: 14px 0; border-bottom: 1px solid #D8CBB2"><span style="font-family: 'Bodoni Moda', serif; font-style: italic; font-size: 19px; color: #8A5A1F">10월 2일</span><span style="font-size: 14px; line-height: 1.65">샹젤리제 극장, 「라 르뷔 네그르」 초연. 찰스턴 열풍의 시작</span></div>
+<div style="display: grid; grid-template-columns: 120px minmax(0, 1fr); column-gap: 20px; padding: 14px 0; border-bottom: 1px solid #D8CBB2"><span style="font-family: 'Bodoni Moda', serif; font-style: italic; font-size: 19px; color: #8A5A1F">가을</span><span style="font-size: 14px; line-height: 1.65">관람객이 몰려 예정보다 길어진 박람회가 막을 내리다</span></div>
+</div>
+<div style="margin-top: 30px; display: flex; gap: 14px; align-items: flex-start">
+<span style="font-family: 'Poiret One', sans-serif; font-size: 12px; letter-spacing: 0.26em; color: #8A5A1F; white-space: nowrap; padding-top: 3px">NOTE · 1985</span>
+<span style="font-size: 13.5px; line-height: 1.7; color: #3A3A46">60년 뒤 서울의 극장 간판은 아직 사람이 붓으로 그린다. 영화는 소리를 얻었지만, 극장 앞의 설렘은 그대로다.</span>
+</div>
+</div>
+<div style="position: absolute; right: 48px; bottom: 28px; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.2em; color: #4E4C57">13</div>
+</div>
+</div></div>
+<div class="page right" aria-hidden="true"><div class="inner shift">
+<div style="width: 1632px; height: 1056px; position: relative; overflow: hidden; background: #F3EADA; font-family: 'Noto Serif KR', 'Noto Serif CJK KR', serif; color: #1A1B24; word-break: keep-all">
+<img src="images/culture-cinema.jpg" alt="어두운 영화관에서 은빛 스크린 불빛을 받으며 앉아 있는 퍼 칼라 코트의 여자, 화면 아래 피아니스트" style="position: absolute; left: 0px; top: 0; width: 816px; height: 1056px; object-fit: cover; object-position: 50% 50%">
+<div style="position: absolute; left: 36px; bottom: 40px; width: 320px; box-sizing: border-box; padding: 24px 24px 22px 24px; background: #F3EADA; display: flex; flex-direction: column; gap: 11px">
+<div style="font-family: 'Poiret One', sans-serif; font-size: 12px; letter-spacing: 0.3em; color: #1C2B5E">CULTURE · 04 — LE CINÉMA</div>
+<div style="font-size: 26px; line-height: 1.25; font-weight: 900; color: #0F1220">소리 없는 영화관</div>
+<p style="margin: 0; font-size: 13px; line-height: 1.75">1925년의 영화에는 아직 소리가 없었다. 화면 아래에서 피아니스트나 작은 악단이 장면에 맞춰 연주했고, 극장은 그 자체로 하나의 궁전이었다.</p>
+<p style="margin: 0; font-size: 13px; line-height: 1.75">영화가 말을 하기 시작하는 건 2년 뒤의 일이다.</p>
+<div style="padding-top: 10px; border-top: 1px solid #B9AB90; display: flex; flex-direction: column; gap: 6px">
+<div style="display: flex; gap: 10px; align-items: baseline"><span style="font-family: 'Poiret One', sans-serif; font-size: 11.5px; letter-spacing: 0.22em; color: #4E4C57; white-space: nowrap">HEADBAND</span><span style="font-size: 12.5px; line-height: 1.5">비즈 헤드밴드</span></div>
+<div style="display: flex; gap: 10px; align-items: baseline"><span style="font-family: 'Poiret One', sans-serif; font-size: 11.5px; letter-spacing: 0.22em; color: #4E4C57; white-space: nowrap">COAT</span><span style="font-size: 12.5px; line-height: 1.5">화이트 퍼 칼라 이브닝 코트</span></div>
+</div>
+</div>
+<div style="position: absolute; left: 48px; bottom: 28px; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.2em; color: #F3EADA">12</div>
+<div style="position: absolute; left: 872px; top: 32px; width: 704px; display: flex; justify-content: space-between; padding-bottom: 12px; border-bottom: 1px solid #B9AB90; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.3em; text-transform: uppercase; color: #4E4C57"><span>Culture</span><span>Calendrier 1925</span></div>
+<div style="position: absolute; left: 872px; top: 100px; width: 704px; display: flex; flex-direction: column">
+<div style="font-family: 'Poiret One', sans-serif; font-size: 14px; letter-spacing: 0.34em; color: #1C2B5E">CALENDRIER 1925</div>
+<div style="margin-top: 12px; display: flex; align-items: baseline; gap: 18px"><span style="font-size: 40px; line-height: 1.2; font-weight: 900; color: #0F1220">그해 파리에서는</span><span style="font-family: 'Bodoni Moda', serif; font-style: italic; font-size: 20px; color: #1C2B5E">une année à Paris</span></div>
+<div style="margin-top: 28px; border-top: 2px solid #0F1220">
+<div style="display: grid; grid-template-columns: 120px minmax(0, 1fr); column-gap: 20px; padding: 14px 0; border-bottom: 1px solid #D8CBB2"><span style="font-family: 'Bodoni Moda', serif; font-style: italic; font-size: 19px; color: #8A5A1F">4월 10일</span><span style="font-size: 14px; line-height: 1.65">뉴욕에서 스콧 피츠제럴드의 『위대한 개츠비』 출간</span></div>
+<div style="display: grid; grid-template-columns: 120px minmax(0, 1fr); column-gap: 20px; padding: 14px 0; border-bottom: 1px solid #D8CBB2"><span style="font-family: 'Bodoni Moda', serif; font-style: italic; font-size: 19px; color: #8A5A1F">4월 28일</span><span style="font-size: 14px; line-height: 1.65">국제 장식미술 박람회 개막. 반년 동안 1,600만 명이 다녀간다</span></div>
+<div style="display: grid; grid-template-columns: 120px minmax(0, 1fr); column-gap: 20px; padding: 14px 0; border-bottom: 1px solid #D8CBB2"><span style="font-family: 'Bodoni Moda', serif; font-style: italic; font-size: 19px; color: #8A5A1F">4월 말</span><span style="font-size: 14px; line-height: 1.65">몽파르나스 딩고 바, 피츠제럴드와 헤밍웨이의 첫 만남</span></div>
+<div style="display: grid; grid-template-columns: 120px minmax(0, 1fr); column-gap: 20px; padding: 14px 0; border-bottom: 1px solid #D8CBB2"><span style="font-family: 'Bodoni Moda', serif; font-style: italic; font-size: 19px; color: #8A5A1F">박람회 기간</span><span style="font-size: 14px; line-height: 1.65">겔랑, 향수 ‘샬리마르’를 공식적으로 선보이다</span></div>
+<div style="display: grid; grid-template-columns: 120px minmax(0, 1fr); column-gap: 20px; padding: 14px 0; border-bottom: 1px solid #D8CBB2"><span style="font-family: 'Bodoni Moda', serif; font-style: italic; font-size: 19px; color: #8A5A1F">여름</span><span style="font-size: 14px; line-height: 1.65">에펠탑에 자동차 회사 시트로엥의 광고 조명이 켜지다</span></div>
+<div style="display: grid; grid-template-columns: 120px minmax(0, 1fr); column-gap: 20px; padding: 14px 0; border-bottom: 1px solid #D8CBB2"><span style="font-family: 'Bodoni Moda', serif; font-style: italic; font-size: 19px; color: #8A5A1F">10월 2일</span><span style="font-size: 14px; line-height: 1.65">샹젤리제 극장, 「라 르뷔 네그르」 초연. 찰스턴 열풍의 시작</span></div>
+<div style="display: grid; grid-template-columns: 120px minmax(0, 1fr); column-gap: 20px; padding: 14px 0; border-bottom: 1px solid #D8CBB2"><span style="font-family: 'Bodoni Moda', serif; font-style: italic; font-size: 19px; color: #8A5A1F">가을</span><span style="font-size: 14px; line-height: 1.65">관람객이 몰려 예정보다 길어진 박람회가 막을 내리다</span></div>
+</div>
+<div style="margin-top: 30px; display: flex; gap: 14px; align-items: flex-start">
+<span style="font-family: 'Poiret One', sans-serif; font-size: 12px; letter-spacing: 0.26em; color: #8A5A1F; white-space: nowrap; padding-top: 3px">NOTE · 1985</span>
+<span style="font-size: 13.5px; line-height: 1.7; color: #3A3A46">60년 뒤 서울의 극장 간판은 아직 사람이 붓으로 그린다. 영화는 소리를 얻었지만, 극장 앞의 설렘은 그대로다.</span>
+</div>
+</div>
+<div style="position: absolute; right: 48px; bottom: 28px; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.2em; color: #4E4C57">13</div>
+</div>
+</div></div>
+</section>
+<section class="spread" id="city" aria-label="시티 — 메트로와 백화점">
+<div class="page left"><div class="inner">
+<div style="width: 1632px; height: 1056px; position: relative; overflow: hidden; background: #F3EADA; font-family: 'Noto Serif KR', 'Noto Serif CJK KR', serif; color: #1A1B24; word-break: keep-all">
+<img src="images/city-metro.jpg" alt="비 오는 밤 아르누보 철제 난간의 메트로 입구 계단에 우산을 쓰고 선 카멜 코트의 남자" style="position: absolute; left: 0px; top: 0; width: 816px; height: 1056px; object-fit: cover; object-position: 50% 50%">
+<div style="position: absolute; left: 36px; top: 120px; width: 300px; box-sizing: border-box; padding: 24px 24px 22px 24px; background: #F3EADA; display: flex; flex-direction: column; gap: 11px">
+<div style="font-family: 'Poiret One', sans-serif; font-size: 12px; letter-spacing: 0.3em; color: #1C2B5E">CITY · LE MÉTRO</div>
+<div style="font-size: 26px; line-height: 1.25; font-weight: 900; color: #0F1220">비 오는 날의 메트로</div>
+<p style="margin: 0; font-size: 13px; line-height: 1.75">파리 지하철 입구의 덩굴 같은 철제 장식은 1900년 무렵 엑토르 기마르가 만든 것이다. 사람들은 이 양식을 아예 ‘메트로 스타일’이라 불렀다.</p>
+<p style="margin: 0; font-size: 13px; line-height: 1.75">하지만 1925년의 파리는 이미 직선의 아르데코로 넘어가는 중이었고, 25년 된 곡선은 어느새 지난 유행이 되어 있었다.</p>
+<div style="padding-top: 10px; border-top: 1px solid #B9AB90; display: flex; flex-direction: column; gap: 6px">
+<div style="display: flex; gap: 10px; align-items: baseline"><span style="font-family: 'Poiret One', sans-serif; font-size: 11.5px; letter-spacing: 0.22em; color: #4E4C57; white-space: nowrap">COAT</span><span style="font-size: 12.5px; line-height: 1.5">카멜 오버코트</span></div>
+<div style="display: flex; gap: 10px; align-items: baseline"><span style="font-family: 'Poiret One', sans-serif; font-size: 11.5px; letter-spacing: 0.22em; color: #4E4C57; white-space: nowrap">SUIT</span><span style="font-size: 12.5px; line-height: 1.5">핀스트라이프 수트</span></div>
+<div style="display: flex; gap: 10px; align-items: baseline"><span style="font-family: 'Poiret One', sans-serif; font-size: 11.5px; letter-spacing: 0.22em; color: #4E4C57; white-space: nowrap">UMBRELLA</span><span style="font-size: 12.5px; line-height: 1.5">블랙 장우산</span></div>
+</div>
+</div>
+<div style="position: absolute; left: 48px; bottom: 28px; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.2em; color: #F3EADA">14</div>
+<img src="images/city-department-store.jpg" alt="백화점 스테인드글라스 돔 아래에서 줄무늬 모자 상자를 안고 위를 올려다보는 크림 코트의 여자" style="position: absolute; left: 816px; top: 0; width: 816px; height: 1056px; object-fit: cover; object-position: 50% 50%">
+<div style="position: absolute; left: 852px; bottom: 40px; width: 300px; box-sizing: border-box; padding: 24px 24px 22px 24px; background: #F3EADA; display: flex; flex-direction: column; gap: 11px">
+<div style="font-family: 'Poiret One', sans-serif; font-size: 12px; letter-spacing: 0.3em; color: #1C2B5E">CITY · LES GRANDS MAGASINS</div>
+<div style="font-size: 26px; line-height: 1.25; font-weight: 900; color: #0F1220">유리 돔 아래의 오후</div>
+<p style="margin: 0; font-size: 13px; line-height: 1.75">파리의 백화점은 물건만 파는 곳이 아니었다. 1920년대 백화점들은 저마다 디자인 아틀리에를 두고, 1925년 박람회에는 파빌리온까지 세워 새 시대의 취향을 이끌었다.</p>
+<div style="padding-top: 10px; border-top: 1px solid #B9AB90; display: flex; flex-direction: column; gap: 6px">
+<div style="display: flex; gap: 10px; align-items: baseline"><span style="font-family: 'Poiret One', sans-serif; font-size: 11.5px; letter-spacing: 0.22em; color: #4E4C57; white-space: nowrap">COAT</span><span style="font-size: 12.5px; line-height: 1.5">퍼 커프스 크림 울 코트</span></div>
+<div style="display: flex; gap: 10px; align-items: baseline"><span style="font-family: 'Poiret One', sans-serif; font-size: 11.5px; letter-spacing: 0.22em; color: #4E4C57; white-space: nowrap">HAT</span><span style="font-size: 12.5px; line-height: 1.5">크림 클로슈</span></div>
+<div style="display: flex; gap: 10px; align-items: baseline"><span style="font-family: 'Poiret One', sans-serif; font-size: 11.5px; letter-spacing: 0.22em; color: #4E4C57; white-space: nowrap">BOXES</span><span style="font-size: 12.5px; line-height: 1.5">스트라이프 모자 상자</span></div>
+</div>
+</div>
+<div style="position: absolute; right: 48px; bottom: 28px; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.2em; color: #F3EADA">15</div>
+</div>
+</div></div>
+<div class="page right" aria-hidden="true"><div class="inner shift">
+<div style="width: 1632px; height: 1056px; position: relative; overflow: hidden; background: #F3EADA; font-family: 'Noto Serif KR', 'Noto Serif CJK KR', serif; color: #1A1B24; word-break: keep-all">
+<img src="images/city-metro.jpg" alt="비 오는 밤 아르누보 철제 난간의 메트로 입구 계단에 우산을 쓰고 선 카멜 코트의 남자" style="position: absolute; left: 0px; top: 0; width: 816px; height: 1056px; object-fit: cover; object-position: 50% 50%">
+<div style="position: absolute; left: 36px; top: 120px; width: 300px; box-sizing: border-box; padding: 24px 24px 22px 24px; background: #F3EADA; display: flex; flex-direction: column; gap: 11px">
+<div style="font-family: 'Poiret One', sans-serif; font-size: 12px; letter-spacing: 0.3em; color: #1C2B5E">CITY · LE MÉTRO</div>
+<div style="font-size: 26px; line-height: 1.25; font-weight: 900; color: #0F1220">비 오는 날의 메트로</div>
+<p style="margin: 0; font-size: 13px; line-height: 1.75">파리 지하철 입구의 덩굴 같은 철제 장식은 1900년 무렵 엑토르 기마르가 만든 것이다. 사람들은 이 양식을 아예 ‘메트로 스타일’이라 불렀다.</p>
+<p style="margin: 0; font-size: 13px; line-height: 1.75">하지만 1925년의 파리는 이미 직선의 아르데코로 넘어가는 중이었고, 25년 된 곡선은 어느새 지난 유행이 되어 있었다.</p>
+<div style="padding-top: 10px; border-top: 1px solid #B9AB90; display: flex; flex-direction: column; gap: 6px">
+<div style="display: flex; gap: 10px; align-items: baseline"><span style="font-family: 'Poiret One', sans-serif; font-size: 11.5px; letter-spacing: 0.22em; color: #4E4C57; white-space: nowrap">COAT</span><span style="font-size: 12.5px; line-height: 1.5">카멜 오버코트</span></div>
+<div style="display: flex; gap: 10px; align-items: baseline"><span style="font-family: 'Poiret One', sans-serif; font-size: 11.5px; letter-spacing: 0.22em; color: #4E4C57; white-space: nowrap">SUIT</span><span style="font-size: 12.5px; line-height: 1.5">핀스트라이프 수트</span></div>
+<div style="display: flex; gap: 10px; align-items: baseline"><span style="font-family: 'Poiret One', sans-serif; font-size: 11.5px; letter-spacing: 0.22em; color: #4E4C57; white-space: nowrap">UMBRELLA</span><span style="font-size: 12.5px; line-height: 1.5">블랙 장우산</span></div>
+</div>
+</div>
+<div style="position: absolute; left: 48px; bottom: 28px; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.2em; color: #F3EADA">14</div>
+<img src="images/city-department-store.jpg" alt="백화점 스테인드글라스 돔 아래에서 줄무늬 모자 상자를 안고 위를 올려다보는 크림 코트의 여자" style="position: absolute; left: 816px; top: 0; width: 816px; height: 1056px; object-fit: cover; object-position: 50% 50%">
+<div style="position: absolute; left: 852px; bottom: 40px; width: 300px; box-sizing: border-box; padding: 24px 24px 22px 24px; background: #F3EADA; display: flex; flex-direction: column; gap: 11px">
+<div style="font-family: 'Poiret One', sans-serif; font-size: 12px; letter-spacing: 0.3em; color: #1C2B5E">CITY · LES GRANDS MAGASINS</div>
+<div style="font-size: 26px; line-height: 1.25; font-weight: 900; color: #0F1220">유리 돔 아래의 오후</div>
+<p style="margin: 0; font-size: 13px; line-height: 1.75">파리의 백화점은 물건만 파는 곳이 아니었다. 1920년대 백화점들은 저마다 디자인 아틀리에를 두고, 1925년 박람회에는 파빌리온까지 세워 새 시대의 취향을 이끌었다.</p>
+<div style="padding-top: 10px; border-top: 1px solid #B9AB90; display: flex; flex-direction: column; gap: 6px">
+<div style="display: flex; gap: 10px; align-items: baseline"><span style="font-family: 'Poiret One', sans-serif; font-size: 11.5px; letter-spacing: 0.22em; color: #4E4C57; white-space: nowrap">COAT</span><span style="font-size: 12.5px; line-height: 1.5">퍼 커프스 크림 울 코트</span></div>
+<div style="display: flex; gap: 10px; align-items: baseline"><span style="font-family: 'Poiret One', sans-serif; font-size: 11.5px; letter-spacing: 0.22em; color: #4E4C57; white-space: nowrap">HAT</span><span style="font-size: 12.5px; line-height: 1.5">크림 클로슈</span></div>
+<div style="display: flex; gap: 10px; align-items: baseline"><span style="font-family: 'Poiret One', sans-serif; font-size: 11.5px; letter-spacing: 0.22em; color: #4E4C57; white-space: nowrap">BOXES</span><span style="font-size: 12.5px; line-height: 1.5">스트라이프 모자 상자</span></div>
+</div>
+</div>
+<div style="position: absolute; right: 48px; bottom: 28px; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.2em; color: #F3EADA">15</div>
+</div>
+</div></div>
+</section>
+<section class="spread" id="ads" aria-label="광고 — 자동차와 아메리칸 바">
+<div class="page left"><div class="inner">
+<div style="width: 1632px; height: 1056px; position: relative; overflow: hidden; background: #F3EADA; font-family: 'Noto Serif KR', 'Noto Serif CJK KR', serif; color: #1A1B24; word-break: keep-all">
+<img src="images/ad-automobile.jpg" alt="해안 절벽 도로를 질주하는 검은 오픈카 광고, 운전하는 여자와 조수석의 남자" style="position: absolute; left: 0px; top: 0; width: 816px; height: 1056px; object-fit: cover; object-position: 50% 50%">
+<div style="position: absolute; left: 40px; top: 28px; font-family: 'Poiret One', sans-serif; font-size: 11px; letter-spacing: 0.4em; color: #F3EADA">PUBLICITÉ</div>
+<div style="position: absolute; left: 48px; top: 70px; width: 440px; display: flex; flex-direction: column; gap: 10px; color: #F3EADA">
+<div style="font-family: 'Poiret One', sans-serif; font-size: 15px; letter-spacing: 0.5em">AUTOMOBILES</div>
+<div style="font-family: 'Bodoni Moda', serif; font-weight: 700; font-size: 92px; line-height: 0.9; letter-spacing: 0.04em">AZUR</div>
+<div style="margin-top: 8px; font-family: 'Bodoni Moda', serif; font-style: italic; font-size: 22px">La route est à vous.</div>
+<div style="font-size: 14px; line-height: 1.6; font-weight: 600">해안 도로는, 가장 먼저 달리는 사람의 것.</div>
+</div>
+<div style="position: absolute; left: 48px; bottom: 36px; font-family: 'Poiret One', sans-serif; font-size: 12px; letter-spacing: 0.3em; color: #0F1220">MODÈLE GRAND SPORT · 1925</div>
+<img src="images/ad-bar.jpg" alt="바 카운터 위 설탕 묻힌 잔에 담긴 앰버빛 칵테일과 셰이커로 술을 따르는 바텐더의 손" style="position: absolute; left: 816px; top: 0; width: 816px; height: 1056px; object-fit: cover; object-position: 50% 50%">
+<div style="position: absolute; left: 856px; top: 28px; font-family: 'Poiret One', sans-serif; font-size: 11px; letter-spacing: 0.4em; color: #F3EADA">PUBLICITÉ</div>
+<div style="position: absolute; left: 864px; bottom: 40px; width: 380px; display: flex; flex-direction: column; gap: 10px; color: #F3EADA">
+<div style="font-family: 'Poiret One', sans-serif; font-size: 14px; letter-spacing: 0.46em; color: #F3EADA">AMERICAN BAR</div>
+<div style="font-family: 'Bodoni Moda', serif; font-weight: 600; font-size: 64px; line-height: 0.95">Le Bar Bleu</div>
+<div style="font-size: 14px; line-height: 1.65">오늘 밤의 한 잔 — 브랜디, 오렌지 리큐어, 레몬.<br>설탕을 묻힌 잔 테두리까지가 레시피.</div>
+<div style="font-family: 'Poiret One', sans-serif; font-size: 12px; letter-spacing: 0.3em">OUVERT DE 22H À L'AUBE</div>
+</div>
+</div>
+</div></div>
+<div class="page right" aria-hidden="true"><div class="inner shift">
+<div style="width: 1632px; height: 1056px; position: relative; overflow: hidden; background: #F3EADA; font-family: 'Noto Serif KR', 'Noto Serif CJK KR', serif; color: #1A1B24; word-break: keep-all">
+<img src="images/ad-automobile.jpg" alt="해안 절벽 도로를 질주하는 검은 오픈카 광고, 운전하는 여자와 조수석의 남자" style="position: absolute; left: 0px; top: 0; width: 816px; height: 1056px; object-fit: cover; object-position: 50% 50%">
+<div style="position: absolute; left: 40px; top: 28px; font-family: 'Poiret One', sans-serif; font-size: 11px; letter-spacing: 0.4em; color: #F3EADA">PUBLICITÉ</div>
+<div style="position: absolute; left: 48px; top: 70px; width: 440px; display: flex; flex-direction: column; gap: 10px; color: #F3EADA">
+<div style="font-family: 'Poiret One', sans-serif; font-size: 15px; letter-spacing: 0.5em">AUTOMOBILES</div>
+<div style="font-family: 'Bodoni Moda', serif; font-weight: 700; font-size: 92px; line-height: 0.9; letter-spacing: 0.04em">AZUR</div>
+<div style="margin-top: 8px; font-family: 'Bodoni Moda', serif; font-style: italic; font-size: 22px">La route est à vous.</div>
+<div style="font-size: 14px; line-height: 1.6; font-weight: 600">해안 도로는, 가장 먼저 달리는 사람의 것.</div>
+</div>
+<div style="position: absolute; left: 48px; bottom: 36px; font-family: 'Poiret One', sans-serif; font-size: 12px; letter-spacing: 0.3em; color: #0F1220">MODÈLE GRAND SPORT · 1925</div>
+<img src="images/ad-bar.jpg" alt="바 카운터 위 설탕 묻힌 잔에 담긴 앰버빛 칵테일과 셰이커로 술을 따르는 바텐더의 손" style="position: absolute; left: 816px; top: 0; width: 816px; height: 1056px; object-fit: cover; object-position: 50% 50%">
+<div style="position: absolute; left: 856px; top: 28px; font-family: 'Poiret One', sans-serif; font-size: 11px; letter-spacing: 0.4em; color: #F3EADA">PUBLICITÉ</div>
+<div style="position: absolute; left: 864px; bottom: 40px; width: 380px; display: flex; flex-direction: column; gap: 10px; color: #F3EADA">
+<div style="font-family: 'Poiret One', sans-serif; font-size: 14px; letter-spacing: 0.46em; color: #F3EADA">AMERICAN BAR</div>
+<div style="font-family: 'Bodoni Moda', serif; font-weight: 600; font-size: 64px; line-height: 0.95">Le Bar Bleu</div>
+<div style="font-size: 14px; line-height: 1.65">오늘 밤의 한 잔 — 브랜디, 오렌지 리큐어, 레몬.<br>설탕을 묻힌 잔 테두리까지가 레시피.</div>
+<div style="font-family: 'Poiret One', sans-serif; font-size: 12px; letter-spacing: 0.3em">OUVERT DE 22H À L'AUBE</div>
+</div>
 </div>
 </div></div>
 </section>
@@ -267,7 +694,7 @@ main{padding-top:20px}
 <div style="position: absolute; left: 0; top: 0; width: 108px; height: 1056px; display: flex; align-items: center; justify-content: center">
 <div style="writing-mode: vertical-rl; font-family: 'Poiret One', sans-serif; font-size: 14px; letter-spacing: 0.42em; color: #1C2B5E">LOOK 01 — LA FEMME — PARIS 1925</div>
 </div>
-<div style="position: absolute; left: 40px; bottom: 28px; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.2em; color: #4E4C57">06</div>
+<div style="position: absolute; left: 40px; bottom: 28px; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.2em; color: #4E4C57">18</div>
 
 <img src="images/women-look01.jpg" alt="비 내린 파리의 밤거리, 가로등 아래 선 비즈 드레스의 여자" style="position: absolute; left: 108px; top: 0; width: 708px; height: 1056px; object-fit: cover">
 <div style="position: absolute; left: 144px; top: 52px; display: flex; flex-direction: column; gap: 4px; color: #F3EADA">
@@ -315,7 +742,7 @@ main{padding-top:20px}
 <span style="font-family: 'Noto Serif KR', 'Noto Serif CJK KR', serif; font-size: 13.5px; line-height: 1.7; color: #3A3A46">치맛단이 무릎 아래까지 올라온 것만으로도 당시엔 스캔들이었다. 1985년 명동의 미니스커트를 보면 이 사람들은 아마 기절할 것이다.</span>
 </div>
 </div>
-<div style="position: absolute; right: 48px; bottom: 28px; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.2em; color: #4E4C57">07</div>
+<div style="position: absolute; right: 48px; bottom: 28px; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.2em; color: #4E4C57">19</div>
 </div>
 </div></div>
 <div class="page right" aria-hidden="true"><div class="inner shift">
@@ -324,7 +751,7 @@ main{padding-top:20px}
 <div style="position: absolute; left: 0; top: 0; width: 108px; height: 1056px; display: flex; align-items: center; justify-content: center">
 <div style="writing-mode: vertical-rl; font-family: 'Poiret One', sans-serif; font-size: 14px; letter-spacing: 0.42em; color: #1C2B5E">LOOK 01 — LA FEMME — PARIS 1925</div>
 </div>
-<div style="position: absolute; left: 40px; bottom: 28px; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.2em; color: #4E4C57">06</div>
+<div style="position: absolute; left: 40px; bottom: 28px; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.2em; color: #4E4C57">18</div>
 
 <img src="images/women-look01.jpg" alt="비 내린 파리의 밤거리, 가로등 아래 선 비즈 드레스의 여자" style="position: absolute; left: 108px; top: 0; width: 708px; height: 1056px; object-fit: cover">
 <div style="position: absolute; left: 144px; top: 52px; display: flex; flex-direction: column; gap: 4px; color: #F3EADA">
@@ -372,11 +799,11 @@ main{padding-top:20px}
 <span style="font-family: 'Noto Serif KR', 'Noto Serif CJK KR', serif; font-size: 13.5px; line-height: 1.7; color: #3A3A46">치맛단이 무릎 아래까지 올라온 것만으로도 당시엔 스캔들이었다. 1985년 명동의 미니스커트를 보면 이 사람들은 아마 기절할 것이다.</span>
 </div>
 </div>
-<div style="position: absolute; right: 48px; bottom: 28px; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.2em; color: #4E4C57">07</div>
+<div style="position: absolute; right: 48px; bottom: 28px; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.2em; color: #4E4C57">19</div>
 </div>
 </div></div>
 </section>
-<section class="spread" id="women-02" aria-label="여성 룩 02–03">
+<section class="spread" id="s3b_femme_looks" aria-label="여성 룩 02–03">
 <div class="page left"><div class="inner">
 <div style="width: 1632px; height: 1056px; position: relative; overflow: hidden; background: #F3EADA; font-family: 'Noto Serif KR', 'Noto Serif CJK KR', serif; color: #1A1B24; word-break: keep-all">
 <img src="images/women-look02.jpg" alt="카페 테라스의 등나무 의자에 앉은 크림 저지 수트와 클로슈 차림의 여자" style="position: absolute; left: 0px; top: 0; width: 816px; height: 1056px; object-fit: cover; object-position: 50% 50%">
@@ -407,8 +834,8 @@ main{padding-top:20px}
 </div>
 <div style="padding-top: 10px; border-top: 1px solid #C08A45; font-size: 12px; line-height: 1.65; color: #3A3A46">프랑스의 테니스 스타 쉬잔 랑글렌이 반다나와 짧은 플리츠 스커트로 코트 위의 복장을 바꿔 놓았다.</div>
 </div>
-<div style="position: absolute; left: 48px; bottom: 28px; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.2em; color: #0F1220">08</div>
-<div style="position: absolute; right: 48px; bottom: 28px; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.2em; color: #0F1220">09</div>
+<div style="position: absolute; left: 48px; bottom: 28px; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.2em; color: #0F1220">20</div>
+<div style="position: absolute; right: 48px; bottom: 28px; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.2em; color: #0F1220">21</div>
 </div>
 </div></div>
 <div class="page right" aria-hidden="true"><div class="inner shift">
@@ -441,12 +868,12 @@ main{padding-top:20px}
 </div>
 <div style="padding-top: 10px; border-top: 1px solid #C08A45; font-size: 12px; line-height: 1.65; color: #3A3A46">프랑스의 테니스 스타 쉬잔 랑글렌이 반다나와 짧은 플리츠 스커트로 코트 위의 복장을 바꿔 놓았다.</div>
 </div>
-<div style="position: absolute; left: 48px; bottom: 28px; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.2em; color: #0F1220">08</div>
-<div style="position: absolute; right: 48px; bottom: 28px; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.2em; color: #0F1220">09</div>
+<div style="position: absolute; left: 48px; bottom: 28px; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.2em; color: #0F1220">20</div>
+<div style="position: absolute; right: 48px; bottom: 28px; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.2em; color: #0F1220">21</div>
 </div>
 </div></div>
 </section>
-<section class="spread" id="women-04" aria-label="여성 룩 04–05">
+<section class="spread" id="s3c_femme_looks" aria-label="여성 룩 04–05">
 <div class="page left"><div class="inner">
 <div style="width: 1632px; height: 1056px; position: relative; overflow: hidden; background: #F3EADA; font-family: 'Noto Serif KR', 'Noto Serif CJK KR', serif; color: #1A1B24; word-break: keep-all">
 <img src="images/women-look04.jpg" alt="달빛 아래 정원 분수 앞에 선 크림 실크 로브 드 스틸 차림의 여자" style="position: absolute; left: 0px; top: 0; width: 816px; height: 1056px; object-fit: cover; object-position: 50% 50%">
@@ -477,8 +904,8 @@ main{padding-top:20px}
 </div>
 <div style="padding-top: 10px; border-top: 1px solid #C08A45; font-size: 12px; line-height: 1.65; color: #3A3A46">단추 대신 한 손으로 여며 쥐는 코트. 그 손짓까지가 스타일이었다.</div>
 </div>
-<div style="position: absolute; left: 48px; bottom: 28px; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.2em; color: #F3EADA">10</div>
-<div style="position: absolute; right: 48px; bottom: 28px; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.2em; color: #F3EADA">11</div>
+<div style="position: absolute; left: 48px; bottom: 28px; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.2em; color: #F3EADA">22</div>
+<div style="position: absolute; right: 48px; bottom: 28px; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.2em; color: #F3EADA">23</div>
 </div>
 </div></div>
 <div class="page right" aria-hidden="true"><div class="inner shift">
@@ -511,12 +938,12 @@ main{padding-top:20px}
 </div>
 <div style="padding-top: 10px; border-top: 1px solid #C08A45; font-size: 12px; line-height: 1.65; color: #3A3A46">단추 대신 한 손으로 여며 쥐는 코트. 그 손짓까지가 스타일이었다.</div>
 </div>
-<div style="position: absolute; left: 48px; bottom: 28px; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.2em; color: #F3EADA">10</div>
-<div style="position: absolute; right: 48px; bottom: 28px; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.2em; color: #F3EADA">11</div>
+<div style="position: absolute; left: 48px; bottom: 28px; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.2em; color: #F3EADA">22</div>
+<div style="position: absolute; right: 48px; bottom: 28px; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.2em; color: #F3EADA">23</div>
 </div>
 </div></div>
 </section>
-<section class="spread" id="women-details" aria-label="여성 디테일과 액세서리">
+<section class="spread" id="s4_femme_details" aria-label="여성 디테일과 액세서리">
 <div class="page left"><div class="inner">
 <div style="width: 1632px; height: 1056px; position: relative; overflow: hidden; background: #F3EADA; font-family: 'Noto Serif KR', 'Noto Serif CJK KR', serif; color: #1A1B24; word-break: keep-all">
 
@@ -528,7 +955,7 @@ main{padding-top:20px}
 <p style="margin: 0; font-size: 13.5px; line-height: 1.75">밑단의 실크 프린지는 몸이 움직일 때마다 함께 흔들리며 빛을 흩뿌린다.</p>
 </div>
 <div style="position: absolute; left: 48px; top: 32px; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.3em; color: #F3EADA">ÉPOQUE · No.01</div>
-<div style="position: absolute; right: 856px; bottom: 28px; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.2em; color: #F3EADA">12</div>
+<div style="position: absolute; right: 856px; bottom: 28px; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.2em; color: #F3EADA">24</div>
 
 <div style="position: absolute; left: 816px; top: 0; width: 816px; height: 1056px; box-sizing: border-box; padding: 32px 56px 0 56px; display: flex; flex-direction: column">
 <div style="display: flex; justify-content: space-between; padding-bottom: 12px; border-bottom: 1px solid #B9AB90; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.3em; text-transform: uppercase; color: #4E4C57">
@@ -558,7 +985,7 @@ main{padding-top:20px}
 <span style="font-size: 13.5px; line-height: 1.7; color: #3A3A46">1985년 서울 여자들의 핸드백에도 콤팩트는 들어 있다. 60년 동안 바뀐 건 거울의 크기 정도다.</span>
 </div>
 </div>
-<div style="position: absolute; right: 48px; bottom: 28px; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.2em; color: #4E4C57">13</div>
+<div style="position: absolute; right: 48px; bottom: 28px; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.2em; color: #4E4C57">25</div>
 </div>
 </div></div>
 <div class="page right" aria-hidden="true"><div class="inner shift">
@@ -572,7 +999,7 @@ main{padding-top:20px}
 <p style="margin: 0; font-size: 13.5px; line-height: 1.75">밑단의 실크 프린지는 몸이 움직일 때마다 함께 흔들리며 빛을 흩뿌린다.</p>
 </div>
 <div style="position: absolute; left: 48px; top: 32px; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.3em; color: #F3EADA">ÉPOQUE · No.01</div>
-<div style="position: absolute; right: 856px; bottom: 28px; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.2em; color: #F3EADA">12</div>
+<div style="position: absolute; right: 856px; bottom: 28px; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.2em; color: #F3EADA">24</div>
 
 <div style="position: absolute; left: 816px; top: 0; width: 816px; height: 1056px; box-sizing: border-box; padding: 32px 56px 0 56px; display: flex; flex-direction: column">
 <div style="display: flex; justify-content: space-between; padding-bottom: 12px; border-bottom: 1px solid #B9AB90; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.3em; text-transform: uppercase; color: #4E4C57">
@@ -602,7 +1029,7 @@ main{padding-top:20px}
 <span style="font-size: 13.5px; line-height: 1.7; color: #3A3A46">1985년 서울 여자들의 핸드백에도 콤팩트는 들어 있다. 60년 동안 바뀐 건 거울의 크기 정도다.</span>
 </div>
 </div>
-<div style="position: absolute; right: 48px; bottom: 28px; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.2em; color: #4E4C57">13</div>
+<div style="position: absolute; right: 48px; bottom: 28px; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.2em; color: #4E4C57">25</div>
 </div>
 </div></div>
 </section>
@@ -617,7 +1044,7 @@ main{padding-top:20px}
 <div style="font-family: 'Bodoni Moda', serif; font-style: italic; font-weight: 500; font-size: 70px; line-height: 1">L'Homme</div>
 <div style="margin-top: 10px; font-size: 13px; line-height: 1.7">작은 불이 켜지는 3초,<br>젖은 길 위의 정적.</div>
 </div>
-<div style="position: absolute; left: 48px; bottom: 28px; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.2em; color: #F3EADA">14</div>
+<div style="position: absolute; left: 48px; bottom: 28px; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.2em; color: #F3EADA">26</div>
 
 <div style="position: absolute; left: 816px; top: 0; width: 816px; height: 1056px; box-sizing: border-box; padding: 32px 56px 0 56px; display: flex; flex-direction: column">
 <div style="display: flex; justify-content: space-between; padding-bottom: 12px; border-bottom: 1px solid #B9AB90; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.3em; text-transform: uppercase; color: #4E4C57">
@@ -656,7 +1083,7 @@ main{padding-top:20px}
 <span style="font-family: 'Noto Serif KR', 'Noto Serif CJK KR', serif; font-size: 13.5px; line-height: 1.7; color: #3A3A46">1985년의 수트는 어깨로 힘을 주고, 1925년의 수트는 바지로 힘을 준다.</span>
 </div>
 </div>
-<div style="position: absolute; right: 48px; bottom: 28px; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.2em; color: #4E4C57">15</div>
+<div style="position: absolute; right: 48px; bottom: 28px; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.2em; color: #4E4C57">27</div>
 </div>
 </div></div>
 <div class="page right" aria-hidden="true"><div class="inner shift">
@@ -669,7 +1096,7 @@ main{padding-top:20px}
 <div style="font-family: 'Bodoni Moda', serif; font-style: italic; font-weight: 500; font-size: 70px; line-height: 1">L'Homme</div>
 <div style="margin-top: 10px; font-size: 13px; line-height: 1.7">작은 불이 켜지는 3초,<br>젖은 길 위의 정적.</div>
 </div>
-<div style="position: absolute; left: 48px; bottom: 28px; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.2em; color: #F3EADA">14</div>
+<div style="position: absolute; left: 48px; bottom: 28px; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.2em; color: #F3EADA">26</div>
 
 <div style="position: absolute; left: 816px; top: 0; width: 816px; height: 1056px; box-sizing: border-box; padding: 32px 56px 0 56px; display: flex; flex-direction: column">
 <div style="display: flex; justify-content: space-between; padding-bottom: 12px; border-bottom: 1px solid #B9AB90; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.3em; text-transform: uppercase; color: #4E4C57">
@@ -708,11 +1135,11 @@ main{padding-top:20px}
 <span style="font-family: 'Noto Serif KR', 'Noto Serif CJK KR', serif; font-size: 13.5px; line-height: 1.7; color: #3A3A46">1985년의 수트는 어깨로 힘을 주고, 1925년의 수트는 바지로 힘을 준다.</span>
 </div>
 </div>
-<div style="position: absolute; right: 48px; bottom: 28px; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.2em; color: #4E4C57">15</div>
+<div style="position: absolute; right: 48px; bottom: 28px; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.2em; color: #4E4C57">27</div>
 </div>
 </div></div>
 </section>
-<section class="spread" id="men-02" aria-label="남성 룩 02–03">
+<section class="spread" id="s5b_homme_looks" aria-label="남성 룩 02–03">
 <div class="page left"><div class="inner">
 <div style="width: 1632px; height: 1056px; position: relative; overflow: hidden; background: #F3EADA; font-family: 'Noto Serif KR', 'Noto Serif CJK KR', serif; color: #1A1B24; word-break: keep-all">
 <img src="images/men-look02.jpg" alt="샹들리에 아래 오페라 극장 계단을 내려오는 연미복 차림의 남자" style="position: absolute; left: 0px; top: 0; width: 816px; height: 1056px; object-fit: cover; object-position: 50% 50%">
@@ -743,8 +1170,8 @@ main{padding-top:20px}
 </div>
 <div style="padding-top: 10px; border-top: 1px solid #C08A45; font-size: 12px; line-height: 1.65; color: #3A3A46">플러스 포스라는 이름은 무릎 아래로 4인치를 더 늘어뜨린 기장에서 왔다. 니트와 양말의 아가일 무늬를 맞춘 것이 이 룩의 포인트.</div>
 </div>
-<div style="position: absolute; left: 48px; bottom: 28px; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.2em; color: #0F1220">16</div>
-<div style="position: absolute; right: 48px; bottom: 28px; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.2em; color: #0F1220">17</div>
+<div style="position: absolute; left: 48px; bottom: 28px; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.2em; color: #0F1220">28</div>
+<div style="position: absolute; right: 48px; bottom: 28px; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.2em; color: #0F1220">29</div>
 </div>
 </div></div>
 <div class="page right" aria-hidden="true"><div class="inner shift">
@@ -777,8 +1204,8 @@ main{padding-top:20px}
 </div>
 <div style="padding-top: 10px; border-top: 1px solid #C08A45; font-size: 12px; line-height: 1.65; color: #3A3A46">플러스 포스라는 이름은 무릎 아래로 4인치를 더 늘어뜨린 기장에서 왔다. 니트와 양말의 아가일 무늬를 맞춘 것이 이 룩의 포인트.</div>
 </div>
-<div style="position: absolute; left: 48px; bottom: 28px; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.2em; color: #0F1220">16</div>
-<div style="position: absolute; right: 48px; bottom: 28px; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.2em; color: #0F1220">17</div>
+<div style="position: absolute; left: 48px; bottom: 28px; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.2em; color: #0F1220">28</div>
+<div style="position: absolute; right: 48px; bottom: 28px; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.2em; color: #0F1220">29</div>
 </div>
 </div></div>
 </section>
@@ -799,7 +1226,7 @@ main{padding-top:20px}
 </div>
 <div style="padding-top: 10px; border-top: 1px solid #C08A45; font-size: 12px; line-height: 1.65; color: #3A3A46">1920년대 중반, 겨울 휴양지였던 리비에라에 여름 손님들이 몰려들기 시작했다.</div>
 </div>
-<div style="position: absolute; left: 48px; bottom: 28px; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.2em; color: #F3EADA">18</div>
+<div style="position: absolute; left: 48px; bottom: 28px; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.2em; color: #F3EADA">30</div>
 <div style="position: absolute; left: 816px; top: 0; width: 816px; height: 1056px; box-sizing: border-box; padding: 32px 56px 0 56px; display: flex; flex-direction: column">
 <div style="display: flex; justify-content: space-between; padding-bottom: 12px; border-bottom: 1px solid #B9AB90; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.3em; text-transform: uppercase; color: #4E4C57">
 <span>The Wardrobe</span>
@@ -861,7 +1288,7 @@ main{padding-top:20px}
 </div>
 </div>
 </div>
-<div style="position: absolute; right: 48px; bottom: 28px; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.2em; color: #4E4C57">19</div>
+<div style="position: absolute; right: 48px; bottom: 28px; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.2em; color: #4E4C57">31</div>
 </div>
 </div></div>
 <div class="page right" aria-hidden="true"><div class="inner shift">
@@ -880,7 +1307,7 @@ main{padding-top:20px}
 </div>
 <div style="padding-top: 10px; border-top: 1px solid #C08A45; font-size: 12px; line-height: 1.65; color: #3A3A46">1920년대 중반, 겨울 휴양지였던 리비에라에 여름 손님들이 몰려들기 시작했다.</div>
 </div>
-<div style="position: absolute; left: 48px; bottom: 28px; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.2em; color: #F3EADA">18</div>
+<div style="position: absolute; left: 48px; bottom: 28px; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.2em; color: #F3EADA">30</div>
 <div style="position: absolute; left: 816px; top: 0; width: 816px; height: 1056px; box-sizing: border-box; padding: 32px 56px 0 56px; display: flex; flex-direction: column">
 <div style="display: flex; justify-content: space-between; padding-bottom: 12px; border-bottom: 1px solid #B9AB90; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.3em; text-transform: uppercase; color: #4E4C57">
 <span>The Wardrobe</span>
@@ -942,7 +1369,7 @@ main{padding-top:20px}
 </div>
 </div>
 </div>
-<div style="position: absolute; right: 48px; bottom: 28px; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.2em; color: #4E4C57">19</div>
+<div style="position: absolute; right: 48px; bottom: 28px; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.2em; color: #4E4C57">31</div>
 </div>
 </div></div>
 </section>
@@ -979,7 +1406,7 @@ main{padding-top:20px}
 <span style="font-size: 13.5px; line-height: 1.7; color: #3A3A46">1985년의 남자들은 손목에 전자시계를 찬다. 바늘 대신 숫자가 시간을 알려 주는 시계를 이 사람들에게 보여 주지 못한 것이 아쉽다.</span>
 </div>
 </div>
-<div style="position: absolute; left: 48px; bottom: 28px; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.2em; color: #4E4C57">20</div>
+<div style="position: absolute; left: 48px; bottom: 28px; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.2em; color: #4E4C57">32</div>
 
 <img src="images/backstage.jpg" alt="거울 조명 앞에서 립스틱을 바르는 여자와 뒤에서 커프스를 채우는 남자" style="position: absolute; left: 816px; top: 0; width: 816px; height: 1056px; object-fit: cover">
 <div style="position: absolute; right: 48px; bottom: 48px; width: 340px; box-sizing: border-box; padding: 28px 28px 24px 28px; background: #F3EADA; display: flex; flex-direction: column; gap: 12px">
@@ -991,7 +1418,7 @@ main{padding-top:20px}
 <span style="font-family: 'Poiret One', sans-serif; font-size: 12px; letter-spacing: 0.22em; color: #4E4C57">NEXT — 다음 출장지는 다음 호에서</span>
 </div>
 </div>
-<div style="position: absolute; right: 400px; bottom: 28px; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.2em; color: #0F1220">21</div>
+<div style="position: absolute; right: 400px; bottom: 28px; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.2em; color: #0F1220">33</div>
 </div>
 </div></div>
 <div class="page right" aria-hidden="true"><div class="inner shift">
@@ -1026,7 +1453,7 @@ main{padding-top:20px}
 <span style="font-size: 13.5px; line-height: 1.7; color: #3A3A46">1985년의 남자들은 손목에 전자시계를 찬다. 바늘 대신 숫자가 시간을 알려 주는 시계를 이 사람들에게 보여 주지 못한 것이 아쉽다.</span>
 </div>
 </div>
-<div style="position: absolute; left: 48px; bottom: 28px; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.2em; color: #4E4C57">20</div>
+<div style="position: absolute; left: 48px; bottom: 28px; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.2em; color: #4E4C57">32</div>
 
 <img src="images/backstage.jpg" alt="거울 조명 앞에서 립스틱을 바르는 여자와 뒤에서 커프스를 채우는 남자" style="position: absolute; left: 816px; top: 0; width: 816px; height: 1056px; object-fit: cover">
 <div style="position: absolute; right: 48px; bottom: 48px; width: 340px; box-sizing: border-box; padding: 28px 28px 24px 28px; background: #F3EADA; display: flex; flex-direction: column; gap: 12px">
@@ -1038,15 +1465,15 @@ main{padding-top:20px}
 <span style="font-family: 'Poiret One', sans-serif; font-size: 12px; letter-spacing: 0.22em; color: #4E4C57">NEXT — 다음 출장지는 다음 호에서</span>
 </div>
 </div>
-<div style="position: absolute; right: 400px; bottom: 28px; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.2em; color: #0F1220">21</div>
+<div style="position: absolute; right: 400px; bottom: 28px; font-family: 'Poiret One', sans-serif; font-size: 13px; letter-spacing: 0.2em; color: #0F1220">33</div>
 </div>
 </div></div>
 </section>
 </main>
 <footer>
 <div class="sig">ÉPOQUE — THE TIME-TRAVEL FASHION MAGAZINE</div>
-<p>1985년 서울의 가상 패션지 ÉPOQUE가 매 호 한 시대로 출장을 떠나 그 시대의 옷을 화보로 찍어 온다는 설정의 프로젝트입니다.<br>No.01의 출장지는 1925년 파리. 여성 5벌, 남성 4벌의 룩과 뷰티·그루밍·액세서리·스타일링 크레딧으로 구성했습니다.</p>
-<p>Concept, styling &amp; art direction — KIM SOY<br>Illustrations generated with Midjourney</p>
+<p>1985년 서울의 가상 패션지 ÉPOQUE가 매 호 한 시대로 출장을 떠나 그 시대의 옷을 화보로 찍어 온다는 설정의 프로젝트입니다.<br>No.01의 출장지는 1925년 파리. 커버 2종, 박람회·재즈·몽파르나스·영화관을 다룬 컬처 지면, 도시 화보, 가상 브랜드 광고, 여성 5벌·남성 4벌의 룩과 스타일링 크레딧으로 구성했습니다.</p>
+<p>Concept, styling &amp; art direction — KIM SOY<br>Illustrations generated with Midjourney<br>잡지 속 광고는 모두 가상 브랜드입니다.</p>
 </footer>
 <script>
 (function(){
