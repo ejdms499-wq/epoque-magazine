@@ -38,6 +38,8 @@ section{scroll-margin-top:72px}
 /* film leader intro */
 .leader{position:fixed;inset:0;z-index:200;background:#111;display:flex;align-items:center;justify-content:center;transition:opacity .5s}
 .leader.done{opacity:0;pointer-events:none}
+.leader{animation:leaderOut .6s 4.2s forwards}
+@keyframes leaderOut{to{opacity:0;visibility:hidden;pointer-events:none}}
 .leader .dial{position:relative;width:min(62vmin,420px);aspect-ratio:1;border-radius:50%;border:3px solid #ddd;display:flex;align-items:center;justify-content:center;overflow:hidden;background:#7d7d7d}
 .leader .sweep{position:absolute;inset:0;background:conic-gradient(#2b2b2b var(--a,0deg),transparent 0);}
 .leader .dial::before,.leader .dial::after{content:"";position:absolute;background:#ddd;z-index:2}
@@ -49,21 +51,29 @@ section{scroll-margin-top:72px}
 .leader .skip{position:absolute;right:20px;bottom:20px;font-family:'Courier Prime',monospace;font-size:13px;letter-spacing:.2em;color:#eee;background:transparent;border:1px solid #888;padding:10px 14px;cursor:pointer}
 @keyframes flick{0%{opacity:.12}100%{opacity:.24}}
 
-/* premiere */
-.premiere{position:relative;padding:72px 24px 80px;text-align:center;background:radial-gradient(ellipse at 50% 0%,rgba(201,205,214,.22),transparent 60%),var(--ink);overflow:hidden}
-.premiere::before{content:"";position:absolute;inset:0;background:repeating-conic-gradient(from 0deg at 50% 0%,rgba(201,168,106,.08) 0deg 3deg,transparent 3deg 9deg);pointer-events:none}
-.eyebrow{font-family:'Courier Prime',monospace;font-size:13px;letter-spacing:.34em;color:var(--gold);text-transform:uppercase}
-.premiere h1{position:relative;margin:14px 0 0;font-family:'Limelight',serif;font-weight:400;font-size:clamp(36px,10.5vw,150px);line-height:.95;letter-spacing:.03em;color:var(--pearl)}
-.premiere .sub{position:relative;margin-top:10px;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(22px,3vw,34px);color:var(--silver)}
-.posters{position:relative;display:flex;justify-content:center;gap:clamp(16px,3vw,40px);margin:48px auto 0;max-width:1100px;flex-wrap:wrap}
-.poster{flex:1 1 300px;max-width:480px;margin:0;position:relative;border:1px solid rgba(201,168,106,.6);padding:10px;background:linear-gradient(180deg,rgba(201,168,106,.12),transparent)}
-.poster .frame{position:relative;overflow:hidden;aspect-ratio:3/4}
-.poster img{width:100%;height:100%;object-fit:cover;object-position:50% 100%}
-.poster .title{position:absolute;left:0;right:0;top:2%;text-align:center;font-family:'Limelight',serif;font-size:clamp(34px,5vw,60px);color:var(--pearl);letter-spacing:.04em;text-shadow:0 2px 18px rgba(7,8,15,.45);pointer-events:none}
-.poster .tag{position:absolute;left:0;right:0;bottom:0;padding:16px;background:linear-gradient(to top,rgba(7,8,15,.85),transparent);text-align:left;pointer-events:none}
-.poster .tag b{display:block;font-family:'Courier Prime',monospace;font-size:12px;letter-spacing:.24em;color:var(--gold);font-weight:400}
-.poster .tag span{font-size:15px;font-weight:700}
-.poster figcaption{font-family:'Courier Prime',monospace;font-size:12px;letter-spacing:.18em;color:var(--silver);padding-top:10px}
+/* covers */
+.covers{position:relative;padding:34px 16px 30px;display:flex;flex-direction:column;align-items:center;gap:18px;background:radial-gradient(ellipse at 50% 0%,rgba(201,205,214,.28),transparent 55%),radial-gradient(ellipse at 50% 100%,rgba(14,24,52,.9),var(--ink) 70%);overflow:hidden}
+.covers::before{content:"";position:absolute;inset:0;background:repeating-conic-gradient(from 0deg at 50% -10%,rgba(201,168,106,.07) 0deg 2deg,transparent 2deg 7deg);pointer-events:none}
+.cover-stage{position:relative;height:min(84vh,1040px,calc(92vw * 4 / 3));aspect-ratio:3/4;container-type:inline-size;box-shadow:0 40px 120px rgba(0,0,0,.75),0 0 0 1px rgba(201,168,106,.5)}
+.mag{position:absolute;inset:0;overflow:hidden;opacity:0;transition:opacity 1.1s ease;pointer-events:none;color:var(--pearl)}
+.mag.on{opacity:1;pointer-events:auto}
+.mag img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 100%;cursor:zoom-in}
+.mag::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,8,15,.28),transparent 26%,transparent 62%,rgba(7,8,15,.55));pointer-events:none}
+.mag > div{position:absolute;z-index:2;pointer-events:none;text-shadow:0 1px 2px rgba(7,8,15,.85),0 0 16px rgba(7,8,15,.6)}
+.mtop,.mbot{left:4cqw;right:4cqw;display:flex;justify-content:space-between;font-family:'Courier Prime',monospace;font-size:1.7cqw;letter-spacing:.3em;text-transform:uppercase}
+.mtop{top:2.6cqw}.mbot{bottom:2.8cqw;color:var(--silver)}
+.mast{left:0;right:0;top:5.2cqw;text-align:center;font-family:'Limelight',serif;font-size:21cqw;line-height:1;letter-spacing:.02em;background:linear-gradient(180deg,#fff 10%,#d7dbe2 45%,#a9afba 70%,#f4f1ea);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 .4cqw .8cqw rgba(7,8,15,.5));text-shadow:none!important}
+.cl{display:flex;flex-direction:column;gap:3.4cqw}
+.cl-l{left:4.5cqw;bottom:9cqw;width:38cqw}
+.cl-r{right:4.5cqw;top:42cqw;width:30cqw;text-align:right;align-items:flex-end}
+.big{font-family:'Limelight',serif;font-size:9.6cqw;line-height:.92;letter-spacing:.02em}
+.big i{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:9cqw;color:var(--gold)}
+.ln{font-size:2.35cqw;line-height:1.5;font-weight:600}
+.ln b{display:block;font-size:3.9cqw;line-height:1.2;font-weight:900;margin-bottom:.6cqw}
+.cl-r .ln{padding-top:2cqw;border-top:.25cqw solid var(--gold)}
+.cover-switch{position:relative;display:flex;gap:8px}
+.cover-switch button{font-family:'Courier Prime',monospace;font-size:13px;letter-spacing:.24em;color:var(--silver);background:transparent;border:1px solid rgba(201,205,214,.4);padding:10px 16px;cursor:pointer;min-height:44px}
+.cover-switch button[aria-pressed="true"]{background:var(--pearl);color:var(--ink);border-color:var(--pearl)}
 
 /* letter */
 .letter{max-width:760px;margin:0 auto;padding:110px 24px}
@@ -111,6 +121,17 @@ section{scroll-margin-top:72px}
 .closeup .cap{max-width:440px}
 .closeup .cap h3{margin:10px 0 6px;font-size:clamp(26px,3vw,36px);line-height:1.3;font-weight:900}
 .closeup .cap .credits{grid-template-columns:90px minmax(0,1fr)}
+/* scene polish */
+main{counter-reset:sc}
+.scene{counter-increment:sc;position:relative}
+.scene .txt{position:relative}
+.scene .txt::before{content:counter(sc,decimal-leading-zero);position:absolute;right:-10px;top:-92px;font-family:'Limelight',serif;font-size:170px;line-height:1;color:rgba(201,205,214,.06);pointer-events:none}
+.shot{padding:14px}
+.shot::before{content:"";position:absolute;inset:0;border:1px solid rgba(201,168,106,.55);pointer-events:none}
+.shot::after{content:"";position:absolute;inset:6px;border:1px solid rgba(201,168,106,.22);pointer-events:none}
+.scene .en{margin-bottom:4px}
+.scene h3{background:linear-gradient(180deg,#fff,#cfd3da);-webkit-background-clip:text;background-clip:text;color:transparent}
+
 /* iris reveal */
 .reveal .frame{clip-path:circle(0% at 50% 50%);transition:clip-path 1.3s cubic-bezier(.6,0,.2,1)}
 .reveal .txt{opacity:0;transform:translateY(24px);transition:opacity .9s .35s,transform .9s .35s}
@@ -136,14 +157,14 @@ section{scroll-margin-top:72px}
 .cell .t{margin-top:10px;font-size:15px;line-height:1.7}
 
 /* end credits */
-.endroll{position:relative;height:88vh;overflow:hidden;background:#000;text-align:center}
+.endroll{position:relative;height:640px;overflow:hidden;background:#000;text-align:center}
 .endroll::before,.endroll::after{content:"";position:absolute;left:0;right:0;height:22%;z-index:2;pointer-events:none}
 .endroll::before{top:0;background:linear-gradient(#000,transparent)}
 .endroll::after{bottom:0;background:linear-gradient(transparent,#000)}
 .roll{position:absolute;left:0;right:0;top:100%;padding:0 24px}
 .endroll.in .roll{animation:roll 46s linear infinite}
 .endroll:hover .roll,.endroll:focus-within .roll{animation-play-state:paused}
-@keyframes roll{from{transform:translateY(0)}to{transform:translateY(calc(-100% - 88vh))}}
+@keyframes roll{from{transform:translateY(0)}to{transform:translateY(calc(-100% - 640px))}}
 @media (prefers-reduced-motion:reduce){.endroll{height:auto}.roll{position:static;padding:60px 24px}.endroll.in .roll{animation:none}.endroll::before,.endroll::after{display:none}}
 .roll .h{font-family:'Limelight',serif;font-size:clamp(36px,5vw,64px);margin:0 0 50px}
 .roll .grp{margin:0 0 46px}
@@ -201,23 +222,44 @@ footer{padding:40px 24px 64px;text-align:center;font-size:13px;line-height:1.9;c
 <a class="brand" href="#top">ÉPOQUE<small>No.02 · HOLLYWOOD 1934</small></a>
 <div class="issues" aria-label="호 선택"><a href="../">No.01 PARIS 1925</a><a href="./" aria-current="page">No.02 HOLLYWOOD 1934</a></div>
 <button class="share-btn" id="shareSite" type="button">공유</button>
-<nav aria-label="목차"><a href="#top">Premiere</a><a href="#letter">Letter</a><a href="#stars">Stars</a><a href="#men">Men</a><a href="#pictures">Pictures</a><a href="#calendar">1934</a><a href="#credits">Credits</a></nav>
+<nav aria-label="목차"><a href="#top">Cover</a><a href="#letter">Letter</a><a href="#stars">Stars</a><a href="#men">Men</a><a href="#pictures">Pictures</a><a href="#calendar">1934</a><a href="#credits">Credits</a></nav>
 </header>
 
 <main>
-<section class="premiere" id="top" aria-label="커버">
-<div class="eyebrow">ÉPOQUE presents · a time-travel fashion picture</div>
-<h1>HOLLYWOOD<br>1934</h1>
-<div class="sub">The Silver Screen Issue — No.02</div>
-<div class="posters">
-<figure class="poster">
-<div class="frame"><img class="zoom" src="../images/no02/cover-a.jpg" alt="실버 새틴 홀터 가운에 화이트 폭스를 걸친 플래티넘 블론드의 여자, 커버 A"><div class="title">ÉPOQUE</div><div class="tag"><b>COVER A</b><span>플래티넘의 해</span></div></div>
-<figcaption>NOW SHOWING · COVER A</figcaption>
-</figure>
-<figure class="poster">
-<div class="frame"><img class="zoom" src="../images/no02/cover-b.jpg" alt="아이보리 더블브레스트 디너 재킷에 블랙 보타이와 흰 카네이션을 단 남자, 커버 B"><div class="title">ÉPOQUE</div><div class="tag"><b>COVER B</b><span>화이트 디너 재킷의 밤</span></div></div>
-<figcaption>NOW SHOWING · COVER B</figcaption>
-</figure>
+<section class="covers" id="top" aria-label="커버">
+<div class="cover-stage">
+<article class="mag on" id="covA" aria-label="커버 A">
+<img class="zoom" src="../images/no02/cover-a.jpg" alt="실버 새틴 홀터 가운에 화이트 폭스를 걸친 플래티넘 블론드의 여자, 커버 A">
+<div class="mtop"><span>Seoul · 1985</span><span>The Time-Travel Fashion Magazine</span><span>No.02</span></div>
+<div class="mast">ÉPOQUE</div>
+<div class="cl cl-l">
+<div class="big">HOLLY<br>WOOD<br><i>1934</i></div>
+<div class="ln"><b>플래티넘의 해</b>단발은 9년 만에<br>금발 웨이브가 됐다</div>
+</div>
+<div class="cl cl-r">
+<div class="ln"><b>등을 연 드레스</b>바이어스 컷,<br>트로카데로의 계단</div>
+<div class="ln"><b>7월 1일</b>스크린의 규칙이<br>바뀌던 날</div>
+</div>
+<div class="mbot"><span>THE SILVER SCREEN ISSUE</span><span>COVER A</span></div>
+</article>
+<article class="mag" id="covB" aria-label="커버 B">
+<img class="zoom" src="../images/no02/cover-b.jpg" alt="아이보리 더블브레스트 디너 재킷에 블랙 보타이와 흰 카네이션을 단 남자, 커버 B">
+<div class="mtop"><span>Seoul · 1985</span><span>The Time-Travel Fashion Magazine</span><span>No.02</span></div>
+<div class="mast">ÉPOQUE</div>
+<div class="cl cl-l">
+<div class="big">LEADING<br>MEN<br><i>1934</i></div>
+<div class="ln"><b>화이트 디너 재킷</b>사막 리조트의<br>여름밤</div>
+</div>
+<div class="cl cl-r">
+<div class="ln"><b>드레이프 컷</b>어깨는 넓게,<br>허리는 높게</div>
+<div class="ln"><b>테크니컬러</b>세 가지 색으로<br>찍는 영화</div>
+</div>
+<div class="mbot"><span>THE SILVER SCREEN ISSUE</span><span>COVER B</span></div>
+</article>
+</div>
+<div class="cover-switch" role="group" aria-label="커버 선택">
+<button type="button" data-c="covA" aria-pressed="true">COVER A</button>
+<button type="button" data-c="covB" aria-pressed="false">COVER B</button>
 </div>
 </section>
 
@@ -479,6 +521,12 @@ Concept, styling &amp; art direction — KIM SOY · Illustrations generated with
       if(i>=5){endLeader();return;}
       num.textContent=5-i;sw.style.setProperty('--a',(f*360)+'deg');requestAnimationFrame(tick);})(start);
   }
+  /* cover switch */
+  var cbtn=document.querySelectorAll('.cover-switch button'),cur='covA',auto=null;
+  function setCover(id){cur=id;document.querySelectorAll('.mag').forEach(function(m){m.classList.toggle('on',m.id===id)});cbtn.forEach(function(b){b.setAttribute('aria-pressed',b.dataset.c===id)});}
+  cbtn.forEach(function(b){b.onclick=function(){clearInterval(auto);setCover(b.dataset.c);}});
+  if(!reduce){auto=setInterval(function(){setCover(cur==='covA'?'covB':'covA')},6000);
+    document.querySelector('.cover-stage').addEventListener('mouseenter',function(){clearInterval(auto)});}
   /* iris reveal */
   var rv=document.querySelectorAll('.reveal');
   if('IntersectionObserver' in window&&!reduce){
