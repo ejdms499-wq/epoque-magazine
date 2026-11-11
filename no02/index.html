@@ -51,6 +51,9 @@ section,article{scroll-margin-top:64px}
 .mag .bg{height:100%;object-fit:cover;object-position:50% 0;cursor:zoom-in;z-index:1}
 .mag[data-shift] .bg{height:auto;-webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 9%),linear-gradient(to right,transparent 0,#000 6%,#000 94%,transparent 100%);-webkit-mask-composite:source-in;mask-image:linear-gradient(to bottom,transparent 0,#000 9%),linear-gradient(to right,transparent 0,#000 6%,#000 94%,transparent 100%);mask-composite:intersect}
 .mag .fg{height:auto;z-index:3;pointer-events:none}
+.mag .cv{position:absolute;inset:0;width:100%;height:100%;object-fit:fill;z-index:3;opacity:0;transition:opacity .8s ease;cursor:zoom-in}
+.mag .cv.playing{opacity:1}
+@media (prefers-reduced-motion:reduce){.mag .cv{display:none}}
 .mag .mast{position:absolute;left:0;right:0;top:10.6cqw;z-index:2;text-align:center;font-family:'Bodoni Moda',serif;font-weight:400;font-size:21.5cqw;line-height:1;letter-spacing:.05em;margin-right:-.05em;color:#F6F1E6;pointer-events:none;white-space:nowrap}
 .mag .mast span{display:inline-block;transition:transform 1.3s var(--ease),opacity 1.3s var(--ease)}
 .js .mag:not(.on) .mast span{transform:translateY(40%);opacity:0}
@@ -257,6 +260,7 @@ footer{padding:28px clamp(20px,5vw,60px) 44px;font-size:12.5px;line-height:1.8;c
 <img class="zoom bg" src="../images/no02/cover-a.jpg" alt="등이 깊게 파인 실버 새틴 홀터 가운에 화이트 폭스와 롱 글러브를 하고 어깨 너머로 돌아보는 플래티넘 블론드의 여자, 커버 A">
 <div class="mast" aria-hidden="true"><span>É</span><span>P</span><span>O</span><span>Q</span><span>U</span><span>E</span></div>
 <img class="fg" src="../images/no02/cover-a-fg.webp" alt="" aria-hidden="true">
+<video class="cv" src="../videos/no02/cover-a.mp4" data-still="../images/no02/cover-a.jpg" muted loop playsinline autoplay preload="auto" aria-hidden="true"></video>
 <div class="topline"><span>September · 1934</span><i>The Hollywood Number</i><span>Price 35 Cents</span></div>
 <div class="frame"></div>
 <div class="tab"><b>Autumn Fashions</b><i>The Bias Cut</i></div>
@@ -266,6 +270,7 @@ footer{padding:28px clamp(20px,5vw,60px) 44px;font-size:12.5px;line-height:1.8;c
 <img class="zoom bg" src="../images/no02/cover-b.jpg" alt="스포트라이트 아래 아이보리 더블브레스트 디너 재킷에 블랙 보타이와 흰 카네이션을 단 남자, 커버 B">
 <div class="mast" aria-hidden="true"><span>É</span><span>P</span><span>O</span><span>Q</span><span>U</span><span>E</span></div>
 <img class="fg" src="../images/no02/cover-b-fg.webp" alt="" aria-hidden="true">
+<video class="cv" src="../videos/no02/cover-b.mp4" data-still="../images/no02/cover-b.jpg" muted loop playsinline autoplay preload="auto" aria-hidden="true"></video>
 <div class="topline"><span>September · 1934</span><i>The Hollywood Number</i><span>Price 35 Cents</span></div>
 <div class="frame"></div>
 <div class="tab"><b>For Men</b><i>The White Jacket</i></div>
@@ -376,7 +381,7 @@ footer{padding:28px clamp(20px,5vw,60px) 44px;font-size:12.5px;line-height:1.8;c
 <div class="body"><p>1934년 윔블던 우승자 프레드 페리는 긴 흰 플란넬 바지를 입고 코트에 섰다. 코트 밖에서는 V넥 둘레에 클럽 색 줄을 넣은 케이블 니트를 어깨에 걸치거나 입는다. 테니스 코트의 흰 옷은 그대로 휴양지의 낮 옷이 됐다.</p><dl class="credits"><dt>KNIT</dt><dd>네이비 줄을 넣은 크림 케이블 니트 V넥 크리켓 스웨터</dd><dt>TROUSERS</dt><dd>주름을 넣은 하이웨이스트 화이트 플란넬 롱 트라우저</dd><dt>SHOES</dt><dd>화이트 캔버스 테니스화</dd><dt>RACKET</dt><dd>프레스에 끼운 목제 라켓</dd></dl></div>
 </article>
 <article class="spread lay-r" id="s10">
-<figure class="pic"><div class="crop"><img class="zoom" src="../images/no02/beachclub.jpg" alt="줄무늬 카바나가 늘어선 비치 클럽 테라스에서 네이비 니트 폴로 셔츠와 크림 하이웨이스트 슬랙스를 입고 선글라스를 든 남자"></div><figcaption><span>Fig. 10</span>EXT. BEACH CLUB, SANTA MONICA — DAY</figcaption></figure>
+<figure class="pic"><div class="crop"><img class="zoom" src="../images/no02/beachclub.jpg" alt="줄무늬 카바나가 늘어선 비치 클럽 테라스에서 네이비 니트 폴로 셔츠와 크림 하이웨이스트 슬랙스를 입고 선글라스를 든 남자"><video class="live" src="../videos/no02/beachclub.mp4" data-still="../images/no02/beachclub.jpg" muted loop playsinline autoplay preload="auto" aria-hidden="true"></video></div><figcaption><span>Fig. 10</span>EXT. BEACH CLUB, SANTA MONICA — DAY</figcaption></figure>
 <div class="head"><div class="num">10</div><h3>막 태어난 셔츠</h3><div class="en">Look 10 · The Knit Polo Shirt</div></div>
 <div class="body"><p>테니스 선수 르네 라코스트가 자기 이름을 단 니트 폴로 셔츠를 내놓은 것이 1933년. 1934년 여름의 폴로 셔츠는 막 나온 새 옷이었다. 바지는 벨트 대신 허리 양옆의 버클로 조이는 할리우드 웨이스트밴드, 허리선은 배꼽 위까지 올라간다.</p><dl class="credits"><dt>SHIRT</dt><dd>네이비 반소매 니트 폴로 셔츠</dd><dt>SLACKS</dt><dd>크림 개버딘 하이웨이스트 슬랙스, 사이드 버클 할리우드 웨이스트밴드와 더블 플리츠</dd><dt>SHOES</dt><dd>화이트 캔버스 데크 슈즈</dd><dt>ACCESSORY</dt><dd>대모갑 라운드 선글라스, 스트라이프 비치 로브</dd></dl></div>
 </article>
@@ -491,7 +496,7 @@ No.02의 출장지는 1934년 할리우드. 사건과 장소는 실제 기록을
   var cu=document.getElementById('cursor');
   if(fine&&!reduce&&cu){
     document.addEventListener('mousemove',function(e){cu.style.transform='translate3d('+e.clientX+'px,'+e.clientY+'px,0)';});
-    document.addEventListener('mouseover',function(e){var t=e.target;cu.classList.toggle('on',!!(t.matches&&t.matches('.crop img.zoom,.crop video.live,.mag img.zoom,.thumbs img')));});
+    document.addEventListener('mouseover',function(e){var t=e.target;cu.classList.toggle('on',!!(t.matches&&t.matches('.crop img.zoom,.crop video.live,.mag img.zoom,.mag video.cv,.thumbs img')));});
   }
   /* lightbox */
   var lb=document.getElementById('lb'),img=document.getElementById('lbImg'),vid=document.getElementById('lbVid'),cap=document.getElementById('lbCap'),cnt=document.getElementById('lbCount'),save=document.getElementById('lbSave');
@@ -515,7 +520,8 @@ No.02의 출장지는 1934년 할리우드. 사건과 장소는 실제 기록을
     var th=t.closest&&t.closest('.thumbs button');
     if(th){e.preventDefault();open(th.getAttribute('data-src'));return;}
     if(t.tagName==='IMG'&&t.classList.contains('zoom')){e.preventDefault();open(t.getAttribute('src'));}
-    else if(t.tagName==='VIDEO'&&t.classList.contains('live')){e.preventDefault();open(t.getAttribute('data-still'));}});
+    else if(t.tagName==='VIDEO'&&(t.classList.contains('live')||t.classList.contains('cv'))){e.preventDefault();open(t.getAttribute('data-still'));}});
+  document.querySelectorAll('.mag .cv').forEach(function(v){if(reduce){v.removeAttribute('autoplay');v.pause();return;}v.addEventListener('playing',function(){v.classList.add('playing')});var pp=v.play();if(pp&&pp.catch)pp.catch(function(){});});
   document.getElementById('lbClose').onclick=close;
   document.getElementById('lbPrev').onclick=function(){show(idx-1)};
   document.getElementById('lbNext').onclick=function(){show(idx+1)};
