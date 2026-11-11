@@ -111,6 +111,9 @@ figcaption span{font-style:italic;text-transform:none;letter-spacing:.04em;font-
 .credits dt{font-family:'Bodoni Moda',serif;font-size:10px;letter-spacing:.24em;color:var(--mute);padding-top:13px}
 .credits dd{margin:0;font-size:13.5px;line-height:1.6}
 
+.crop video.live{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;cursor:zoom-in}
+@media (prefers-reduced-motion:reduce){.crop video.live{display:none}}
+
 /* spreads */
 .spread{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:clamp(14px,2vw,32px);row-gap:0;padding:clamp(70px,13vh,150px) 0;align-items:start}
 .spread .crop{width:min(100%,calc(90vh * .75))}
@@ -347,7 +350,7 @@ footer{padding:28px clamp(20px,5vw,60px) 44px;font-size:12.5px;line-height:1.8;c
 </section>
 
 <section class="band" aria-label="Grooming · 1934">
-<figure class="pic"><div class="crop"><img class="zoom" src="../images/no02/grooming.jpg" alt="옆가르마 웨이브 머리가 한쪽 눈썹 위로 흘러내린 젊은 남자와 블랙 보타이의 클로즈업"></div><figcaption><span>Close-up</span>GROOMING · 1934</figcaption></figure>
+<figure class="pic"><div class="crop"><img class="zoom" src="../images/no02/grooming.jpg" alt="옆가르마 웨이브 머리가 한쪽 눈썹 위로 흘러내린 젊은 남자와 블랙 보타이의 클로즈업"><video class="live" src="../videos/no02/grooming.mp4" data-still="../images/no02/grooming.jpg" muted loop playsinline autoplay preload="auto" aria-hidden="true"></video></div><figcaption><span>Close-up</span>GROOMING · 1934</figcaption></figure>
 <div class="head"><div class="kick">Grooming · 1934</div><h3>머리는 더 이상 납작하지 않다</h3></div>
 <div class="body"><dl class="credits"><dt>HAIR</dt><dd>윗머리를 길게 남겨 웨이브를 살린 옆가르마, 이마로 흘러내린 앞머리 한 가닥</dd><dt>SKIN</dt><dd>수염 없이 매끈하게 면도한 얼굴</dd><dt>JACKET</dt><dd>새틴 라펠의 미드나잇 블루 디너 재킷</dd><dt>TIE</dt><dd>블랙 실크 보타이</dd></dl></div>
 </section>
@@ -488,7 +491,7 @@ No.02의 출장지는 1934년 할리우드. 사건과 장소는 실제 기록을
   var cu=document.getElementById('cursor');
   if(fine&&!reduce&&cu){
     document.addEventListener('mousemove',function(e){cu.style.transform='translate3d('+e.clientX+'px,'+e.clientY+'px,0)';});
-    document.addEventListener('mouseover',function(e){var t=e.target;cu.classList.toggle('on',!!(t.matches&&t.matches('.crop img.zoom,.mag img.zoom,.thumbs img')));});
+    document.addEventListener('mouseover',function(e){var t=e.target;cu.classList.toggle('on',!!(t.matches&&t.matches('.crop img.zoom,.crop video.live,.mag img.zoom,.thumbs img')));});
   }
   /* lightbox */
   var lb=document.getElementById('lb'),img=document.getElementById('lbImg'),vid=document.getElementById('lbVid'),cap=document.getElementById('lbCap'),cnt=document.getElementById('lbCount'),save=document.getElementById('lbSave');
