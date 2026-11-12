@@ -7,7 +7,7 @@
 <meta name="description" content="1985년 서울의 가상 패션지 ÉPOQUE가 1953년 로마로 출장 가서 찍어 온 시간여행 화보.">
 <meta property="og:title" content="ÉPOQUE No.04 — ROMA 1953">
 <meta property="og:description" content="1985년 서울의 가상 패션지가 1953년 로마로 출장 가서 찍어 온 시간여행 화보">
-<meta property="og:image" content="../images/no04/spanishsteps.jpg">
+<meta property="og:image" content="../images/no04/cover-a.jpg">
 <meta name="theme-color" content="#F8F5EF">
 <script>document.documentElement.classList.add('js')</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -47,10 +47,15 @@ section,article{scroll-margin-top:60px}
 .hero .sub .it{font-size:clamp(22px,2.4vw,36px)}
 .deck{font-size:14.5px;line-height:1.95;margin:0;color:#333}
 .duo{display:grid;grid-template-columns:1fr 1fr;gap:clamp(14px,3vw,48px);max-width:1100px;margin:clamp(36px,7vh,80px) auto 0;align-items:end}
-.arch{margin:0;display:flex;flex-direction:column-reverse}
-.arch img{width:100%;height:auto;cursor:zoom-in}
-.arch figcaption{font-family:'Italiana',serif;font-size:clamp(22px,2.4vw,34px);padding:12px 0 0;display:flex;justify-content:space-between;align-items:baseline;border-top:0}
-.arch figcaption::after{content:"Roma, 1953";font-family:'Noto Sans KR',sans-serif;font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--mute)}
+.arch{margin:0}
+.cv{position:relative;container-type:inline-size;color:#F6EEDD}
+.cv img{width:100%;height:auto;cursor:zoom-in}
+.cv .mast{position:absolute;left:0;right:0;top:8cqw;text-align:center;font-family:'Italiana',serif;font-size:21cqw;line-height:1;letter-spacing:.03em;white-space:nowrap;pointer-events:none;text-shadow:0 0 1.2cqw rgba(0,0,0,.25)}
+.cv .cl{position:absolute;left:4.5cqw;right:4.5cqw;top:2.6cqw;display:flex;justify-content:space-between;font-size:1.9cqw;letter-spacing:.3em;text-transform:uppercase;pointer-events:none}
+.cv .ct{color:#141414;position:absolute;left:4.5cqw;right:4.5cqw;bottom:3.6cqw;display:flex;justify-content:space-between;align-items:baseline;pointer-events:none}
+.cv .ct i{font-family:'Italiana',serif;font-style:normal;font-size:9cqw;line-height:1}
+.cv .ct span{font-size:1.9cqw;letter-spacing:.3em;text-transform:uppercase}
+.arch figcaption{padding:12px 0 0;font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--mute)}
 .toc-wrap{margin-top:clamp(40px,8vh,90px);border-top:1px solid var(--ink);border-bottom:1px solid var(--line)}
 .toc{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,1fr)}
 .toc a{display:block;text-decoration:none;padding:20px 18px 22px 0;font-family:'Italiana',serif;font-size:24px;line-height:1.1}
@@ -167,7 +172,7 @@ footer{padding:26px clamp(20px,5vw,60px) 44px;font-size:12px;line-height:1.9;col
  .bar{padding:12px 16px}.brand{font-size:19px;letter-spacing:.12em}.bar-r{gap:10px}.issues{gap:9px}.issues a{font-size:10px;letter-spacing:.1em}.share-btn{padding:8px 10px;letter-spacing:.1em}
  .hero{padding:96px 18px 0}
  .hero .sub{grid-template-columns:1fr;gap:14px}
- .duo{gap:12px}.arch figcaption::after{display:none}
+ .duo{grid-template-columns:1fr;gap:26px}
  .toc{grid-template-columns:1fr}.toc a{padding:16px 0!important;border-left:0!important;border-top:1px solid var(--line)}.toc li:first-child a{border-top:0}
  .letter{grid-template-columns:1fr;padding:70px 20px}
  .opener{padding:80px 16px 40px}
@@ -203,8 +208,8 @@ footer{padding:26px clamp(20px,5vw,60px) 44px;font-size:12px;line-height:1.9;col
 <h1>ROMA <b>1953</b></h1>
 <div class="sub"><span class="it">Il numero romano</span><p class="deck">1985년 서울의 패션지가 떠난 네 번째 시간 여행. 영화 한 편이 도시를 바꾸고, 이탈리아 옷이 처음으로 세계의 쇼윈도에 걸린 해.</p></div>
 <div class="duo">
-<figure class="arch a1"><figcaption>Lei</figcaption><img class="zoom" src="../images/no04/beauty.jpg" alt="짧게 헝클어뜨린 검은 곱슬머리에 눈꼬리를 길게 뺀 아이라인, 금 링 귀걸이를 하고 어깨 너머로 돌아보는 여자의 클로즈업"></figure>
-<figure class="arch"><figcaption>Lui</figcaption><img class="zoom" src="../images/no04/grooming.jpg" alt="볼륨을 살려 뒤로 넘긴 짙은 갈색 머리에서 한 가닥이 이마로 흘러내린, 크림색 니트 폴로 차림 남자의 클로즈업"></figure>
+<figure class="arch"><div class="cv"><img class="zoom" src="../images/no04/cover-a.jpg" alt="짧게 헝클어뜨린 검은 곱슬머리에 눈꼬리를 길게 뺀 아이라인, 붉은 입술, 금 링 귀걸이를 하고 정면을 보는 여자, 커버 A"><div class="mast" aria-hidden="true">ÉPOQUE</div><div class="cl"><span>Numero 04</span><span>Estate 1953</span></div><div class="ct"><i>Lei</i><span>Il numero romano</span></div></div><figcaption>Copertina A</figcaption></figure>
+<figure class="arch"><div class="cv"><img class="zoom" src="../images/no04/grooming.jpg" alt="볼륨을 살려 뒤로 넘긴 짙은 갈색 머리에서 한 가닥이 이마로 흘러내린, 크림색 니트 폴로 차림 남자의 클로즈업, 커버 B"><div class="mast" aria-hidden="true">ÉPOQUE</div><div class="cl"><span>Numero 04</span><span>Estate 1953</span></div><div class="ct"><i>Lui</i><span>Il numero romano</span></div></div><figcaption>Copertina B</figcaption></figure>
 </div>
 <div class="toc-wrap"><ol class="toc">
 <li><a href="#letter"><span>00</span>Lettera<em>네 번째 출장</em></a></li>
@@ -385,7 +390,7 @@ No.04의 출장지는 1953년 로마. 사건과 장소는 실제 기록을 바�
   var cu=document.getElementById('cursor');
   if(fine&&!reduce&&cu){
     document.addEventListener('mousemove',function(e){cu.style.transform='translate3d('+e.clientX+'px,'+e.clientY+'px,0)';});
-    document.addEventListener('mouseover',function(e){var t=e.target;cu.classList.toggle('on',!!(t.matches&&t.matches('.crop img.zoom,.arch img.zoom,.crop video.live,.mag img.zoom,.mag video.cv,.thumbs img')));});
+    document.addEventListener('mouseover',function(e){var t=e.target;cu.classList.toggle('on',!!(t.matches&&t.matches('.crop img.zoom,.cv img.zoom,.crop video.live,.mag img.zoom,.mag video.cv,.thumbs img')));});
   }
   /* lightbox */
   var lb=document.getElementById('lb'),img=document.getElementById('lbImg'),vid=document.getElementById('lbVid'),cap=document.getElementById('lbCap'),cnt=document.getElementById('lbCount'),save=document.getElementById('lbSave');
