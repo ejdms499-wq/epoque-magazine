@@ -157,7 +157,7 @@ footer{max-width:820px;margin:0 auto;padding:10px 24px 50px;text-align:center;fo
 .toast.show{opacity:1}
 @media (max-width:1100px){.toc-nav{display:none}}
 @media (max-width:900px){
- .bar{padding:10px 12px}.brand{font-size:19px;letter-spacing:.12em}.bar-r{gap:10px}.issues{gap:9px}.issues a{font-size:10px;letter-spacing:.1em}.share-btn{padding:7px 9px;letter-spacing:.1em}
+ .bar{padding:10px 10px;gap:8px}.brand{font-size:16px;letter-spacing:.06em}.bar-r{gap:7px}.issues{gap:6px}.issues a{font-size:9px;letter-spacing:.02em}.share-btn{padding:6px 7px;letter-spacing:.04em;font-size:10px}
  main{padding-top:14px}
  .spread{flex-direction:column;align-items:center;gap:14px;margin-bottom:14px}
  .page.left::after,.page.right::before{display:none}
@@ -176,6 +176,24 @@ video.full{position:absolute;inset:0;z-index:1;width:792px;height:1056px;object-
 
 .toc .row{padding:7px 0}.toc .row b{font-size:23px}.toc .row span{font-size:14.5px}.toc .grp{margin:18px 0 4px}
 .toc h2{margin:10px 0 20px;font-size:84px}
+
+.page.plate{background:var(--ink)}
+.sqlab{position:absolute;left:36px;top:60px;font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:rgba(255,255,255,.6)}
+.sqp{position:absolute;left:0;right:0;top:132px}
+.sqp img{width:792px;height:792px;object-fit:cover}
+.sqcap{margin-top:20px;padding:0 36px;font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:rgba(255,255,255,.6)}
+.adtag{position:absolute;z-index:3;left:24px;font-size:9.5px;letter-spacing:.3em;text-transform:uppercase;color:#fff;background:rgba(0,0,0,.5);padding:5px 9px}
+.adtag.top{top:20px}.adtag.bottom{bottom:20px}
+.adband{position:absolute;z-index:3;left:0;right:0;background:var(--paper);color:var(--ink);padding:20px 36px 22px;display:flex;justify-content:space-between;align-items:baseline;gap:24px}
+.adband.bottom{bottom:0}.adband.top{top:0}
+.adband b{font-family:var(--disp);font-weight:var(--dw);font-size:46px;line-height:1;white-space:nowrap}
+.adband span{font-size:14px;line-height:1.55;text-align:right}
+.page.adpage{background:var(--acc);color:#fff}
+.adt{position:absolute;left:64px;right:64px;top:0;bottom:0;display:flex;flex-direction:column;justify-content:center}
+.adt .lab{color:rgba(255,255,255,.75)}
+.adt .w{font-family:var(--disp);font-weight:var(--dw);font-size:170px;line-height:.9;margin:18px 0 26px;text-transform:uppercase}
+.adt p{margin:0;font-size:26px;line-height:1.5;font-weight:700}
+.adt .sm{margin-top:40px;font-size:12px;letter-spacing:.2em;text-transform:uppercase;opacity:.8}
 :root{--btw:430px}
 </style>
 <script>(function(){function fit(){var w=window.innerWidth,h=window.innerHeight,s=w<=900?(w-24)/792:Math.min((w-72)/1584,(h-96)/1056);s=Math.max(.3,Math.min(1.15,s));document.documentElement.style.setProperty('--s',s.toFixed(4));}fit();window.addEventListener('resize',fit);})();</script>
@@ -186,7 +204,7 @@ video.full{position:absolute;inset:0;z-index:1;width:792px;height:1056px;object-
 <a class="brand" href="#top">ÉPOQUE</a>
 <nav class="toc-nav" aria-label="목차"><a href="#top">Cover</a><a href="#contents">Sommario</a><a href="#lei">Lei</a><a href="#film">1953</a><a href="#lui">Lui</a><a href="#index">Indice</a><a href="#colophon">Colophon</a></nav>
 <div class="bar-r">
-<div class="issues" aria-label="호 선택"><a href="../no00/">No.00</a><a href="../">No.01</a><a href="../no02/">No.02</a><a href="../no03/">No.03</a><a href="./" aria-current="page">No.04</a></div>
+<div class="issues" aria-label="호 선택"><a href="../no00/">No.00</a><a href="../">No.01</a><a href="../no02/">No.02</a><a href="../no03/">No.03</a><a href="./" aria-current="page">No.04</a><a href="../no05/">No.05</a></div>
 <button class="share-btn" id="shareSite" type="button">공유</button>
 </div>
 </header>
