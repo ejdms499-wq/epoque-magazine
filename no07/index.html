@@ -252,16 +252,72 @@ footer{color:#f1d9dc}
 .kt{position:absolute;z-index:3;display:flex;align-items:center;gap:7px;background:#fff;border:2px solid #111;padding:3px 9px 3px 3px;font-family:var(--tw),var(--body);font-size:13px;font-weight:700;pointer-events:none;box-shadow:2px 3px 0 rgba(0,0,0,.25)}
 .kt b{background:#111;color:#fff;font-family:'Anton';font-weight:400;font-size:15px;padding:2px 6px}
 
+:root{--tlh:72px;--tla:#F0B44C;--tlb:#0E0E10;--tlf:#F3EADA}
+body{padding-bottom:calc(var(--tlh) + env(safe-area-inset-bottom,0px))}
+.toast{bottom:calc(var(--tlh) + 22px)!important}
+.ytl{position:fixed;left:0;right:0;bottom:0;z-index:55;height:calc(var(--tlh) + env(safe-area-inset-bottom,0px));padding-bottom:env(safe-area-inset-bottom,0px);display:flex;align-items:stretch;background:var(--tlb);color:var(--tlf);border-top:1px solid rgba(243,234,218,.24);font-family:"Helvetica Neue",Helvetica,Arial,"Noto Sans KR",sans-serif;-webkit-user-select:none;user-select:none}
+.ytl-lab{flex:none;display:flex;flex-direction:column;justify-content:center;gap:5px;padding:0 24px 0 clamp(14px,3vw,40px);border-right:1px solid rgba(243,234,218,.18)}
+.ytl-lab b{font-size:10px;letter-spacing:.34em;font-weight:700;color:var(--tla);white-space:nowrap}
+.ytl-lab span{font-size:11px;color:rgba(243,234,218,.62);white-space:nowrap}
+.ytl-track{flex:1;display:flex;margin:0;padding:0 clamp(6px,2vw,30px);list-style:none;position:relative;min-width:0}
+.ytl-track li{flex:1;position:relative;min-width:0}
+.ytl-track li::before{content:"";position:absolute;left:0;right:0;top:22px;border-top:1px solid rgba(243,234,218,.38)}
+.ytl-track li:first-child::before{left:50%}
+.ytl-track li:last-child::before{right:50%}
+.ytl-track li.past::before,.ytl-track li.here::before{border-top-color:var(--tla)}
+.ytl-track li.here::before{right:50%}
+.ytl-track li.here::after{content:"";position:absolute;left:50%;right:0;top:22px;border-top:1px solid rgba(243,234,218,.38)}
+.ytl-track li.soon::before{border-top-style:dashed;border-top-color:rgba(243,234,218,.3)}
+.ytl-st{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;height:100%;padding-top:16px;text-decoration:none;color:inherit}
+.ytl-st i{width:13px;height:13px;border-radius:50%;background:var(--tlb);border:1.5px solid var(--tlf);transition:transform .2s,background .2s,border-color .2s}
+.ytl-st b{margin-top:9px;font-size:15px;letter-spacing:.08em;font-weight:600;font-variant-numeric:tabular-nums;line-height:1;transition:color .2s}
+.ytl-st span{margin-top:5px;font-size:8.5px;letter-spacing:.14em;line-height:1;white-space:nowrap;color:rgba(243,234,218,.55)}
+a.ytl-st:hover i,a.ytl-st:focus-visible i{background:var(--tla);border-color:var(--tla);transform:scale(1.4)}
+a.ytl-st:hover b,a.ytl-st:focus-visible b{color:var(--tla)}
+a.ytl-st:focus-visible{outline:1px solid var(--tla);outline-offset:-3px}
+.ytl-st[aria-current] i{background:var(--tla);border-color:var(--tla);box-shadow:0 0 0 4px rgba(240,180,76,.26);transform:scale(1.2)}
+.ytl-st[aria-current] b,.ytl-st[aria-current] span{color:var(--tla)}
+.soon .ytl-st{opacity:.5}
+.soon .ytl-st i{border-style:dashed}
+.ytl-run{position:absolute;z-index:2;top:15.5px;left:0;width:14px;height:14px;margin-left:-7px;border-radius:50%;background:var(--tla);box-shadow:0 0 0 5px rgba(240,180,76,.3),0 0 18px 4px rgba(240,180,76,.55);display:none;pointer-events:none}
+.ytl-pop{position:fixed;left:0;bottom:calc(var(--tlh) + 12px);z-index:56;width:156px;padding:6px 6px 10px;background:var(--tlb);border:1px solid rgba(243,234,218,.32);color:var(--tlf);font-family:"Helvetica Neue",Helvetica,Arial,"Noto Sans KR",sans-serif;opacity:0;transform:translate(-50%,8px);transition:opacity .18s,transform .18s;pointer-events:none}
+.ytl-pop.on{opacity:1;transform:translate(-50%,0)}
+.ytl-pop img{display:block;width:100%;aspect-ratio:3/4;object-fit:cover;background:#222}
+.ytl-pop b{display:block;margin:8px 2px 0;font-size:11px;letter-spacing:.14em;line-height:1.3}
+.ytl-pop em{display:block;margin:3px 2px 0;font-style:normal;font-size:11px;color:var(--tla)}
+.ytl-warp{position:fixed;inset:0;z-index:400;background:var(--tlb);color:var(--tlf);display:none;flex-direction:column;align-items:center;justify-content:center;overflow:hidden;opacity:0;transition:opacity .35s;padding-bottom:var(--tlh);text-align:center}
+.ytl-warp.on{display:flex}
+.ytl-warp.in{opacity:1}
+.ytl-warp img{position:absolute;left:-6%;top:-6%;width:112%;height:112%;object-fit:cover;filter:blur(16px) saturate(1.1);opacity:0;transform:scale(1.14);transition:opacity .7s,transform 1.8s ease-out}
+.ytl-warp.show img{opacity:.44;transform:scale(1)}
+.ytl-warp::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent 0 59px,rgba(243,234,218,.07) 59px 60px);animation:tlrun .45s linear infinite}
+.ytl-warp.back::after{animation-direction:reverse}
+.ytl-warp.show::after{animation-play-state:paused;opacity:.5}
+@keyframes tlrun{to{background-position:-60px 0}}
+.ytl-warp .k,.ytl-warp .y,.ytl-warp .c{position:relative;z-index:1}
+.ytl-warp .k{font:700 11px/1 "Helvetica Neue",Helvetica,Arial,sans-serif;letter-spacing:.42em;color:var(--tla);padding-left:.42em}
+.ytl-warp .y{margin:18px 0 14px;font-family:var(--disp,'Poiret One'),Didot,'Times New Roman',serif;font-weight:400;font-size:clamp(92px,23vw,300px);line-height:.92;letter-spacing:.02em;font-variant-numeric:tabular-nums;white-space:nowrap}
+.ytl-warp .c{font:600 clamp(13px,1.5vw,19px)/1 "Helvetica Neue",Helvetica,Arial,sans-serif;letter-spacing:.44em;padding-left:.44em;opacity:0;transform:translateY(10px);transition:opacity .4s,transform .4s}
+.ytl-warp.show .c{opacity:1;transform:none}
+html.ytl-warping .ytl{z-index:410}
+.ytl-hint{position:fixed;left:50%;bottom:calc(var(--tlh) + env(safe-area-inset-bottom,0px) + 12px);z-index:56;transform:translate(-50%,6px);padding:9px 15px;background:var(--tla);color:#0E0E10;font:600 12.5px/1.2 "Helvetica Neue",Helvetica,Arial,"Noto Sans KR",sans-serif;white-space:nowrap;opacity:0;transition:opacity .3s,transform .3s;pointer-events:none}
+.ytl-hint::after{content:"";position:absolute;left:50%;bottom:-5px;width:10px;height:10px;margin-left:-5px;background:var(--tla);transform:rotate(45deg)}
+.ytl-hint.on{opacity:1;transform:translate(-50%,0)}
+@media (max-width:1180px){.ytl-st span{display:none}.ytl-st[aria-current] span{display:block}}
+@media (max-width:900px){:root{--tlh:50px}.ytl-lab{display:none}.ytl-track{padding:0 2px}.ytl-st{padding-top:11px}.ytl-st i{width:9px;height:9px}.ytl-track li::before,.ytl-track li.here::after{top:15px}.ytl-st b{font-size:9.5px;letter-spacing:0;margin-top:8px}.ytl-st[aria-current] span{display:none}.ytl-run{top:9.5px;width:12px;height:12px;margin-left:-6px}}
+@media (prefers-reduced-motion:reduce){.ytl-warp::after{animation:none}}
+
 </style>
-<script>(function(){function fit(){var w=window.innerWidth,h=window.innerHeight,s=w<=900?(w-24)/792:Math.min((w-72)/1584,(h-96)/1056);s=Math.max(.3,Math.min(1.15,s));document.documentElement.style.setProperty('--s',s.toFixed(4));}fit();window.addEventListener('resize',fit);})();</script>
+<script>(function(){function fit(){var w=window.innerWidth,h=window.innerHeight,s=w<=900?(w-24)/792:Math.min((w-72)/1584,(h-172)/1056);s=Math.max(.3,Math.min(1.15,s));document.documentElement.style.setProperty('--s',s.toFixed(4));}fit();window.addEventListener('resize',fit);})();</script>
 </head>
 <body>
+<div class="ytl-warp" id="tlWarp" aria-hidden="true"><img alt=""><div class="k"></div><div class="y"></div><div class="c"></div></div>
+<script>try{var w=sessionStorage.getItem('epq-warp');if(w){sessionStorage.removeItem('epq-warp');w=w.split('|');var o=document.getElementById('tlWarp');o.querySelector('.y').textContent=w[0];o.querySelector('.c').textContent=w[1];o.querySelector('.k').textContent='ARRIVED';o.querySelector('img').src='../images/tl/07.webp';o.classList.add('on','in','show');document.documentElement.classList.add('ytl-arrive')}}catch(e){}</script>
 <div class="progress" id="progress" aria-hidden="true"></div>
 <header class="bar" id="bar">
 <a class="brand" href="#top">ÉPOQUE</a>
 <nav class="toc-nav" aria-label="목차"><a href="#top">Cover</a><a href="#contents">Contents</a><a href="#punks">Punks</a><a href="#out">Out</a><a href="#year">1977</a><a href="#teds">Teds</a><a href="#brit">UK</a><a href="#index">Index</a></nav>
 <div class="bar-r">
-<div class="issues" aria-label="호 선택"><a href="../">1925</a><a href="../no02/">1934</a><a href="../no03/">1948</a><a href="../no04/">1953</a><a href="../no08/">1967</a><a href="./" aria-current="page">1977</a><a href="../no00/">1985</a><a href="../no06/">1989</a><a href="../no05/">1990s</a></div>
 <button class="share-btn" id="shareSite" type="button">공유</button>
 </div>
 </header>
@@ -501,6 +557,9 @@ No.07은 편집부가 8년 전의 런던에 다녀온 호. 사건은 실제 기�
 <div class="lb-cap" id="lbCap"></div>
 </div>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
+<nav class="ytl" id="tl" aria-label="연도별 호 이동"><div class="ytl-lab"><b>TIME LINE</b><span>연도를 누르면 그 시대로</span></div><ol class="ytl-track"><li class="past"><a class="ytl-st" href="../" data-y="1925" data-l="1925" data-c="PARIS" data-t="../images/tl/01.webp" aria-label="1925 PARIS 호로 이동"><i></i><b>1925</b><span>PARIS</span></a></li><li class="past"><a class="ytl-st" href="../no02/" data-y="1934" data-l="1934" data-c="HOLLYWOOD" data-t="../images/tl/02.webp" aria-label="1934 HOLLYWOOD 호로 이동"><i></i><b>1934</b><span>HOLLYWOOD</span></a></li><li class="past"><a class="ytl-st" href="../no03/" data-y="1948" data-l="1948" data-c="NEW YORK" data-t="../images/tl/03.webp" aria-label="1948 NEW YORK 호로 이동"><i></i><b>1948</b><span>NEW YORK</span></a></li><li class="past"><a class="ytl-st" href="../no04/" data-y="1953" data-l="1953" data-c="ROMA" data-t="../images/tl/04.webp" aria-label="1953 ROMA 호로 이동"><i></i><b>1953</b><span>ROMA</span></a></li><li class="past"><a class="ytl-st" href="../no08/" data-y="1967" data-l="1967" data-c="SAN FRANCISCO" data-t="../images/tl/08.webp" aria-label="1967 SAN FRANCISCO 호로 이동"><i></i><b>1967</b><span>SAN FRANCISCO</span></a></li><li class="here"><span class="ytl-st" aria-current="page" data-y="1977" data-l="1977"><i></i><b>1977</b><span>LONDON</span></span></li><li class=""><a class="ytl-st" href="../no00/" data-y="1985" data-l="1985" data-c="SEOUL" data-t="../images/tl/00.webp" aria-label="1985 SEOUL 호로 이동"><i></i><b>1985</b><span>SEOUL</span></a></li><li class=""><a class="ytl-st" href="../no06/" data-y="1989" data-l="1989" data-c="TOKYO" data-t="../images/tl/06.webp" aria-label="1989 TOKYO 호로 이동"><i></i><b>1989</b><span>TOKYO</span></a></li><li class=""><a class="ytl-st" href="../no05/" data-y="1995" data-l="1990s" data-c="SEOUL" data-t="../images/tl/05.webp" aria-label="1990s SEOUL 호로 이동"><i></i><b>1990s</b><span>SEOUL</span></a></li><li class="soon"><span class="ytl-st" title="준비 중"><i></i><b>2003</b><span>LOS ANGELES</span></span></li></ol><div class="ytl-run" aria-hidden="true"></div></nav>
+<div class="ytl-pop" id="tlPop" aria-hidden="true"><img alt=""><b></b><em>이 시대로 이동 →</em></div>
+<div class="ytl-hint" id="tlHint" aria-hidden="true">연도를 누르면 그 시대로 이동합니다</div>
 <script>
 (function(){
   var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -568,6 +627,45 @@ No.07은 편집부가 8년 전의 런던에 다녀온 호. 사건은 실제 기�
   var sx=null;lb.addEventListener('touchstart',function(e){sx=e.touches[0].clientX},{passive:true});
   lb.addEventListener('touchend',function(e){if(sx===null)return;var dx=e.changedTouches[0].clientX-sx;if(Math.abs(dx)>50)show(idx+(dx<0?1:-1));sx=null;});
   var m=location.hash.match(/^#photo=(.+)$/);if(m){var it=list.find(function(x){return x.name===decodeURIComponent(m[1])});if(it)open(it.src);}
+})();
+
+
+(function(){
+var tl=document.getElementById('tl');if(!tl)return;
+var doc=document.documentElement,warp=document.getElementById('tlWarp'),wy=warp.querySelector('.y'),wc=warp.querySelector('.c'),wi=warp.querySelector('img'),wk=warp.querySelector('.k');
+var pop=document.getElementById('tlPop'),pi=pop.querySelector('img'),pb=pop.querySelector('b');
+var cur=tl.querySelector('[aria-current]'),curY=+cur.getAttribute('data-y'),run=tl.querySelector('.ytl-run'),track=tl.querySelector('.ytl-track');
+var rm=window.matchMedia('(prefers-reduced-motion:reduce)').matches,fine=window.matchMedia('(hover:hover) and (pointer:fine)').matches,busy=false;
+function hide(){warp.classList.remove('in');setTimeout(function(){warp.classList.remove('on','show','back');doc.classList.remove('ytl-warping','ytl-arrive');run.style.display='none';busy=false},380)}
+var hint=document.getElementById('tlHint');
+if(doc.classList.contains('ytl-arrive'))setTimeout(hide,850);
+else{try{if(!localStorage.getItem('epq-tl-hint')){setTimeout(function(){hint.classList.add('on')},1400);setTimeout(function(){hint.classList.remove('on')},6400);localStorage.setItem('epq-tl-hint','1')}}catch(e){}}
+window.addEventListener('pageshow',function(e){if(e.persisted){warp.classList.remove('in','on','show','back');doc.classList.remove('ytl-warping','ytl-arrive');run.style.display='none';busy=false}});
+function mid(el){var r=el.querySelector('i').getBoundingClientRect();return r.left+r.width/2}
+function go(a){
+  if(busy)return;busy=true;
+  var y=+a.getAttribute('data-y'),lab=a.getAttribute('data-l'),city=a.getAttribute('data-c'),d=Math.abs(y-curY),dur=Math.max(950,Math.min(1800,d*32));
+  try{sessionStorage.setItem('epq-warp',lab+'|'+city)}catch(e){}
+  pop.classList.remove('on');hint.classList.remove('on');
+  wi.src=a.getAttribute('data-t');wc.textContent=city;wk.textContent=y<curY?'← BACK IN TIME':'FORWARD IN TIME →';wy.textContent=curY;
+  warp.classList.remove('show');warp.classList.toggle('back',y<curY);
+  doc.classList.add('ytl-warping');warp.classList.add('on');
+  var x0=mid(cur),x1=mid(a);
+  run.style.transition='none';run.style.left=x0+'px';run.style.display='block';
+  requestAnimationFrame(function(){requestAnimationFrame(function(){
+    warp.classList.add('in');run.style.transition='left '+dur+'ms cubic-bezier(.45,0,.2,1)';run.style.left=x1+'px';
+    var t0=performance.now();
+    (function step(t){var p=Math.min(1,Math.max(0,(t-t0)/dur)),e=p<.5?2*p*p:1-Math.pow(-2*p+2,2)/2;wy.textContent=Math.round(curY+(y-curY)*e);
+      if(p<1)requestAnimationFrame(step);else{wy.textContent=lab;warp.classList.add('show');setTimeout(function(){location.href=a.href},560)}})(t0);
+  })});
+}
+[].forEach.call(tl.querySelectorAll('a.ytl-st'),function(a){
+  function on(){hint.classList.remove('on');pi.src=a.getAttribute('data-t');pb.textContent=a.getAttribute('data-l')+' '+a.getAttribute('data-c');var x=mid(a),w=window.innerWidth;pop.style.left=Math.max(88,Math.min(w-88,x))+'px';pop.classList.add('on')}
+  function off(){pop.classList.remove('on')}
+  if(fine){a.addEventListener('mouseenter',on);a.addEventListener('mouseleave',off)}
+  a.addEventListener('focus',function(){if(fine)on()});a.addEventListener('blur',off);
+  a.addEventListener('click',function(e){if(rm||e.metaKey||e.ctrlKey||e.shiftKey||e.altKey||e.button)return;e.preventDefault();go(a)});
+});
 })();
 
 </script>
